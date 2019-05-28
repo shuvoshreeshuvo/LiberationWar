@@ -8,39 +8,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('frontend/css/style.css')}}">
+
     
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
   
-    <style>
-        /*
-        .image_page .images {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-        }
-        .image_page .images {
-            margin-bottom: 10px;
-        }
-        .image_page .images img {
-            margin-right: 10px;
-            height: 260px;
-            max-width: 100%;
-        }
-*/
-        img {
-            display: inline;
-            margin: 20px 5px 5px 5px;
-            vertical-align: middle;
-            border-style: none;
-            height: 200px;
-            transition: transform 0.3s, filter 0.5s ease-in-out;
-            transform-origin: center center;
-            overflow: hidden;
-        }
+    
 
-
-    </style>
+    
 
 </head>
 
@@ -53,9 +28,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <h1 class="display-4">আমার ইতিহাস</h1>
-    <img src="https://www.crossed-flag-pins.com/animated-flag-gif/gifs/Bangladesh_120-animated-flag-gifs.gif" style="width:80px;height:40px;margin-top: 6px" />
-
-
+    
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="nav navbar-nav mx-auto">
             <li class="nav-item active">
@@ -71,7 +44,7 @@
                         <!-- <a  href="{!! url('/etihash/languagemovement/index'); !!}">প্রথম পর্যায়</a> -->
 
                         @foreach($periods as $period)
-                            <a  href="{!! url('/etihash/languagemovement/'.$period->id); !!}"> {{ $period->name }} ( {{ $period->starting_year .' - '. $period->ending_year }} )</a>
+                            <a  href="{!! url('/etihash/period/'.$period->id); !!}"> {{ $period->name }} ( {{ $period->starting_year .' - '. $period->ending_year }} )</a>
                         @endforeach
                         <!-- 
                         <a  href="{!! url('/etihash/massuprisingg'); !!}">দ্বিতীয় পর্যায়</a>
