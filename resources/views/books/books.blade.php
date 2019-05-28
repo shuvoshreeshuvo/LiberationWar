@@ -9,16 +9,22 @@
 <div class="container">
     <div class="row">
         @foreach($book as $data)
-            <div class="books">
+        <div class="col-md-4">
+            <div class="books" style="margin-right: 25px;margin-bottom: 20px;">
                 <div class="book">
-                    <h2 style="text-align: center;color: red;">{{$data->title}}</h2>
-                    <a href="{{URL::asset('public/frontend/books/'.$data-> path) }}">
+                    {{--<h4 style="text-align: center;color: red;">{{$data->title}}</h4>--}}
+                    <a target="_blank" href="{{URL::asset('frontend/books/'.$data->path.'.pdf') }}">
                     <img class="bookimages" src="{{ asset('uploads/book/'.$data-> image) }}" /></a>
-                    <div class="overlay">
-    <div class="text">Hello World</div>
-  </div>
+                  <div class="caption">
+                    <div class="blur"></div>
+                    <div class="caption-text" style="margin-top: 20px;">
+                       {{-- <h1>{{ $data->title }}</h1> --}}
+                        <p>{!! $data->caption !!}</p>
+                    </div>
+                </div>
                 </div>
             </div>
+        </div>
         @endforeach
     </div>
 </div>
