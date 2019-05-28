@@ -2,56 +2,16 @@
 
 @section('title', 'Our History || 1952')
 
-@section('content')
-
-<style>
-    @media (min-width: 768px) {
-        .carousel-multi-item-2 .col-md-3 {
-            float: left;
-            width: 25%;
-            max-width: 100%; } }
-
-    .carousel-multi-item-2 .card img {
-        border-radius: 2px; }
-
-    div.controls-top a{
-        cursor: pointer;
-        text-decoration: none;
-        background-color: transparent;
-        color:#000;
-        text-align: center;
-}
-    div.controls-top a i{
-        padding-left: 1rem!important;
-        font-family: 'Font Awesome 5 Free';
-        font-weight: 900;
-        font-size: 3em ;
-        -webkit-font-smoothing: antialiased;
-        display: inline-block;
-        font-style: normal;
-        font-variant: normal;
-        text-rendering: auto;
-        line-height: 1;
-    }
-    .text-white {
-    color: #fff!important;
-}
-    img {
-        display: inline;
-        margin: 0px 5px 5px 5px;
-        vertical-align: middle;
-        border-style: none;
-        height: 200px;
-    }
+@section('content') 
 
 </style>
 
-<div class="container-fluid" style="margin-top: 100px;">
+<div class="container">
     <h3 style="text-align: center; color:red;" class="m-4">ভাষা আন্দোলন কালপঞ্জি </h3>
 <div class="row ">
     @if($events->count() > 0)
     @foreach($events as $event)
-        <div class="col-md-3">
+        <div class="col-md-4">
             <div class="thumbnail">
                 <h3 style="text-align: center;font-size: 22px;color: #ff0000" >{{ $event->title }} ( {{ $event->year}} )</h3>
                 <div class="polaroid">
@@ -81,6 +41,8 @@
             </div>
         @endif
       </div>
+  </div>
+  
 <div class="container">
     <h4 style="text-align: center; color:red;" class="m-4">কিছু ছবি </h4>
     <!--Carousel Wrapper-->
@@ -88,6 +50,7 @@
 
         <!--Controls-->
         <div class="controls-top" style="text-align:center;margin-bottom: 1.88rem">
+
             <a class="text-white" href="#multi-item-example" data-slide="prev" ><i class="fas fa-angle-left"></i></a>
             <a class="text-white" style="font-size: 25px" href="#multi-item-example" data-slide="next"><i class="fas fa-angle-right"></i></a>
         </div>
@@ -101,28 +64,28 @@
 
                 <div class="col-md-3 mb-3">
                     <div class="card">
-                        <img class="img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/1952_Bengali_Language_movement.jpg/250px-1952_Bengali_Language_movement.jpg"
+                        <img class="img-fluid image-slider" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/1952_Bengali_Language_movement.jpg/250px-1952_Bengali_Language_movement.jpg"
                              alt="Card image cap">
                     </div>
                 </div>
 
                 <div class="col-md-3 mb-3">
                     <div class="card">
-                        <img class="img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/21_Feb_1953_Dhaka_University_female_students_procession.png/220px-21_Feb_1953_Dhaka_University_female_students_procession.png"
+                        <img class="img-fluid image-slider" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/21_Feb_1953_Dhaka_University_female_students_procession.png/220px-21_Feb_1953_Dhaka_University_female_students_procession.png"
                              alt="Card image cap">
                     </div>
                 </div>
 
                 <div class="col-md-3 mb-3">
                     <div class="card">
-                        <img class="img-fluid" src="https://www.newsg24.com/uploadFile/6f8dd_21_long.jpg"
+                        <img class="img-fluid image-slider" src="https://www.newsg24.com/uploadFile/6f8dd_21_long.jpg"
                              alt="Card image cap">
                     </div>
                 </div>
 
                 <div class="col-md-3 mb-3">
                     <div class="card">
-                        <img class="img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/3/30/21_feb_1952_DecideToBreak_Curfew.png"
+                        <img class="img-fluid image-slider" src="https://upload.wikimedia.org/wikipedia/commons/3/30/21_feb_1952_DecideToBreak_Curfew.png"
                              alt="Card image cap">
                     </div>
                 </div>
@@ -135,28 +98,28 @@
 
                 <div class="col-md-3 mb-3">
                     <div class="card">
-                        <img class="img-fluid" src="http://www.likhalikhi.com/wp-content/uploads/2018/08/42243523_303.jpg"
+                        <img class="img-fluid image-slider" src="http://www.likhalikhi.com/wp-content/uploads/2018/08/42243523_303.jpg"
                              alt="Card image cap">
                     </div>
                 </div>
 
                 <div class="col-md-3 mb-3">
                     <div class="card">
-                        <img class="img-fluid" src="https://banglahub.com.bd/wp-content/uploads/2017/02/Shaheed_Minar_Behine_Dhaka_Hall.png"
+                        <img class="img-fluid image-slider" src="https://banglahub.com.bd/wp-content/uploads/2017/02/Shaheed_Minar_Behine_Dhaka_Hall.png"
                              alt="Card image cap">
                     </div>
                 </div>
 
                 <div class="col-md-3 mb-3">
                     <div class="card">
-                        <img class="img-fluid" src="https://banglahub.com.bd/wp-content/uploads/2017/02/694874813ce062ba31125a8dca9ede23-.jpg"
+                        <img class="img-fluid image-slider" src="https://banglahub.com.bd/wp-content/uploads/2017/02/694874813ce062ba31125a8dca9ede23-.jpg"
                              alt="Card image cap">
                     </div>
                 </div>
 
                 <div class="col-md-3 mb-3">
                     <div class="card">
-                        <img class="img-fluid" src="https://2.bp.blogspot.com/-7t_Xak3shcI/WG-AZWHcWFI/AAAAAAAAAIs/YbiNnfWDQpwCoerwmZa65E8bUafhsgbfgCLcB/s1600/ashim_mahamichil-1024x417.jpg"
+                        <img class="img-fluid image-slider" src="https://2.bp.blogspot.com/-7t_Xak3shcI/WG-AZWHcWFI/AAAAAAAAAIs/YbiNnfWDQpwCoerwmZa65E8bUafhsgbfgCLcB/s1600/ashim_mahamichil-1024x417.jpg"
                              alt="Card image cap">
                     </div>
                 </div>
@@ -169,28 +132,28 @@
 
                 <div class="col-md-3 mb-3">
                     <div class="card">
-                        <img class="img-fluid" src="https://banglahub.com.bd/wp-content/uploads/2017/02/image_84_33609.jpg"
+                        <img class="img-fluid image-slider" src="https://banglahub.com.bd/wp-content/uploads/2017/02/image_84_33609.jpg"
                              alt="Card image cap">
                     </div>
                 </div>
 
                 <div class="col-md-3 mb-3">
                     <div class="card">
-                        <img class="img-fluid" src="https://banglahub.com.bd/wp-content/uploads/2017/02/Shaheed_Minar_Behine_Dhaka_Hall.png"
+                        <img class="img-fluid image-slider" src="https://banglahub.com.bd/wp-content/uploads/2017/02/Shaheed_Minar_Behine_Dhaka_Hall.png"
                              alt="Card image cap">
                     </div>
                 </div>
 
                 <div class="col-md-3 mb-3">
                     <div class="card">
-                        <img class="img-fluid" src="https://www.anandabazar.com/polopoly_fs/1.567737.1487621002!/image/image.jpg_gen/derivatives/box_185_185/image.jpg"
+                        <img class="img-fluid image-slider" src="https://www.anandabazar.com/polopoly_fs/1.567737.1487621002!/image/image.jpg_gen/derivatives/box_185_185/image.jpg"
                              alt="Card image cap">
                     </div>
                 </div>
 
                 <div class="col-md-3 mb-3">
                     <div class="card">
-                       <a href="Image"> <img class="img-fluid" src="https://www.dw.com/image/42243974_303.jpg"
+                       <a href="Image"> <img class="img-fluid image-slider" src="https://www.dw.com/image/42243974_303.jpg"
                                              alt="Card image cap"></a>
 
                     </div>
