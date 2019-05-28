@@ -38,9 +38,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <h1 class="display-4">আমার ইতিহাস</h1>
-        <img src="https://www.crossed-flag-pins.com/animated-flag-gif/gifs/Bangladesh_120-animated-flag-gifs.gif" style="width:80px;height:40px"/>
-
-
+        
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="nav navbar-nav mx-auto">
                 <li class="nav-item active">
@@ -54,7 +52,7 @@
                     <div class="dropdown" >
                         <div class="dropdown-content">
                             @foreach($periods as $period)
-                            <a  href="{!! url('/etihash/languagemovement/'.$period->id); !!}"> {{ $period->name }} ( {{ $period->starting_year .' - '. $period->ending_year }} )</a>
+                            <a  href="{!! url('/etihash/period/'.$period->id); !!}"> {{ $period->name }} ( {{ $period->starting_year .' - '. $period->ending_year }} )</a>
                             <!-- <a  href="{!! url('/etihash/massuprisingg'); !!}">  দ্বিতীয় পর্যায়</a>
                             <a  href="{!! url('/etihash/liberationwar/liberationwar'); !!}">  তৃতীয় পর্যায়</a> -->
                             @endforeach
