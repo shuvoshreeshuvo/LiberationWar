@@ -18,6 +18,7 @@ class CreateBooksTable extends Migration
             $table->string('title');
             $table->string('image');
             $table->string('path');
+            $table->text('caption');
             $table->timestamps();
         });
     }
