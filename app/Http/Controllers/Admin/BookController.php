@@ -43,6 +43,7 @@ class BookController extends Controller
             'title' => 'required',
             'image' => 'required|mimes:jpeg,jpg,png,bmp',
             'path'  =>'required',
+            'caption' => 'required',
         ]);
 
         $image= $request->file('image');
@@ -65,6 +66,7 @@ class BookController extends Controller
             $book->title = $request->title;
             $book->image = $imagename;
             $book->path = $request->path;
+            $book->caption = $request->caption;
             $book->save();
             return redirect()->route('book.index')->with('successMsg','Book Added Succesfully');
         }
@@ -107,6 +109,7 @@ class BookController extends Controller
             'title' => 'required',
             'image' => 'mimes:jpeg,jpg,png,bmp',
             'path'  =>'required',
+            'caption' => 'required',
         ]);
 
         $image= $request->file('image');
@@ -130,6 +133,7 @@ class BookController extends Controller
             $book->title = $request->title;
             $book->image = $imagename;
             $book->path = $request->path;
+            $book->caption = $request->caption;
             $book->save();
             return redirect()->route('book.index')->with('successMsg','Book Updated Succesfully');
 
