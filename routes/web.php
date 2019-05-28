@@ -23,7 +23,7 @@ Route::get('/', 'HomeController@index');
 
 
 //Route::get('/LanguageMovement', 'EtihashController@LanguageMovement')
-Route::get('/etihash/languagemovement/{id}', 'EtihashController@period_history');
+Route::get('/etihash/period/{id}', 'EtihashController@period_history');
 Route::get('/etihash/languagemovement/bongovongo', 'LanguageMovementController@Bongovongo');
 Route::get('/etihash/languagemovement/languagemovement', 'LanguageMovementController@LanguageMovement');
 Route::get('/etihash/languagemovement/juktofront', 'LanguageMovementController@Juktofront');
