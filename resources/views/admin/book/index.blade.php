@@ -26,6 +26,7 @@
                           <th>Title</th>
                           <th>Image</th>
                           <th>Path</th>
+                          <th>Caption</th>
                           <th>Created At</th>
                           <th>Updated At</th>
                           <th>Action</th>
@@ -37,7 +38,8 @@
                               <td>{{ $key + 1 }}</td>
                               <td>{{ $book->title }}</td>
                               <td>{{ $book->image }}</td>
-                               <td>{{ $book->path }}</td>
+                              <td>{{ $book->path }}</td>
+                          <td>{!! str_limit($book->caption, $limit = 100, $end = '...') !!} </td>
                               <td>{{ $book->created_at }}</td>
                               <td>{{ $book->updated_at }}</td>
                               <td> 

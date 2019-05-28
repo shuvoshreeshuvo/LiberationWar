@@ -46,6 +46,19 @@
                         <input type="text" class="form-control" name="path" value="{{ $book->path }}">                    
                           </div>
                   </div>
+
+                  <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group label-floating">
+                          <label class="control-label">Caption</label>
+
+                           <textarea class="ckeditor" name="caption">{{ $book->caption }}</textarea>
+                          
+
+                        </div>
+                      </div>
+                  </div>
+
                   <a href="{{ route('book.index') }}" class="btn btn-danger">Back</a>
                   <button type="submit" class="btn btn-primary">Save</button>
                 
