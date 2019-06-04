@@ -40,12 +40,32 @@ class Ff_titleController extends Controller
 
             'nickname' => 'required',
             'number' => 'required',
+
             
         ]);
+         $image = $request->file('image');
+         $slug = str_slug($request->title);
+         if(isset($image))
+         {
+
+            $currentData = Carbon::now()->toDatestring();
+            $imagetitle =$slug.'-'.$currentData.'-'.uniqid() .'.'.
+            $image->getclientOriginalExtension();
+
+            if(!file_exists('uploads/ff_title'))
+            {
+                mkdir('uploads/ff_title',0777,true);
+            }
+            $image->move('uploads/ff_title',$imagetitle);
+            
+         }else{
+              $imagetitle ="default.png";
+         }
 
          $ff_title = new Ff_title();
          $ff_title->nickname = $request->nickname;
          $ff_title->number = $request->number;
+         $ff_title->image = $request->image;
          $ff_title->save();
          return redirect()->route('freedomfighter_title.index')->with('successMsg','Nickname Succesfully Saved');
     }
@@ -90,8 +110,30 @@ class Ff_titleController extends Controller
         ]);
 
          $ff_title = Ff_title::find($id);
+         $image = $request->file('image');
+         $slug = str_slug($request->title);
+         if(isset($image))
+         {
+
+            $currentData = Carbon::now()->toDatestring();
+            $imagetitle =$slug.'-'.$currentData.'-'.uniqid() .'.'.
+            $image->getclientOriginalExtension();
+
+            if(!file_exists('uploads/ff_title'))
+            {
+                mkdir('uploads/ff_title',0777,true);
+            }
+            unlink('uploads/ff_title/'.$event->image);
+            $image->move('uploads/ff_title',$imagetitle);
+
+            
+         }else{
+              $imagetitle = $ff_title->image;
+         }
+        
          $ff_title->nickname = $request->nickname;
          $ff_title->number = $request->number;
+          $ff_title->image = $request->image;
          $ff_title->save();
          return redirect()->route('freedomfighter_title.index')->with('successMsg','Nickname Succesfully Updated');
     }
