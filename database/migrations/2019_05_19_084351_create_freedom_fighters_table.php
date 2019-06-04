@@ -17,8 +17,11 @@ class CreateFreedomFightersTable extends Migration
         
              $table->increments('id');
             $table->integer('ff_title_id')->unsigned();
+            $table->string('number');
             $table->string('name');
-            $table->string('subname');
+            $table->string('sector');
+            $table->string('title');
+            $table->string('gadget_number');
             $table->string('image');
             $table->text('content');
             $table->foreign('ff_title_id')
