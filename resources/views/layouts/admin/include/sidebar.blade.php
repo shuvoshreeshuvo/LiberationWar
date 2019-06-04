@@ -62,6 +62,21 @@
             </a>
           </li>
 
+           <li class="nav-item {{ Request::is('admin/freedomfighter_title*') ? 'active': '' }}">
+            <a class="nav-link" href="{{ route('freedomfighter_title.index') }}">
+             <i class="material-icons">category</i>
+              <p>Freedomfighter_title</p>
+            </a>
+          </li>
+
+           <li class="nav-item {{ Request::is('admin/freedom_fighter*') ? 'active': '' }}">
+            <a class="nav-link" href="{{ route('freedom_fighter.index') }}">
+              <i class="material-icons">event_available</i>              
+              <p>Freedom_fighter</p>
+            </a>
+          </li>
+
+
          <li class="nav-item {{ Request::is('admin/Category*') ? 'active': '' }}">
             <a class="nav-link" href="{{ route('Category.index') }}">
               <i class="material-icons">content_paste</i>
