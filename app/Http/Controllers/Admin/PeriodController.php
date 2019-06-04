@@ -47,6 +47,7 @@ class PeriodController extends Controller
          $period->name = $request->name;
          $period->starting_year = $request->starting_year;
          $period->ending_year = $request->ending_year;
+         $period->content = $request->content;
          $period->save();
          return redirect()->route('period.index')->with('successMsg','Period Succesfully Saved');
     }
@@ -93,6 +94,7 @@ class PeriodController extends Controller
          $period->name = $request->name;
          $period->starting_year = $request->starting_year;
          $period->ending_year = $request->ending_year;
+         $period->content = $request->content;
          $period->save();
          return redirect()->route('period.index')->with('successMsg','Period Succesfully Updated');
     }
