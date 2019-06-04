@@ -41,6 +41,14 @@
                   </div>
                   
 
+                  <div class="row">
+                      <div class="col-md-12">
+                        <label class="control-label">Image</label>
+                          <input type="file" name="image"  class="form-control">
+                        </div>
+                      </div>
+                
+
                 
                   <a href="{{ route('freedomfighter_title.index') }}" class="btn btn-danger">Back</a>
                   <button type="submit" class="btn btn-primary">Save</button>
