@@ -62,7 +62,9 @@ Route::get('/archive/image', 'ArchiveController@Image');
 Route::get('/archive/video', 'ArchiveController@VideoFootage');
 
 
-Route::get('/freedom_fighter/freedom_fighter', 'MuktijuddhoController@FreedomFighter');
+Route::get('/freedom_fighter', 'Freedom_fighterController@index');
+Route::get('/freedom_fighter/freedomfighter_title/{id}', 'Freedom_fighterController@freedom_fighter');
+Route::get('/freedom_fighter/details/{id}', 'Freedom_fighterController@freedom_fighter_details');
 
 
 
