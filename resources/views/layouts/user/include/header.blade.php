@@ -68,14 +68,29 @@
                         <a  href="{!! url('/archive/image'); !!}">ছবি</a>
                         <a  href="{!! url('/archive/documents'); !!}">ডকুমেন্টস</a>
                         <a  href="{!! url('/archive/video'); !!}">ভিডিও ফুটেজ</a>
+                         <a  href="{!! url('/archive/audio'); !!}">অডিও</a>
 
                     </div>
                 </div>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link " href="{!! url('/freedom_fighter/freedom_fighter'); !!}">মুক্তিযোদ্ধা‎ </a>
-            </li>
+            <li class="nav-item dropdown">
+                   <a class="nav-link " href="{!! url('/freedom_fighter'); !!}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        মুক্তিযোদ্ধা‎
+                    </a>
+                    <div class="dropdown" >
+                        <div class="dropdown-content">
+                            @foreach($ff_titles as $ff_title)
+                            <a  href="{!! url('/freedom_fighter/freedomfighter_title/'.$ff_title->id); !!}"> {{ $ff_title->nickname }}</a>
+
+                             @endforeach                                              
+
+                        </div>
+                            
+                        </div>
+                
+                </li>
+
 
             <li class="nav-item">
                 <a class="nav-link " href="{!! url('/books/books'); !!}">বই</a>
