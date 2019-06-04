@@ -45,6 +45,14 @@
                         </div>
                       </div>
                   </div>
+                   <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group label-floating">
+                          <label class="control-label">Content</label>
+                          <textarea class="ckeditor" name="content"></textarea>
+                        </div>
+                      </div>
+                  </div>
 
                   <a href="{{ route('period.index') }}" class="btn btn-danger">Back</a>
                   <button type="submit" class="btn btn-primary">Save</button>
