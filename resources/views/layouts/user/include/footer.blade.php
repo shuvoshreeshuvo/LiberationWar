@@ -49,11 +49,11 @@
 
       <hr class="clearfix w-100 d-md-none">
 
-      <!-- Grid column -->
+       {{--<!-- Grid column -->
       <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
 
         <!-- Links -->
-        <h5 class="font-weight-bold text-uppercase mb-4">About</h5>
+       <h5 class="font-weight-bold text-uppercase mb-4">About</h5>
 
         <ul class="list-unstyled">
           <li>
@@ -78,7 +78,7 @@
           </li>
         </ul>
 
-      </div>
+      </div>--}}
       <!-- Grid column -->
 
       <hr class="clearfix w-100 d-md-none">
@@ -146,8 +146,8 @@
   <!-- Footer Links -->
 
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2018 Copyright:
-    <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+  <div class="footer-copyright text-center py-3">© 2019 Copyright:
+    <a href="#"> </a>
   </div>
   <!-- Copyright -->
 
