@@ -23,9 +23,12 @@
                     <table id="table" class="table" width="100%">
                        <thead class="text-primary">
                           <th style="width: 50px;">Id</th>
+                          <th>Number</th>
                           <th>Name</th>
                           <th>Freedom Fighter Title</th>
-                           <th>Sub Title</th>
+                          <th>Sector</th>
+                          <th>Title</th>
+                          <th>Gadget Number</th>
                           <th>Image</th>
                           <th>Content</th>
                           <th>Created At</th>
@@ -37,15 +40,18 @@
                              @foreach($freedom_fighter as $key=>$freedom_fighter)
                             <tr>
                               <td>{{ $key + 1 }}</td>
+                              <td>{{ $freedom_fighter->number }}</td> 
                               <td>{{ $freedom_fighter->name }}</td> 
                               <td>{{ $freedom_fighter->ff_title->nickname }}</td>
-                               <td>{{ $freedom_fighter->subname }}</td>
+                               <td>{{ $freedom_fighter->sector }}</td>
+                               <td>{{ $freedom_fighter->title }}</td>
+                               <td>{{ $freedom_fighter->gadget_number }}</td>
                               <td><img class="img-responsive img-thumbnail" src="{{ asset('uploads/freedom_fighter/'.$freedom_fighter->image) }}" style="height:100px;width:100px" alt=""></td>
                                <td>{{ $freedom_fighter->content }}</td>
                               <td>{{ $freedom_fighter->created_at }}</td>
                               <td>{{ $freedom_fighter->updated_at }}</td>
                               <td> 
-                                <a href="{{ route('freedom_fighter.edit',$freedom_fighter->id) }}" class="btn btn-info btn-sm"><i class="material-icons">mode_edit</i></a>
+                                 <a href="{{ route('freedom_fighter.edit',$freedom_fighter->id) }}" class="btn btn-info btn-sm"><i class="material-icons">mode_edit</i></a>
                                  <form  id="delete-form-{{ $freedom_fighter->id }}"  action="{{ route('freedom_fighter.destroy',$freedom_fighter->id) }}" style="display:none;"method="POST">
                                     {{ csrf_field() }}
                                     {{ method_field('DELETE') }}
@@ -53,7 +59,7 @@
                                  </form>
                                 <button type="button" class="btn btn-danger btn-sm" onclick="if(confirm('Are you sure ? confirm delect this?'))
                                 {
-                                  freedom_fighter.preventDefault();
+                                  event.preventDefault();
                                   document.getElementById('delete-form-{{ $freedom_fighter->id }}').submit();
                                 }else{
                                   event.preventDefault();
