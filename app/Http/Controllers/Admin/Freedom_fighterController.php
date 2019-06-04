@@ -43,10 +43,10 @@ class Freedom_fighterController extends Controller
          $this->validate($request,[
 
             'ff_title' => 'required',
-            'name' => 'required',
-            'subname' => 'required',
-            'image' => 'required|mimes:jpeg,jpg,bmp,png',
-            'content' => 'required',
+           // 'name' => 'required',
+          
+           // 'image' => 'mimes:jpeg,jpg,bmp,png',
+            
 
                
         ]);
@@ -71,8 +71,11 @@ class Freedom_fighterController extends Controller
          }
          $freedom_fighter = new Freedom_fighter();
          $freedom_fighter->ff_title_id = $request->ff_title;
+         $freedom_fighter->number = $request->number;
          $freedom_fighter->name = $request->name;
-         $freedom_fighter->subname = $request->subname;
+         $freedom_fighter->sector = $request->sector;
+         $freedom_fighter->title = $request->title;
+         $freedom_fighter->gadget_number = $request->gadget_number;
          $freedom_fighter->image= $imagetitle;
          $freedom_fighter->content = $request->content;
         
@@ -118,10 +121,9 @@ class Freedom_fighterController extends Controller
          $this->validate($request,[
 
             'ff_title' => 'required',
-            'name' => 'required',
-            'subname' => 'required',
-            'image' => 'required|mimes:jpeg,jpg,bmp,png',
-            'content' => 'required',
+            
+             //'image' => 'mimes:jpeg,jpg,bmp,png',
+            
         ]);
 
          $freedom_fighter=Freedom_fighter::find($id);
@@ -147,12 +149,15 @@ class Freedom_fighterController extends Controller
          }
         
          $freedom_fighter->ff_title_id = $request->ff_title;
+         $freedom_fighter->number = $request->number;
          $freedom_fighter->name = $request->name;
-         $freedom_fighter->subname = $request->subname;
+         $freedom_fighter->sector = $request->sector;
+         $freedom_fighter->title = $request->title;
+         $freedom_fighter->gadget_number = $request->gadget_number;
          $freedom_fighter->image= $imagetitle;
          $freedom_fighter->content = $request->content;
          
-         $event->save();
+         $freedom_fighter->save();
           return redirect()->route('freedom_fighter.index')->with('successMsg','Freedom Fighter Succesfully Updated');
 
 
