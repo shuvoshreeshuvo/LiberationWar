@@ -25,6 +25,7 @@
                           <th style="width: 50px;">Id</th>
                           <th>Nickname</th>
                           <th>Number</th>
+                           <th>Image</th>
                           <th>Created At</th>
                           <th>Updated At</th>
                           <th>Action</th>
@@ -36,6 +37,7 @@
                               <td>{{ $key + 1 }}</td>
                               <td>{{ $ff_title->nickname }}</td>
                               <td>{{ $ff_title->number }}</td>
+                              <td>{{ $ff_title->image }}</td>
                               <td>{{ $ff_title->created_at }}</td>
                               <td>{{ $ff_title->updated_at }}</td>
                               <td> 
