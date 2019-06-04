@@ -26,6 +26,7 @@
                           <th>Name</th>
                           <th>Starting Year</th>
                           <th>Ending Year</th>
+                           <th>Content</th>
                           <th>Created At</th>
                           <th>Updated At</th>
                           <th>Action</th>
@@ -38,6 +39,7 @@
                               <td>{{ $period->name }}</td>
                               <td>{{ $period->starting_year }}</td>
                               <td>{{ $period->ending_year }}</td>
+                              <td>{{ $period->content }}</td>
                               <td>{{ $period->created_at }}</td>
                               <td>{{ $period->updated_at }}</td>
                               <td> 
