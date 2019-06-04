@@ -34,6 +34,14 @@
                       </div>
                     </div>
 
+                  <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group label-floating">
+                          <label class="control-label">Number</label>
+                          <input type="text" class="form-control" name="number">
+                        </div>
+                      </div>
+                  </div>
 
                     <div class="row">
                       <div class="col-md-12">
@@ -46,8 +54,25 @@
                   <div class="row">
                       <div class="col-md-12">
                         <div class="form-group label-floating">
-                          <label class="control-label">Sub Title</label>
-                          <input type="text" class="form-control" name="subname">
+                          <label class="control-label">Sector</label>
+                          <input type="text" class="form-control" name="sector">
+                        </div>
+                      </div>
+                  </div>
+
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group label-floating">
+                          <label class="control-label">Title</label>
+                          <input type="text" class="form-control" name="title">
+                        </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group label-floating">
+                          <label class="control-label">Gadget Number</label>
+                          <input type="text" class="form-control" name="gadget_number">
                         </div>
                       </div>
                   </div>
@@ -55,27 +80,27 @@
                    <div class="row">
                       <div class="col-md-12">
                         <label class="control-label">Image</label>
-                          <input type="file" name="image">
+                          <input type="file" name="image" class="form-control">
                         </div>
                       </div>
-                  </div>
+                  
 
 
                    <div class="row">
                       <div class="col-md-12">
                         <div class="form-group label-floating">
                           <label class="control-label">Content</label>
-                          <textarea class="form-control" name="content"></textarea>
+                          <textarea class="ckeditor" name="content"></textarea>
                         </div>
                       </div>
                   </div>
 
 
-                  
+                 
 
                   <a href="{{ route('freedom_fighter.index') }}" class="btn btn-danger">Back</a>
                   <button type="submit" class="btn btn-primary">Save</button>
-                
+                </form> 
               </div>
             </div>
             
