@@ -24,6 +24,7 @@ tr:nth-child(even) {
 
 <div class="container">
     <h3 style="text-align: center; color:red;" class="m-4">বাংলাদেশের স্বাধীনতা যুদ্ধের খেতাবপ্রাপ্ত মুক্তিযোদ্ধা </h3>
+    <hr>
  @foreach($freedom_fighters as $freedom_fighter)
        <table>
   		<tr>
@@ -37,7 +38,7 @@ tr:nth-child(even) {
 
   <tr>
     <td>{{ $freedom_fighter->number }}</td>
-    <td> {{ $freedom_fighter->name }}</td> </a>
+    <td> <a href="{!! url('freedom_fighter/details/'.$freedom_fighter->id); !!}"> {{ $freedom_fighter->name }}  </a></td>
     <td>{{ $freedom_fighter->sector }}</td>
     <td>{{ $freedom_fighter->title }}</td>
     <td>{{ $freedom_fighter->gadget_number }}</td>
