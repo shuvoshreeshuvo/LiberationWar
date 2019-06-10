@@ -11,7 +11,8 @@
    <div class="img">
       <img style="height:300px;width:300px" class="rounded float-right"  src="{{ asset('/uploads/FreedomFighter/'.$freedom_fighter->image) }}" />
     </div>
-    <div class="content">   
+    <div class="content ">   
+    	
        <p>{!! $freedom_fighter->content !!}</p>
     </div>
 
