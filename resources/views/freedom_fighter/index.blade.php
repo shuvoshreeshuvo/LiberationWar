@@ -8,6 +8,7 @@
 
 <div class="container">
     <h2 style="text-align: center; color:red;" class="m-4">বাংলাদেশের স্বাধীনতা যুদ্ধের খেতাবপ্রাপ্ত মুক্তিযোদ্ধা</h2>
+    <hr>
 
       
       <div class="row">
@@ -15,7 +16,7 @@
         <div class="col-md-6">
             <div class="thumbnail">
              <div class="polaroid">
-                    <img src="{{ asset('/uploads/ff_title/'.$ff_title->image) }}"  class="img-thumbnail" alt="Fjords" width="304" height="236">
+                    <img src="{{ asset('/uploads/ff_title/'.$ff_title->image) }}"  class="img-thumbnail" width="304" height="236">
                     <div class="caption">
                         <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
                     </div>
