@@ -7,7 +7,7 @@ use App\Period;
 use App\Ff_title;
 use App\Document;
 use App\Videofootage;
-use App\Image;
+use App\Archive;
 
 class ArchiveController extends Controller
 {
@@ -21,8 +21,8 @@ class ArchiveController extends Controller
     public function Image(){
         $periods=Period::all();
         $ff_titles=Ff_title::all();
-        $image=Image::all();
-        return view('Archive.Image',compact('periods','ff_titles','image'));
+        $archive=Archive::all();
+        return view('Archive.Image',compact('periods','ff_titles','archive'));
     }
     
     public function VideoFootage(){
