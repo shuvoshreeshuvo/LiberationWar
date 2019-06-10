@@ -44,7 +44,7 @@ class ArchiveController extends Controller
             'title' => 'required',
             'year' => 'required',
             'type' => 'required',
-            'media' => 'required|mimes:jpeg,jpg,png,bmp',
+            
             'description' => 'required',
             
 
@@ -70,7 +70,7 @@ class ArchiveController extends Controller
            $archive->title = $request->title;
             $archive->year = $request->year;
                $archive->type = $request->type;
-                  $archive->media = $medianame;
+                  $archive->media =  $medianame;
                      $archive->description = $request->description;
          
          $archive->save();
@@ -117,7 +117,7 @@ class ArchiveController extends Controller
             'title' => 'required',
             'year' => 'required',
             'type' => 'required',
-            'media' => 'required|mimes:jpeg,jpg,png,bmp',
+           
             'description' => 'required',
             
 
