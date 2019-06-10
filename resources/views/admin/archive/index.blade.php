@@ -48,7 +48,7 @@
                                 <td><img class="img-responsive img-thumbnail" src="{{ asset('uploads/archive/'.$archive->media) }}" style="height:100px;width:100px" alt=""></td>
                               @endif
                               
-                                <td>Video</td>
+                               
                               
                              <td>{{ $archive->description}}</td>
                               <td>{{ $archive->created_at }}</td>
