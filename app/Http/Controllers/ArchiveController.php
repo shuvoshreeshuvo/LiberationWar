@@ -13,9 +13,10 @@ class ArchiveController extends Controller
 {
     public function Documents(){
         $periods=Period::all();
-
+        $ff_titles=Ff_title::all();
         $document=Document::all();
-        return view('Archive.Documents',compact('document'));
+
+        return view('Archive.Documents',compact('periods','ff_titles','document'));
     }
 
     public function Image(){
