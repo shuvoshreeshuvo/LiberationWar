@@ -37,7 +37,7 @@
                               <td>{{ $key + 1 }}</td>
                               <td>{{ $ff_title->nickname }}</td>
                               <td>{{ $ff_title->number }}</td>
-                              <td>{{ $ff_title->image }}</td>
+                              <td><img class="img-responsive img-thumbnail" src="{{ asset('uploads/ff_title/'.$ff_title->image) }}" style="height:100px;width:100px" alt=""></td>
                               <td>{{ $ff_title->created_at }}</td>
                               <td>{{ $ff_title->updated_at }}</td>
                               <td> 
