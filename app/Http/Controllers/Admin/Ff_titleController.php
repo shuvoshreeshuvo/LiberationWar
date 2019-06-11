@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Ff_title;
+use Carbon\Carbon;
+
 class Ff_titleController extends Controller
 {
     /**
@@ -43,6 +45,8 @@ class Ff_titleController extends Controller
 
             
         ]);
+
+
          $image = $request->file('image');
          $slug = str_slug($request->title);
          if(isset($image))
@@ -65,7 +69,7 @@ class Ff_titleController extends Controller
          $ff_title = new Ff_title();
          $ff_title->nickname = $request->nickname;
          $ff_title->number = $request->number;
-         $ff_title->image = $request->image;
+         $ff_title->image =  $imagetitle;
          $ff_title->save();
          return redirect()->route('freedomfighter_title.index')->with('successMsg','Nickname Succesfully Saved');
     }
@@ -130,10 +134,11 @@ class Ff_titleController extends Controller
          }else{
               $imagetitle = $ff_title->image;
          }
-        
+
+         
          $ff_title->nickname = $request->nickname;
          $ff_title->number = $request->number;
-          $ff_title->image = $request->image;
+          $ff_title->image = $imagetitle;
          $ff_title->save();
          return redirect()->route('freedomfighter_title.index')->with('successMsg','Nickname Succesfully Updated');
     }
