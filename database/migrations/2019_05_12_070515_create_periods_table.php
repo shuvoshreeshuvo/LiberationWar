@@ -18,6 +18,7 @@ class CreatePeriodsTable extends Migration
             $table->string('name');
             $table->string('starting_year');
             $table->string('ending_year');
+            $table->string('image');
             $table->string('content');
             $table->timestamps();
         });
