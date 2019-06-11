@@ -50,7 +50,8 @@ class ArchiveController extends Controller
 
         ]);
 
-        $media= $request->file('media');
+
+         $media= $request->file('media');
         $slug= str_slug($request->title);
         if(isset($media))
         {
@@ -67,12 +68,12 @@ class ArchiveController extends Controller
                 $medianame ='dafault.png';
             }
             $archive = new Archive();
-           $archive->title = $request->title;
+            $archive->title = $request->title;
             $archive->year = $request->year;
-               $archive->type = $request->type;
-                  $archive->media =  $medianame;
-                     $archive->description = $request->description;
-         
+            $archive->type = $request->type;
+            $archive->media =  $medianame;
+            $archive->description = $request->description;
+
          $archive->save();
          return redirect()->route('archive.index')->with('successMsg','Archive Succesfully Saved');
 
@@ -123,10 +124,11 @@ class ArchiveController extends Controller
 
         ]);
 
-        $media= $request->file('media');
-        $slug= str_slug($request->title);
-        $archive=Archive::find($id);
-        if(isset($media))
+
+          $archive=Archive::find($id);
+          $media= $request->file('media');
+          $slug= str_slug($request->title);
+               if(isset($media))
         {
             $currentdate =Carbon::now()->toDateString();
             $medianame =$slug .'-'. $currentdate .'-'. uniqid() .'.'.
