@@ -41,10 +41,10 @@
                   </div>
                   
 
-                  <div class="row">
+                 <div class="row">
                       <div class="col-md-12">
                         <label class="control-label">Image</label>
-                          <input type="file" name="image"  class="form-control">
+                          <input type="file" name="image" class="form-control">
                         </div>
                       </div>
                 
