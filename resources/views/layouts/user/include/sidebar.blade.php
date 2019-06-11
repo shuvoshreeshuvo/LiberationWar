@@ -1,14 +1,15 @@
 <style>
 
 .sidenav {
-  width: 200px;
+  height: 100%;
+  width: 160px;
   position: fixed;
   z-index: 1;
-  top: 150px;
-  left: 10px;
+  top:0;
+  left: 0;
   background: #eee;
   overflow-x: hidden;
-  padding: 8px 0;
+ padding-top: 70px;
 }
 
 .sidenav a {
