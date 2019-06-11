@@ -122,27 +122,49 @@
 <div class="container" >
     <h2 style="text-align: center;color: red">স্বাধীনতার যাত্রা</h2>
 
-    <div class="row">
+<div class="row">
+   @if($periods->count() > 0)
+    @foreach($periods as $period)
+
+    
         <div class="col-md-4">
             <div class="thumbnail">
                 <h3 style="text-align: center;font-size: 22px;color: #ff0000" >ভাষা আন্দোলনের সূত্রপাত</h3>
                 <div class="polaroid">
-                    <img src="https://www.newsg24.com/uploadFile/6f8dd_21_long.jpg"  class="img-thumbnail" alt="Fjords" width="304" height="236">
+                     <img src="{{ asset('/uploads/period/'.$period->image) }}"  class="img-thumbnail" alt="Fjords" width="304" height="236">
+
                     <div class="caption">
-                        <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+                        <p class="lead text-secondary">
+                        
+                        {!! str_limit($period->content, $limit = 100, $end = '...') !!}
+                    </p>
                     </div>
                 </div>
 
 
                 <p style="text-align: center;">
                            <span class="wpb_button align_center">
-                               <a href="{!! url('/etihash/languagemovement/index'); !!}" class="g-btn color_green">
+                               <a href="{!! url('/etihash/period/'.$period->id); !!}" class="g-btn color_green">
                                    <span>Read More</span>
                                </a>
                            </span>
                 </p>
             </div>
         </div>
+        @endforeach
+         @else
+            <div class="col-md-12" style="text-align: center;">
+                <h1>No Data Found.</h1>
+            </div>
+        @endif
+    </div>
+</div>
+
+
+
+
+
+{{--
         <div class="col-md-4">
             <div class="thumbnail">
                 <h3 style="text-align: center; font-size: 22px;color: #ff0000">গণ অভ্যুত্থান</h3>
@@ -181,7 +203,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 
 <h4 class="section-heading3"><a href="#">ছবি</a></h4>
 
