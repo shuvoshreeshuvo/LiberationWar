@@ -3,18 +3,22 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 use App\Period;
 use App\Ff_title;
 use App\Document;
 use App\Videofootage;
 use App\Archive;
 
+
 class ArchiveController extends Controller
 {
     public function Documents(){
         $periods=Period::all();
         $ff_titles=Ff_title::all();
-        $document=Document::all();
+        $document= DB::table('archives') 
+                   ->where('type', 'document')
+                   ->get();
 
         return view('Archive.Documents',compact('periods','ff_titles','document'));
     }
@@ -22,8 +26,10 @@ class ArchiveController extends Controller
     public function Image(){
         $periods=Period::all();
         $ff_titles=Ff_title::all();
-        $archive=Archive::all();
-        return view('Archive.Image',compact('periods','ff_titles','archive'));
+        $image=DB::table('archives') 
+                   ->where('type', 'image')
+                   ->get();
+        return view('Archive.Image',compact('periods','ff_titles','image'));
     }
     
     public function VideoFootage(){
