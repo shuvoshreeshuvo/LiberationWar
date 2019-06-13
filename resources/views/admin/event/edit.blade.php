@@ -73,7 +73,7 @@
 
 
                 
-                  <a href="{{ route('period.index') }}" class="btn btn-danger">Back</a>
+                  <a href="{{ route('event.index') }}" class="btn btn-danger">Back</a>
                   <button type="submit" class="btn btn-primary">Save</button>
                 </form>
               </div>
