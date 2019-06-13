@@ -127,7 +127,7 @@ class Ff_titleController extends Controller
             {
                 mkdir('uploads/ff_title',0777,true);
             }
-            unlink('uploads/ff_title/'.$event->image);
+            unlink('uploads/ff_title/'.$ff_title->image);
             $image->move('uploads/ff_title',$imagetitle);
 
             
