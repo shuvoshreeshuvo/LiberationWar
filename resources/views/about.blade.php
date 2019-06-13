@@ -14,27 +14,28 @@
 
 
 <div class="col-md-6 pt-md-5">
-	<h3>Get in Touch with Us</h3>
+	<h3>আমাদের সাথে যোগাযোগ করুন</h3>
 <form  method="post" action="{{ route('contact.send') }}">
     {{ csrf_field() }}
 
 <div class="form-group">
-    <label for="exampleInputPassword1">Name</label>
-    <input type="name" class="form-control" id="exampleInputName1" name="name" placeholder="Enter your name">
+    <label for="exampleInputPassword1">নাম</label>
+    <input type="name" class="form-control" id="exampleInputName1" name="name" placeholder="আপনার নাম">
   </div>
 
   <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input  type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Enter your email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <label for="exampleInputEmail1">ইমেইল</label>
+    <input  type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="আপনার ইমেইল">
+    <small id="emailHelp" class="form-text text-muted">
+আমরা অন্য কারো সাথে আপনার ইমেইল শেয়ার করব না।</small>
   </div>
 
   <div class="form-group">
-    <label for="exampleFormControlTextarea1">Message</label>
+    <label for="exampleFormControlTextarea1"></label>
     <textarea class="form-control" name="message" id="exampleFormControlTextarea1"  rows="3" ></textarea>
   </div>
   
-  <input type="submit" class="btn btn-success" value="Send Message">
+  <input type="submit" class="btn btn-success" value="বার্তা পাঠান">
 </form>
 
 </div>
