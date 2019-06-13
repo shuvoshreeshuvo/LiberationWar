@@ -54,7 +54,7 @@ Route::get('/1971', function () {
 })->name('1971');
 
 
-Route::get('/bongobondu/bongobondu', 'BongobonduController@Bongobondu');
+Route::get('/bongobondu', 'BongobonduController@Bongobondu');
 
 
 Route::get('/archive/documents', 'ArchiveController@Documents');
