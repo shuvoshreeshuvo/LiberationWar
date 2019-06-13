@@ -62,7 +62,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link " href="{!! url('/bongobondu/bongobondu'); !!}">বঙ্গবন্ধু</a>
+                    <a class="nav-link " href="{!! url('/bongobondu'); !!}">বঙ্গবন্ধু</a>
                 </li>
 
                 <li class="nav-item dropdown">
@@ -123,13 +123,13 @@
     <h2 style="text-align: center;color: red">স্বাধীনতার যাত্রা</h2>
 
 <div class="row">
+
    @if($periods->count() > 0)
     @foreach($periods as $period)
 
-    
-        <div class="col-md-4">
+           <div class="col-md-4">
             <div class="thumbnail">
-                <h3 style="text-align: center;font-size: 22px;color: #ff0000" >ভাষা আন্দোলনের সূত্রপাত</h3>
+                <h3 style="text-align: center;font-size: 22px;color: #ff0000" >{{ $period->name }}</h3>
                 <div class="polaroid">
                      <img src="{{ asset('/uploads/period/'.$period->image) }}"  class="img-thumbnail" alt="Fjords" width="304" height="236">
 
@@ -161,49 +161,6 @@
 </div>
 
 
-
-
-
-{{--
-        <div class="col-md-4">
-            <div class="thumbnail">
-                <h3 style="text-align: center; font-size: 22px;color: #ff0000">গণ অভ্যুত্থান</h3>
-                <div class="polaroid">
-                    <img src="http://risingbd.com/media/imgAll/2017December/bg/Gonoabothan20180124131458.jpg"  class="img-thumbnail" alt="Fjords" width="304" height="236">
-                    <div class="caption">
-                        <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-                    </div>
-                </div>
-                <p style="text-align: center;">
-                           <span class="wpb_button align_center">
-                               <a href="{!! url('/etihash/massuprisingg'); !!}" class="g-btn color_green">
-                                   <span>Read More</span>
-                               </a>
-                           </span>
-                </p>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="thumbnail">
-                <h3 style="text-align: center; font-size: 22px;color: #ff0000">মুক্তিযুদ্ধ</h3>
-
-                <div class="polaroid">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQobjU7N5WWtqIrG-qU3u4_Cr3gJJppDwlUJABp4laDaQ-Ld8g8"  class="img-thumbnail" alt="Fjords" width="304" height="236">
-                    <div class="caption">
-                        <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-                    </div>
-                </div>
-                <p style="text-align: center;">
-                           <span class="wpb_button align_center">
-                               <a href="{!! url('/etihash/liberationwar/liberationwar'); !!}" class="g-btn color_green">
-                                   <span>Read More</span>
-                               </a>
-                           </span>
-                </p>
-            </div>
-        </div>
-    </div>
-</div> --}}
 
 <h4 class="section-heading3"><a href="#">ছবি</a></h4>
 
@@ -361,27 +318,7 @@
 
 
 <!-- Footer -->
-<footer class="page-footer font-small stylish-color-dark pt-4">
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 ">
-                <!-- Content -->
-                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">আমাদের সম্পর্কে</h5>
-                <p>বহু মানুষের আত্মত্যাগ ও বীরত্বের মাধ্যমে পাকিস্তানি হানাদার বাহিনীকে পরাজিত করে আমরা পেয়েছি আমাদের স্বাধীনতা। জাতি অর্জন করেছে বিজয়। ইতিহাসে আমরা পরিচিত হয়েছি বীর বাঙালি ও বিজয়ী জাতি হিসাবে।নতুন প্রজন্মকে মুক্তিযুদ্ধের সঠিক ইতিহাস জানতে হবে। স্বাধীনতার চেতনায় দেশকে...</p>
-            </div>
-
-        </div>
-        <a style="font-size:15px;text-decoration: none;color: white" href="About">Read More</a>
-    </div>
-
-
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2019 Copyright. All rights reserved.
-    </div>
-    <!-- Copyright -->
-
-</footer>
+@include('layouts.user.include.footer')
 <!-- Footer -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
