@@ -1,32 +1,3 @@
-
-
-
-<!-- Footer -->
-{{--<footer class="page-footer font-small stylish-color-dark pt-6">
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 ">
-                <!-- Content -->
-                <h5 class="font-weight-bold text-uppercase mt-3 mb-4"></h5>
-                <p>বহু মানুষের আত্মত্যাগ ও বীরত্বের মাধ্যমে পাকিস্তানি হানাদার বাহিনীকে পরাজিত করে আমরা পেয়েছি আমাদের স্বাধীনতা। জাতি অর্জন করেছে বিজয়। ইতিহাসে আমরা পরিচিত হয়েছি বীর বাঙালি ও বিজয়ী জাতি হিসাবে।নতুন প্রজন্মকে মুক্তিযুদ্ধের সঠিক ইতিহাস জানতে হবে। স্বাধীনতার চেতনায় দেশকে...</p>
-            </div>
-
-        </div>
-        <a style="font-size:15px;text-decoration: none;color: white" href="About">Read More</a>
-    </div>
-
-
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2019 Copyright. All rights reserved.
-    </div>
-    <!-- Copyright -->
-
-  
-
-</footer>
-<!-- Footer -->--}}
-
 <!-- Footer -->
 <footer class="page-footer font-small mdb-color lighten-3 pt-4">
 
