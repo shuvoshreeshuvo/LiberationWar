@@ -14,10 +14,10 @@
   }
 </style>
 <div class="container">
-
+   <h3 style="text-align:center; color:red;" >ডকুমেন্টস</h3>
     @foreach($document as $data)
 
-      <a href={{ $data-> path }}><img  class="images" src="{{ $data-> path }}" style="width:100%;max-width:300px" /> </a>
+      <a href="{{ URL::to('/uploads/archive/'.$data->media) }}"><img  class="images" src="{{ asset('uploads/archive/'.$data->media) }}" style="width:100%;height:300px;max-width:300px" /> </a>
 
     @endforeach
 </div>
