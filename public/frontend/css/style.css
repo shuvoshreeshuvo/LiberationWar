@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-    margin-top: 100px;
+    margin-top: 50px;
     margin-left: 200px;
 }
 
@@ -203,7 +203,7 @@ h3{
     color: red
 }
 
-h4,a{
+h4{
     color:red;
     font-size: 22px;
     text-align: center;
