@@ -56,7 +56,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link " href="{!! url('/bongobondu/bongobondu'); !!}">বঙ্গবন্ধু</a>
+                <a class="nav-link " href="{!! url('/bongobondu'); !!}">বঙ্গবন্ধু</a>
             </li>
 
             <li class="nav-item dropdown">
@@ -78,7 +78,7 @@
                    <a class="nav-link " href="{!! url('/freedom_fighter'); !!}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         মুক্তিযোদ্ধা‎
                     </a>
-                    <div class="dropdown" >
+                     <div class="dropdown" >
                         <div class="dropdown-content">
                             @foreach($ff_titles as $ff_title)
                             <a  href="{!! url('/freedom_fighter/freedomfighter_title/'.$ff_title->id); !!}"> {{ $ff_title->nickname }}</a>
@@ -86,8 +86,7 @@
                              @endforeach                                              
 
                         </div>
-                            
-                        </div>
+                    </div>
                 
                 </li>
 
