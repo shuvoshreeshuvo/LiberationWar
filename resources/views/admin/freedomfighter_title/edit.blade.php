@@ -18,7 +18,7 @@
                 </div>
                 <div class="card-body">
                  
-                  <form method="POST"action="{{ route('freedomfighter_title.update',$ff_title->id)}}" >
+                  <form method="POST"action="{{ route('freedomfighter_title.update',$ff_title->id)}}"enctype="multipart/form-data" >
                     {{ csrf_field() }}
                     {{ method_field('PUT') }}
 
