@@ -1,6 +1,6 @@
 @extends('layouts.front')
 
-@section('title', 'মুকিযোদ্ধা')
+@section('title', 'মুক্তিযোদ্ধা')
 
 @section('content') 
 
@@ -15,18 +15,24 @@ td, th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
+  color: white;
+
+}
+
+tr:nth-child(odd) {
+  background-color: #5de282;
 }
 
 tr:nth-child(even) {
-  background-color: #ffffff;
+  background-color: #dd6a6a;
 }
 </style>
 
 <div class="container">
     <h3 style="text-align: center; color:red;" class="m-4">বাংলাদেশের স্বাধীনতা যুদ্ধের খেতাবপ্রাপ্ত মুক্তিযোদ্ধা </h3>
     <hr>
- @foreach($freedom_fighters as $freedom_fighter)
-       <table>
+ 
+       <table border="1">
   		<tr>
     		<th>ক্রম</th>
     		<th>নাম</th>
@@ -35,14 +41,16 @@ tr:nth-child(even) {
     		<th>গ্যাজেট নম্বর</th>
    		</tr>
   
-
+@foreach($freedom_fighters as $freedom_fighter)
   <tr>
     <td>{{ $freedom_fighter->number }}</td>
-    <td> <a href="{!! url('freedom_fighter/details/'.$freedom_fighter->id); !!}"> {{ $freedom_fighter->name }}  </a></td>
+    <td> <a style="color:#351fc4;" href="{!! url('freedom_fighter/details/'.$freedom_fighter->id); !!}"> {{ $freedom_fighter->name }}  </a></td>
     <td>{{ $freedom_fighter->sector }}</td>
     <td>{{ $freedom_fighter->title }}</td>
     <td>{{ $freedom_fighter->gadget_number }}</td>
   </tr>
+
+      @endforeach
 </table>
 
   
@@ -53,7 +61,6 @@ tr:nth-child(even) {
     </div>--}}
    
 
-      @endforeach
       
   </div>
   
