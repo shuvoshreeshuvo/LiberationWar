@@ -42,9 +42,10 @@ class PeriodController extends Controller
             'name' => 'required',
             'starting_year' => 'required',
             'ending_year' => 'required',
+            // 'image'=>'mimes:jpeg,jpg,bmp,png',
         ]);
         $image= $request->file('image');
-        $slug= str_slug($request->title);
+        $slug= str_slug($request->name);
         if(isset($image))
         {
             $currentdate =Carbon::now()->toDateString();
@@ -102,14 +103,17 @@ class PeriodController extends Controller
      */
     public function update(Request $request, $id)
     {
+        
         $this->validate($request,[
 
-            'name' => 'required'
-            
+            'name' => 'required',
+            'starting_year' => 'required',
+            'ending_year' => 'required',
+           // 'image'=>'mimes:jpeg,jpg,bmp,png',
         ]);
-        $period = Period::find($id);
-         $image= $request->file('image');
-        $slug= str_slug($request->title);
+        $image= $request->file('image');
+        $slug= str_slug($request->name);
+        $period=Period::find($id);
         if(isset($image))
         {
             $currentdate =Carbon::now()->toDateString();
@@ -122,7 +126,7 @@ class PeriodController extends Controller
              $image->move('uploads/period',$imagename);
             }else {
 
-                $imagename =$period->image;
+                $imagename = $period->image;
             }
 
          
@@ -133,7 +137,10 @@ class PeriodController extends Controller
          $period->content = $request->content;
          $period->save();
          return redirect()->route('period.index')->with('successMsg','Period Succesfully Updated');
-    }
+   
+
+
+            }
 
     /**
      * Remove the specified resource from storage.
