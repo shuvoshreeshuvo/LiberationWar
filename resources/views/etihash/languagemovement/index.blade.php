@@ -4,12 +4,16 @@
 
 @section('content') 
 
-</style>
 
 <div class="container">
     <h3 style="text-align: center; color:red;" class="m-4">ভাষা আন্দোলন কালপঞ্জি </h3>
-     
 
+    @foreach($periods as $period)    
+     <div class="content">   
+       <p>{!! $period->content !!}</p>
+    </div>
+    @endforeach
+        
 <div class="row ">
 
     @if($events->count() > 0)
