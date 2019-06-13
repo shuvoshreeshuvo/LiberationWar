@@ -41,11 +41,11 @@ class ArchiveController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-            'title' => 'required',
-            'year' => 'required',
-            'type' => 'required',
+           // 'title' => 'required',
+           // 'year' => 'required',
+           // 'type' => 'required',
             
-            'description' => 'required',
+           // 'description' => 'required',
             
 
         ]);
@@ -65,7 +65,7 @@ class ArchiveController extends Controller
              $media->move('uploads/archive',$medianame);
             }else {
 
-                $medianame ='dafault.png';
+                $medianame ='default.png';
             }
             $archive = new Archive();
             $archive->title = $request->title;
@@ -165,10 +165,12 @@ class ArchiveController extends Controller
     public function destroy($id)
     {
         $archive=Archive::find($id);
-        if(file_exists('uploads/archive/'.$archive->media)){
+        if($archive->media != 'default.png'){
+            if(file_exists('uploads/archive/'.$archive->media)){
             
                 unlink('uploads/archive/'.$archive->media);
             }
+        }
         $archive->delete();  
          return redirect()->back()->with('successMsg','Archive  Succesfully Deleted');
  
