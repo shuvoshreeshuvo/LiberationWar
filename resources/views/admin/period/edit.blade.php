@@ -18,7 +18,7 @@
                 </div>
                 <div class="card-body">
                  
-                  <form method="POST"action="{{ route('period.update',$period->id)}}" >
+                  <form method="POST"action="{{ route('period.update',$period->id)}}"  enctype="multipart/form-data" >
                     {{ csrf_field() }}
                     {{ method_field('PUT') }}
 
