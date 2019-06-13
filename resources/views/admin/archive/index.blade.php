@@ -50,7 +50,7 @@
                               
                                
                               
-                             <td>{{ $archive->description}}</td>
+                             <td>{!! $archive->description !!}</td>
                               <td>{{ $archive->created_at }}</td>
                               <td>{{ $archive->updated_at }}</td>
                               <td> 
