@@ -134,6 +134,36 @@ div.polaroid {
     margin-bottom: 25px;
 }
 
+div.polaroids {
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+div.polar{
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+    width: auto;
+}
+
+div.polar img {
+    border: 12px solid #fff;
+    border-bottom: 70px solid #fff;
+    -webkit-box-shadow: 3px 3px 3px #888;
+    -moz-box-shadow: 3px 3px 3px #888;
+    box-shadow: 3px 3px 3px #888;
+    height: 250px;
+    max-width: 100%;
+}
+div.polar p {
+    color: #888;
+    font: 500 18px/22px Arial, sans-serif;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
 div.polaroid:hover img{
     filter: brightness(100%);
     transform: scale(1.3);
@@ -146,6 +176,7 @@ div.polaroid:hover img{
     max-width: 100%;
     height: 150px;
 }
+
 span.wpb_button a{
     text-decoration: none;
 }
