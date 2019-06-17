@@ -24,7 +24,7 @@
   </div>
 
   <div class="form-group">
-    <label for="exampleInputEmail1">ইমেইল</label>
+    <label for="exampleInputEmail1">ই-মেইল</label>
     <input  type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="আপনার ইমেইল">
     <small id="emailHelp" class="form-text text-muted">
 আমরা অন্য কারো সাথে আপনার ইমেইল শেয়ার করব না।</small>
