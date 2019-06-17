@@ -47,6 +47,26 @@
                           <input type="file" name="image" class="form-control">
                         </div>
                       </div>
+
+                     <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group label-floating">
+                          <label class="control-label">Content</label>
+                         <textarea class="ckeditor" name="content">{{ $ff_title->content }}</textarea>
+                        </div>
+                      </div>
+                  </div>
+
+
+                  <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group label-floating">
+                          <label class="control-label">Intro</label>
+                         <textarea class="ckeditor" name="intro">{{ $ff_title->intro }}</textarea>
+                        </div>
+                      </div>
+                  </div>
+
                 
 
                 
