@@ -20,6 +20,24 @@
                  
                   <form method="POST"action="{{ route('book.store')}}" enctype="multipart/form-data">
                     {{ csrf_field() }}
+
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group label-floating">
+                          <label class="control-label">Book Category</label>
+                         <select class="form-control" name="bookcategory">
+                          <option>Book Category</option>
+                           @foreach($bookcategories as $bookcategory)
+                           <option value="{{ $bookcategory->id }}">{{ $bookcategory->book_type }}</option>
+                           @endforeach
+                         </select>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+
                    <div class="row">
                       <div class="col-md-12">
                         <div class="form-group label-floating">
