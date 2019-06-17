@@ -18,6 +18,8 @@ class CreateFfTitlesTable extends Migration
             $table->string('nickname');
             $table->integer('number');
             $table->string('image');
+            $table->text('content');
+             $table->text('intro');
             $table->timestamps();
         });
     }
