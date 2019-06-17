@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Book;
+use App\Bookcategory;
 use Carbon\Carbon;
 
 
@@ -28,7 +29,8 @@ class BookController extends Controller
      */
     public function create()
     {
-        return view('admin.book.create');
+         $categories=Bookcategory::all();
+        return view('admin.book.create',compact('categories'));
     }
 
     /**
@@ -93,7 +95,8 @@ class BookController extends Controller
     public function edit($id)
     {
         $book=Book::find($id);
-        return view('admin.book.edit',compact('book'));
+        $categories =Bookcategory::all();
+        return view('admin.book.edit',compact('book','categories'));
     }
 
     /**
