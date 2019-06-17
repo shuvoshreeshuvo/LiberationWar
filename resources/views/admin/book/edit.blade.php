@@ -22,6 +22,22 @@
                     {{ csrf_field() }}
                     {{ method_field('PUT') }}
 
+                      <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group label-floating">
+                          <label class="control-label">Book Category</label>
+                         <select class="form-control" name="bookcategory">
+                           @foreach($bookcategories as $bookcategory)
+                           <option {{ $bookcategory->id == $book->bookcategory->id ? 'selected' : '' }}
+                            value="{{ $bookcategory->id }}"> {{ $bookcategory->book_type }} </option>
+                           @endforeach
+                         </select>
+                        </div>
+                      </div>
+                    </div>
+
+
+
                    <div class="row" >
                       <div class="col-md-12">
                         <div class="form-group label-floating">
