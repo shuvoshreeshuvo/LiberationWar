@@ -103,7 +103,7 @@ div.polaroid:hover .homeimage{
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="nav navbar-nav mx-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/">হোম <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/">হোম Home <span class="sr-only">(current)</span></a>
                 </li>
 
                 <li class="nav-item dropdown">
