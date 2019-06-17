@@ -26,6 +26,8 @@
                           <th>Nickname</th>
                           <th>Number</th>
                            <th>Image</th>
+                            <th>Content</th>
+                           <th>Intro</th>
                           <th>Created At</th>
                           <th>Updated At</th>
                           <th>Action</th>
@@ -38,6 +40,8 @@
                               <td>{{ $ff_title->nickname }}</td>
                               <td>{{ $ff_title->number }}</td>
                               <td><img class="img-responsive img-thumbnail" src="{{ asset('uploads/ff_title/'.$ff_title->image) }}" style="height:100px;width:100px" alt=""></td>
+                               <td>{!! $ff_title->content !!}</td>
+                               <td>{!! $ff_title->intro !!}</td>
                               <td>{{ $ff_title->created_at }}</td>
                               <td>{{ $ff_title->updated_at }}</td>
                               <td> 
