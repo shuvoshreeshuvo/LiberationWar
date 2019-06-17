@@ -23,6 +23,7 @@
                     <table id="table" class="table" width="100%">
                        <thead class="text-primary">
                           <th style="width: 50px;">Id</th>
+                          <th>Book Type</th>
                           <th>Title</th>
                           <th>Image</th>
                           <th>Path</th>
@@ -36,6 +37,7 @@
                              @foreach($books as $key=>$book)
                             <tr>
                               <td>{{ $key + 1 }}</td>
+                            
                               <td>{{ $book->title }}</td>
                               <td>{{ $book->image }}</td>
                               <td>{{ $book->path }}</td>
@@ -51,10 +53,10 @@
                                  </form>
                                 <button type="button" class="btn btn-danger btn-sm" onclick="if(confirm('Are you sure ? confirm delect this?'))
                                 {
-                                  event.preventDefault();
+                                  book.preventDefault();
                                   document.getElementById('delete-form-{{ $book->id }}').submit();
                                 }else{
-                                  event.preventDefault();
+                                  book.preventDefault();
                                 }"><i class="material-icons">delete</i></button>
 
                               </td>
