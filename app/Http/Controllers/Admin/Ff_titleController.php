@@ -70,6 +70,8 @@ class Ff_titleController extends Controller
          $ff_title->nickname = $request->nickname;
          $ff_title->number = $request->number;
          $ff_title->image =  $imagetitle;
+         $ff_title->content = $request->content;
+         $ff_title->intro = $request->intro;
          $ff_title->save();
          return redirect()->route('freedomfighter_title.index')->with('successMsg','Nickname Succesfully Saved');
     }
@@ -139,6 +141,8 @@ class Ff_titleController extends Controller
          $ff_title->nickname = $request->nickname;
          $ff_title->number = $request->number;
           $ff_title->image = $imagetitle;
+          $ff_title->content = $request->content;
+          $ff_title->intro = $request->intro;
          $ff_title->save();
          return redirect()->route('freedomfighter_title.index')->with('successMsg','Nickname Succesfully Updated');
     }
