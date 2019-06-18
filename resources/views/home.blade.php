@@ -373,6 +373,72 @@ div.polaroid:hover .homeimage{
 </div>
 <!--/.Carousel Wrapper-->
 
+<!--video gallery -->
+
+<h6>ভিডিও</h6>
+
+<main role="main">
+    <article>
+        <p>এখানে বাংলাদেশের মুক্তিযুদ্ধ বিষয়ক ভিডিও, টেলিভিশন রিপোর্ট এবং বিশেষ ডকুমেন্টারি সংগ্রহ করে দেখানোর চেষ্টা করা হয়েছে। যুদ্ধক্ষেত্রের বিভিন্ ফুটেজ,পাকিস্তানের আত্মসমর্পণের
+            ফুটেজ, গণহত্যার বিবরণ ও ধর্ষণের বিস্তারিত বর্ণনা, পূর্ব পাকিস্তানে পাকিস্তান সেনাবাহিনী যে অত্যাচার করেছিল তার বিবরণ তুলে ধরা হয়েছে।</p>
+    </article>
+    <section class="videos" id="featured-videos">
+        <div class="video-grid front-page" id="front-page-videos">
+            <ul class="video-list featured">
+                <li class="video featured">
+                    <a data-fancybox href="https://www.youtube.com/embed/Zq6Crtglztk?autoplay=1&controls=0&showinfo=0&color=white&rel=0" class="featured-video">
+                        <figure style="background-image: url(https://img.youtube.com/vi/Zq6Crtglztk/hqdefault.jpg);">
+                            <img class="videoimage" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
+                            <figcaption>Swap-Meet Speed for Roadkill Nights</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="video featured">
+                    <a data-fancybox href="https://www.youtube.com/embed/qDK86kzgUPg?autoplay=1&controls=0&showinfo=0&color=white&rel=0" class="featured-video">
+                        <figure style="background-image: url(https://img.youtube.com/vi/qDK86kzgUPg/hqdefault.jpg);">
+                            <img class="videoimage"  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
+                            <figcaption>Cummins Diesel in a Cadillac</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="video featured">
+                    <a data-fancybox href="https://www.youtube.com/embed/uSB2_428P2w?autoplay=1&controls=0&showinfo=0&color=white&rel=0" class="featured-video">
+                        <figure style="background-image: url(https://img.youtube.com/vi/uSB2_428P2w/hqdefault.jpg);">
+                            <img class="videoimage"  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
+                            <figcaption>Dirt-Track Challenger Rescue and Thrash</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="video featured">
+                    <a data-fancybox href="https://www.youtube.com/embed/pOhl6oVpEes?autoplay=1&controls=0&showinfo=0&color=white&rel=0" class="featured-video">
+                        <figure style="background-image: url(https://img.youtube.com/vi/pOhl6oVpEes/hqdefault.jpg);">
+                            <img class="videoimage"  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
+                            <figcaption>Junkyard 1956 Buick Hack</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="video featured">
+                    <a data-fancybox href="https://www.youtube.com/embed/PVs_xZ46Cxw?autoplay=1&controls=0&showinfo=0&color=white&rel=0" class="featured-video">
+                        <figure style="background-image: url(https://img.youtube.com/vi/PVs_xZ46Cxw/hqdefault.jpg);">
+                            <img class="videoimage"  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
+                            <figcaption>Wheelstanding Dump Truck! Stubby Bob’s Comeback</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="video featured">
+                    <a data-fancybox href="https://www.youtube.com/embed/C4jk51rgfts?autoplay=1&controls=0&showinfo=0&color=white&rel=0" class="featured-video">
+                        <figure style="background-image: url(https://img.youtube.com/vi/C4jk51rgfts/hqdefault.jpg);">
+                            <img class="videoimage"  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
+                            <figcaption>Will It Go 10s? Mazdarati Is Back!</figcaption>
+                        </figure>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+</main>
+
+<!-- Video Gallery -->
 
 
 
