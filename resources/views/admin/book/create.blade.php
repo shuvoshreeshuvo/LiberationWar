@@ -26,7 +26,6 @@
                         <div class="form-group label-floating">
                           <label class="control-label">Book Category</label>
                          <select class="form-control" name="bookcategory">
-                          <option>Book Category</option>
                            @foreach($bookcategories as $bookcategory)
                            <option value="{{ $bookcategory->id }}">{{ $bookcategory->book_type }}</option>
                            @endforeach
