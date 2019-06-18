@@ -38,7 +38,7 @@
                              
                               <td>{{ $bookcategory->created_at }}</td>
                               <td>{{ $bookcategory->updated_at }}</td>
-                              <td> 
+                               <td> 
                                 <a href="{{ route('book_category.edit',$bookcategory->id) }}" class="btn btn-info btn-sm"><i class="material-icons">mode_edit</i></a>
                                  <form  id="delete-form-{{ $bookcategory->id }}"  action="{{ route('book_category.destroy',$bookcategory->id) }}" style="display:none;"method="POST">
                                     {{ csrf_field() }}
@@ -47,10 +47,10 @@
                                  </form>
                                 <button type="button" class="btn btn-danger btn-sm" onclick="if(confirm('Are you sure ? confirm delect this?'))
                                 {
-                                  book.preventDefault();
+                                  event.preventDefault();
                                   document.getElementById('delete-form-{{ $bookcategory->id }}').submit();
                                 }else{
-                                  book.preventDefault();
+                                  event.preventDefault();
                                 }"><i class="material-icons">delete</i></button>
 
                               </td>
