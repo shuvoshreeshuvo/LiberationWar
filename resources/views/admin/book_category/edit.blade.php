@@ -10,16 +10,15 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-12">
-              
                 @include('layouts.admin.include.msg')
              
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title ">Edit Book Category</h4>
+                  <h4 class="card-title ">Edit Title</h4>
                 </div>
                 <div class="card-body">
                  
-                  <form method="POST"action="{{ route('book_ category.update',$bookcategory->id)}}" enctype="multipart/form-data" >
+                  <form method="POST"action="{{ route('book_category.update',$bookcategory->id)}}"enctype="multipart/form-data" >
                     {{ csrf_field() }}
                     {{ method_field('PUT') }}
 
@@ -32,7 +31,8 @@
                       </div>
                   </div>
 
-                  
+                
+                
 
                 
                   <a href="{{ route('book_category.index') }}" class="btn btn-danger">Back</a>
