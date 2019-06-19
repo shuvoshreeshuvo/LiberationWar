@@ -82,17 +82,18 @@ class bookcategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request,[
+       $this->validate($request,[
 
-            'book_type' => 'required'
+            'book_type' => 'required',
             
+    
         ]);
-
-         $bookcategory = Bookcategory::find($id);
-         $bookcategory->book_type = $request->book_type;
-         
-         $bookcategory->save();
+        
+        $bookcategory=Bookcategory::find($id); 
+        $bookcategory->book_type = $request->book_type;
+        $bookcategory->save();
          return redirect()->route('book_category.index')->with('successMsg','Book Category Succesfully Updated');
+   
     }
 
     /**

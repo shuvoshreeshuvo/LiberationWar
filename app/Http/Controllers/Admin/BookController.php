@@ -29,8 +29,8 @@ class BookController extends Controller
      */
     public function create()
     {
-         $categories=Bookcategory::all();
-        return view('admin.book.create',compact('categories'));
+         $bookcategories=Bookcategory::all();
+        return view('admin.book.create',compact('bookcategories'));
     }
 
     /**
@@ -65,6 +65,7 @@ class BookController extends Controller
                 $imagename ='dafault.png';
             }
             $book = new Book();
+            $book->bookcategory_id = $request->bookcategory;
             $book->title = $request->title;
             $book->image = $imagename;
             $book->path = $request->path;
@@ -94,9 +95,9 @@ class BookController extends Controller
      */
     public function edit($id)
     {
-        $book=Book::find($id);
-        $categories =Bookcategory::all();
-        return view('admin.book.edit',compact('book','categories'));
+         $book=Book::find($id);
+         $bookcategories =Bookcategory::all();
+        return view('admin.book.edit',compact('book','bookcategories'));
     }
 
     /**
@@ -109,36 +110,46 @@ class BookController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request,[
-            'title' => 'required',
-            'image' => 'mimes:jpeg,jpg,png,bmp',
+
+           'title' => 'required',
+            'image' => 'required|mimes:jpeg,jpg,png,bmp',
             'path'  =>'required',
             'caption' => 'required',
+            
+             //'image' => 'mimes:jpeg,jpg,bmp,png',
+            
         ]);
 
-        $image= $request->file('image');
-        $slug= str_slug($request->title);
-        $book=Book::find($id);
-        if(isset($image))
-        {
-            $currentdate =Carbon::now()->toDateString();
-            $imagename =$slug .'-'. $currentdate .'-'. uniqid() .'.'.
-            $image->getClientOriginalExtension();
-            if(!file_exists('uploads/book'))
-             {
-                 mkdir('uploads/book', 0777,true);
-             }
-             $image->move('uploads/book',$imagename);
-            }else {
+         $book=Freedom_fighter::find($id);
+         $image = $request->file('image');
+         $slug = str_slug($request->title);
+         if(isset($image))
+         {
 
-                $imagename =$book->image;
+            $currentData = Carbon::now()->toDatestring();
+            $imagetitle =$slug.'-'.$currentData.'-'.uniqid() .'.'.
+            $image->getclientOriginalExtension();
+
+            if(!file_exists('uploads/book'))
+            {
+                mkdir('uploads/book',0777,true);
             }
-           
-            $book->title = $request->title;
-            $book->image = $imagename;
-            $book->path = $request->path;
-            $book->caption = $request->caption;
-            $book->save();
-            return redirect()->route('book.index')->with('successMsg','Book Updated Succesfully');
+            //unlink('uploads/freedom_fighter/'.$freedom_fighter->image);
+            $image->move('uploads/book',$imagetitle);
+
+            
+         }else{
+              $imagetitle = $book->image;
+         }
+        
+         $book->bookcategory_id = $request->bookcategory;
+         $book->title = $request->title;
+         $book->image= $imagetitle;
+         $book->path = $request->path;
+         $book->caption = $request->caption;
+         
+         $book->save();
+          return redirect()->route('book.index')->with('successMsg','Book Succesfully Updated');
 
     }
 

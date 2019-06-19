@@ -438,6 +438,8 @@ div.polaroid:hover .homeimage{
     </section>
 </main>
 
+
+
 <!-- Video Gallery -->
 
 
