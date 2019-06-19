@@ -709,12 +709,15 @@ p{
     color: red;
     font-size: 22px;
     text-align: center;
+    font-weight: bold;
+    padding-top: 20px;
 }
 
 h4{
     color:red;
     font-size: 22px;
     text-align: center;
+
 
 }
 
