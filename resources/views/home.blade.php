@@ -114,8 +114,6 @@ div.polaroid:hover .homeimage{
                         <div class="dropdown-content">
                             @foreach($periods as $period)
                             <a  href="{!! url('/etihash/period/'.$period->id); !!}"> {{ $period->name }} ( {{ $period->starting_year .' - '. $period->ending_year }} )</a>
-                            <!-- <a  href="{!! url('/etihash/massuprisingg'); !!}">  দ্বিতীয় পর্যায়</a>
-                            <a  href="{!! url('/etihash/liberationwar/liberationwar'); !!}">  তৃতীয় পর্যায়</a> -->
                             @endforeach
                             
                         </div>
