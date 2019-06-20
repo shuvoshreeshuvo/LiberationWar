@@ -42,7 +42,8 @@ class BookController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-            'title' => 'required',
+           
+           
             'image' => 'required|mimes:jpeg,jpg,png,bmp',
             'path'  =>'required',
             'caption' => 'required',
@@ -110,7 +111,7 @@ class BookController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request,[
-
+            
            'title' => 'required',
             'image' => 'required|mimes:jpeg,jpg,png,bmp',
             'path'  =>'required',
@@ -120,7 +121,7 @@ class BookController extends Controller
             
         ]);
 
-         $book=Freedom_fighter::find($id);
+         $book=Book::find($id);
          $image = $request->file('image');
          $slug = str_slug($request->title);
          if(isset($image))
