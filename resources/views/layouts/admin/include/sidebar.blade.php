@@ -55,12 +55,7 @@
           </li>
 
 
-           <li class="nav-item {{ Request::is('admin/book_category*') ? 'active': '' }}">
-            <a class="nav-link" href="{{ route('book_category.index') }}">
-              <i class="material-icons">description</i>             
-               <p>Book Category </p>
-            </a>
-          </li>
+           
 
 
           <li class="nav-item {{ Request::is('admin/book*') ? 'active': '' }}">
@@ -99,6 +94,18 @@
             </a>
           </li>--}} 
 
+
+
+
+          <li class="nav-item {{ Request::is('admin/book_category*') ? 'active': '' }}">
+            <a class="nav-link" href="{{ route('book_category.index') }}">
+              <i class="material-icons">description</i>             
+               <p>Book Category </p>
+            </a>
+          </li>
+
+
+         
          
           <li class="nav-item {{ Request::is('admin/Contact*') ? 'active': '' }}">
             <a class="nav-link" href="{{ route('contact.index') }}">
