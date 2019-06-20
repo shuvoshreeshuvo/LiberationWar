@@ -82,7 +82,7 @@ div.polaroid:hover .homeimage{
 
 
 <div class="container">
-    <h3 style="text-align: center; color:red;" class="m-4">ভাষা আন্দোলন কালপঞ্জি </h3>
+    <h1 class="header"> দ্বিতীয় পর্যায় </h1>
 
     @foreach($periods as $period)    
      <div class="content">   
@@ -96,7 +96,7 @@ div.polaroid:hover .homeimage{
     @foreach($events as $event)
         <div class="col-md-4">
             <div class="thumbnail">
-                <h3 style="text-align: center;font-size: 22px;color: #ff0000" >{{ $event->title }} ( {{ $event->year}} )</h3>
+                <h2 class="header" >{{ $event->title }} ( {{ $event->year}} )</h2>
                 <div class="polaroid">
                     <img class="homeimage"  src="{{ asset('/uploads/event/'.$event->image) }}"  class="img-thumbnail" alt="Fjords" width="304" height="236">
                     <div class="caption">
@@ -241,7 +241,7 @@ div.polaroid:hover .homeimage{
 
                     </div>
                 </div>
-                <a href="{!! url('/Archive/Image'); !!}"style="text-align: right;text-decoration: none"><h6> More Photos </h6></a>
+                <a href="{!! url('/Archive/Image'); !!}"style="text-align: left;text-decoration: none"> More Photos </a>
 
             </div>
             <!--/.Third slide-->

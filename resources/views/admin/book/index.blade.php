@@ -37,11 +37,12 @@
                              @foreach($books as $key=>$book)
                             <tr>
                               <td>{{ $key + 1 }}</td>
+
                             {{--  <td>{{ $book->bookcategory->book_type }}</td>--}}
                               <td>{{ $book->title }}</td>
                                <td>{{ $book->image }}</td>
                               <td>{{ $book->path }}</td>
-                          <td>{!! str_limit($book->caption, $limit = 100, $end = '...') !!} </td>
+                                <td>{!! str_limit($book->caption, $limit = 100, $end = '...') !!} </td>
                               <td>{{ $book->created_at }}</td>
                               <td>{{ $book->updated_at }}</td>
                               <td> 

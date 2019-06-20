@@ -34,8 +34,11 @@ class ArchiveController extends Controller
     
     public function VideoFootage(){
         $periods=Period::all();
-		$Videofootage=Videofootage::all();
-        return view('Archive.Video_Footage',compact('Videofootage'));
+        $ff_titles=Ff_title::all();
+		$Videofootage=DB::table('archives')
+            ->where('type', 'Videofootage')
+            ->get();
+        return view('Archive.Video_Footage',compact('periods','ff_titles','Videofootage'));
     }
 
 }
