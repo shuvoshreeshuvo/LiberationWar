@@ -37,9 +37,9 @@
                              @foreach($books as $key=>$book)
                             <tr>
                               <td>{{ $key + 1 }}</td>
-                            <td>{{ $book->bookcategory->book_type }}</td>
+                            {{--  <td>{{ $book->bookcategory->book_type }}</td>--}}
                               <td>{{ $book->title }}</td>
-                              <td>{{ $book->image }}</td>
+                               <td>{{ $book->image }}</td>
                               <td>{{ $book->path }}</td>
                           <td>{!! str_limit($book->caption, $limit = 100, $end = '...') !!} </td>
                               <td>{{ $book->created_at }}</td>
@@ -53,10 +53,10 @@
                                  </form>
                                 <button type="button" class="btn btn-danger btn-sm" onclick="if(confirm('Are you sure ? confirm delect this?'))
                                 {
-                                  book.preventDefault();
+                                  event.preventDefault();
                                   document.getElementById('delete-form-{{ $book->id }}').submit();
                                 }else{
-                                  book.preventDefault();
+                                  event.preventDefault();
                                 }"><i class="material-icons">delete</i></button>
 
                               </td>
