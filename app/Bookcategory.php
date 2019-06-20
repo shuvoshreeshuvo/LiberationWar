@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Bookcategory extends Model
 {
-     public function books()
+    public function book()
     {
     	return $this->hasMany('App\Book');
     }
