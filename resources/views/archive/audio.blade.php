@@ -11,10 +11,7 @@
 
     <div class="col-md-4">
                     
-                            <a class="show" target="_blank" href="{{URL::asset('frontend/archive/audio/'.$data->path.'.mp4') }}">
-
-                            gdhsgd
-                            </a>
+                            <audio controls> <source  src="{{ asset('frontend/archive/audio/'.$data->path) }}" type="audio/mpeg"></audio>
                         </div>
 
                     
