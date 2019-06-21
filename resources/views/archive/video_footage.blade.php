@@ -6,7 +6,7 @@
 <div class="container">
 
 
-   <div class="videos">
+   {{--<div class="videos">--}}
 
    	@foreach($Videofootage as $data)
 
@@ -16,7 +16,7 @@
 
    	@endforeach
 
-   </div>
+ {{--  </div> --}}
 
 </div>
 @endsection
