@@ -48,7 +48,7 @@
                               <option value="{{ $archive->type }}">{{ $archive->type }}</option>
                               <option value="document">Document</option>
                               <option value="image">Image</option>
-                              <option value="video">Video</option>
+                                <option value="audio">Audio</option>
                             </select>
                         </div>
                       </div>
@@ -60,6 +60,13 @@
                         <label class="control-label">Image</label>
                         <input type="file" class="form-control" name="image">
                       </div>
+                  </div>
+
+                  <div class="row">
+                      <div class="col-md-12">
+                        <label class="control-label">Path</label>
+                        <input type="text" class="form-control" name="path" value="{{ $archive->path }}">                    
+                          </div>
                   </div>
 
 
