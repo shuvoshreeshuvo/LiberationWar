@@ -46,7 +46,9 @@ class ArchiveController extends Controller
            // 'type' => 'required',
             
            // 'description' => 'required',
-            
+
+           //'media' =>'nullable|mimes:audio/mpeg,mpga,mp3,wav,aac',
+
 
         ]);
 
@@ -72,6 +74,7 @@ class ArchiveController extends Controller
             $archive->year = $request->year;
             $archive->type = $request->type;
             $archive->media =  $medianame;
+            $archive->path = $request->path;
             $archive->description = $request->description;
 
          $archive->save();
@@ -148,6 +151,7 @@ class ArchiveController extends Controller
             $archive->year = $request->year;
                $archive->type = $request->type;
                   $archive->media = $medianame;
+                  $archive->path = $request->path;
                      $archive->description = $request->description;
          
          $archive->save();
