@@ -49,6 +49,7 @@
                               <option value="document">Document</option>
                               <option value="image">Image</option>
                               <option value="video">Video</option>
+                               <option value="audio">Audio</option>
                             </select>
                           
                         </div>
@@ -62,6 +63,15 @@
                         <input type="file" class="form-control" name="media">
                       </div>
                   </div>
+
+
+                   <div class="row">
+                      <div class="col-md-12">
+                        <label class="control-label">Path</label>
+                        <input type="text" class="form-control" name="path">
+                      </div>
+                  </div>
+                  
 
                   <div class="row">
                       <div class="col-md-12">
