@@ -50,14 +50,18 @@
                               @endif
 
                                @if($archive->type == 'video')
-                                <td>{{ $archive->video }}</td>
+                                <td>
+                                  <div class="video">
+                                  <iframe width="300" height="150" src="{{ $archive->media }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                  </div>
+                                </td>
                               @endif
                               
                                @if($archive->type == 'audio')
-                                <td>{{ $archive->media }}</td>
+                                <td><audio controls> <source  src="{{ asset('frontend/archive/audio/'.$archive->path) }}" type="audio/mpeg"></audio></td>
                               @endif
                                
-                               <td>{{ $archive->path }}</td>
+                               
                              <td>{!! $archive->description !!}</td>
                               <td>{{ $archive->created_at }}</td>
                               <td>{{ $archive->updated_at }}</td>
