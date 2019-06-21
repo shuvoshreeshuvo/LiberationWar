@@ -27,6 +27,7 @@
                           <th>Year</th>
                           <th>Type</th>
                           <th>Media</th>
+                           <th>Path</th>
                           <th>Description</th>
                           <th>Created At</th>
                           <th>Updated At</th>
@@ -47,9 +48,16 @@
                               @if($archive->type == 'document')
                                 <td><img class="img-responsive img-thumbnail" src="{{ asset('uploads/archive/'.$archive->media) }}" style="height:100px;width:100px" alt=""></td>
                               @endif
+
+                               @if($archive->type == 'video')
+                                <td>{{ $archive->video }}</td>
+                              @endif
                               
+                               @if($archive->type == 'audio')
+                                <td>{{ $archive->media }}</td>
+                              @endif
                                
-                              
+                               <td>{{ $archive->path }}</td>
                              <td>{!! $archive->description !!}</td>
                               <td>{{ $archive->created_at }}</td>
                               <td>{{ $archive->updated_at }}</td>
