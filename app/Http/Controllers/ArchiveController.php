@@ -20,7 +20,7 @@ class ArchiveController extends Controller
                    ->where('type', 'document')
                    ->get();
 
-        return view('Archive.Documents',compact('periods','ff_titles','document'));
+        return view('archive.documents',compact('periods','ff_titles','document'));
     }
 
     public function Image(){
@@ -29,16 +29,16 @@ class ArchiveController extends Controller
         $image=DB::table('archives') 
                    ->where('type', 'image')
                    ->get();
-        return view('Archive.Image',compact('periods','ff_titles','image'));
+        return view('archive.image',compact('periods','ff_titles','image'));
     }
     
     public function VideoFootage(){
         $periods=Period::all();
         $ff_titles=Ff_title::all();
 		$Videofootage=DB::table('archives')
-            ->where('type', 'Video')
+            ->where('type', 'video')
             ->get();
-        return view('Archive.Video_Footage',compact('periods','ff_titles','Videofootage'));
+        return view('archive.video_footage',compact('periods','ff_titles','Videofootage'));
     }
 
 
@@ -48,6 +48,6 @@ class ArchiveController extends Controller
         $audio=DB::table('archives') 
                    ->where('type', 'audio')
                    ->get();
-        return view('Archive.audio',compact('periods','ff_titles','audio'));
+        return view('archive.audio',compact('periods','ff_titles','audio'));
     }
 }
