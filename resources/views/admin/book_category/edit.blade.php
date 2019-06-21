@@ -18,7 +18,7 @@
                 </div>
                 <div class="card-body">
                  
-                  <form method="POST"action="{{ route('book_category.update',$bookcategory->id)}}"enctype="multipart/form-data" >
+                  <form method="POST"action="{{ route('b_category.update',$bookcategory->id)}}"enctype="multipart/form-data" >
                     {{ csrf_field() }}
                     {{ method_field('PUT') }}
 
@@ -35,7 +35,7 @@
                 
 
                 
-                  <a href="{{ route('book_category.index') }}" class="btn btn-danger">Back</a>
+                  <a href="{{ route('b_category.index') }}" class="btn btn-danger">Back</a>
                   <button type="submit" class="btn btn-primary">Save</button>
                 
               </div>
