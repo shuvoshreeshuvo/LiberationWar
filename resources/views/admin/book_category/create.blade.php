@@ -18,7 +18,7 @@
                 </div>
                 <div class="card-body">
                  
-                  <form method="POST"action="{{ route('book_category.store')}}" enctype="multipart/form-data">
+                  <form method="POST"action="{{ route('b_category.store')}}" enctype="multipart/form-data">
                     {{ csrf_field() }}
                    <div class="row">
                       <div class="col-md-12">
@@ -29,7 +29,7 @@
                       </div>
                   </div>
 
-                  <a href="{{ route('book_category.index') }}" class="btn btn-danger">Back</a>
+                  <a href="{{ route('b_category.index') }}" class="btn btn-danger">Back</a>
                   <button type="submit" class="btn btn-primary">Save</button>
                 
               </div>
