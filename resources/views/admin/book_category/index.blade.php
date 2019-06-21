@@ -11,7 +11,7 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-12">
-                <a  href="{{ route('book_category.create') }}" class="btn btn-primary">Add New</a>
+                <a  href="{{ route('b_category.create') }}" class="btn btn-primary">Add New</a>
                @include('layouts.admin.include.msg')
               <div class="card">
                 <div class="card-header card-header-primary">
@@ -39,8 +39,8 @@
                               <td>{{ $bookcategory->created_at }}</td>
                               <td>{{ $bookcategory->updated_at }}</td>
                                <td> 
-                                <a href="{{ route('book_category.edit',$bookcategory->id) }}" class="btn btn-info btn-sm"><i class="material-icons">mode_edit</i></a>
-                                 <form  id="delete-form-{{ $bookcategory->id }}"  action="{{ route('book_category.destroy',$bookcategory->id) }}" style="display:none;"method="POST">
+                                <a href="{{ route('b_category.edit',$bookcategory->id) }}" class="btn btn-info btn-sm"><i class="material-icons">mode_edit</i></a>
+                                 <form  id="delete-form-{{ $bookcategory->id }}"  action="{{ route('b_category.destroy',$bookcategory->id) }}" style="display:none;"method="POST">
                                     {{ csrf_field() }}
                                     {{ method_field('DELETE') }}
 
