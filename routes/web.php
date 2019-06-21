@@ -60,6 +60,7 @@ Route::get('/bongobondu', 'BongobonduController@Bongobondu');
 Route::get('/archive/documents', 'ArchiveController@Documents');
 Route::get('/archive/image', 'ArchiveController@Image');
 Route::get('/archive/video', 'ArchiveController@VideoFootage');
+Route::get('/archive/audio', 'ArchiveController@Audio');
 
 
 Route::get('/freedom_fighter', 'Freedom_fighterController@index');
