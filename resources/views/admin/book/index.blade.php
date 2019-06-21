@@ -38,7 +38,7 @@
                             <tr>
                               <td>{{ $key + 1 }}</td>
 
-                            {{--  <td>{{ $book->bookcategory->book_type }}</td>--}}
+                              <td>{{ $book->bookcategory->book_type }}</td>
                               <td>{{ $book->title }}</td>
                                <td>{{ $book->image }}</td>
                               <td>{{ $book->path }}</td>
