@@ -16,7 +16,7 @@ class bookcategoryController extends Controller
     public function index()
     {
          $bookcategories=Bookcategory::all();
-        return view('admin.book_category.index',compact('bookcategories'));
+        return view('admin.b_category.index',compact('bookcategories'));
     }
 
     /**
@@ -26,7 +26,7 @@ class bookcategoryController extends Controller
      */
     public function create()
     {
-        return view('admin.book_category.create');
+        return view('admin.b_category.create');
     }
 
     /**
@@ -47,7 +47,7 @@ class bookcategoryController extends Controller
          $bookcategory->book_type= $request->book_type;
          
          $bookcategory->save();
-         return redirect()->route('book_category.index')->with('successMsg','Book Category Succesfully Saved');
+         return redirect()->route('b_category.index')->with('successMsg','Book Category Succesfully Saved');
     }
 
     /**
@@ -70,7 +70,7 @@ class bookcategoryController extends Controller
     public function edit($id)
     {
         $bookcategory=Bookcategory::find($id);
-        return view('admin.book_category.edit',compact('bookcategory'));
+        return view('admin.b_category.edit',compact('bookcategory'));
     }
 
     /**
@@ -92,7 +92,7 @@ class bookcategoryController extends Controller
         $bookcategory=Bookcategory::find($id); 
         $bookcategory->book_type = $request->book_type;
         $bookcategory->save();
-         return redirect()->route('book_category.index')->with('successMsg','Book Category Succesfully Updated');
+         return redirect()->route('b_category.index')->with('successMsg','Book Category Succesfully Updated');
    
     }
 
