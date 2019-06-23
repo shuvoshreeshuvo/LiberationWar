@@ -7,6 +7,7 @@ use DB;
 use App\Period;
 use App\Event;
 use App\Ff_title;
+use App\Bookcategory;
 
 
 class EtihashController extends Controller
@@ -34,17 +35,19 @@ class EtihashController extends Controller
     {
         $periods=Period::all();
         $ff_titles=Ff_title::all();
+        $bookcategories=Bookcategory::all();
         $events = DB::table('events')
                 ->where('period_id', $id)
                 ->get();
             //dd($events);
-        return view('etihash.languagemovement.index',compact('periods','ff_titles','events'));
+        return view('etihash.languagemovement.index',compact('periods','ff_titles','events','bookcategories'));
     }
     public function event_brief($id)
     {
         $periods = Period::all();
         $ff_titles=Ff_title::all();
+        $bookcategories=Bookcategory::all();
         $event = Event::find($id);
-        return view('etihash.languagemovement.bongovongo', compact('periods', 'ff_titles','event'));
+        return view('etihash.languagemovement.bongovongo', compact('periods', 'ff_titles','event','bookcategories'));
     }
 }
