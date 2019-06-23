@@ -113,7 +113,6 @@ class BookController extends Controller
         $this->validate($request,[
             
            'title' => 'required',
-            'image' => 'required|mimes:jpeg,jpg,png,bmp',
             'path'  =>'required',
             'caption' => 'required',
             
