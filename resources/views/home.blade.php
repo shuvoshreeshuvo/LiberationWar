@@ -155,8 +155,21 @@ div.polaroid:hover .homeimage{
                     </div>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link " href="{!! url('/books/books'); !!}">বই</a>
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link " href="{!! url('/books/books'); !!}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        বই
+                    </a>
+                    <div class="dropdown" >
+                        <div class="dropdown-content">
+                            @foreach($bookcategories as $bookcategory)
+                                <a  href="{!! url('/bookcategory/'.$bookcategory->id); !!}"> {{ $bookcategory->book_type}}</a>
+
+                            @endforeach
+
+                        </div>
+                    </div>
+
                 </li>
 
                 <li class="nav-item">
