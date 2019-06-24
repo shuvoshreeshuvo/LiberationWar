@@ -69,7 +69,7 @@ Route::get('/freedom_fighter/details/{id}', 'Freedom_fighterController@freedom_f
 
 
 
-Route::get('/books/books', 'BooksController@Books');
+Route::get('/books', 'BooksController@Books');
 Route::get('/bookcategory/{id}', 'BooksController@Bookcategory');
 
 Route::get('/about', 'AboutController@About');
