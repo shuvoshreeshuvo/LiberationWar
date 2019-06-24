@@ -4,19 +4,21 @@
 
 @section('content')
 <div class="container">
+	<h3 class="header" >ভিডিও তালিকা</h3>
+	<div class="row">
+		<div class="col-md-6">
 
+   			@foreach($Videofootage as $data)
+   		<div class="videogallery">
 
-   {{--<div class="videos">--}}
+				<iframe width="450" height="300" src="{{ $data->media }} " frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-   	@foreach($Videofootage as $data)
-
-   		<div class="video">
-   			<iframe width="560" height="315" src="{{ $data->media }} " frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<h4 class="videoTitle">{{ $data->description }}</h4>
       	</div>
 
-   	@endforeach
+   			@endforeach
 
- {{--  </div> --}}
-
+       </div>
+   </div>
 </div>
 @endsection
