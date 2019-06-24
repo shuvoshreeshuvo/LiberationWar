@@ -93,13 +93,13 @@
 
             <li class="nav-item dropdown">
 
-                <a class="nav-link " href="{!! url('/books/books'); !!}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link " href="{!! url('/books'); !!}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     বই
                 </a>
                 <div class="dropdown" >
                     <div class="dropdown-content">
                         @foreach($bookcategories as $bookcategory)
-                            <a  href="{!! url('/book/b_category/'.$bookcategory->id); !!}"> {{ $bookcategory->book_type}}</a>
+                            <a  href="{!! url('/bookcategory/'.$bookcategory->id); !!}"> {{ $bookcategory->book_type}}</a>
 
                         @endforeach
 
