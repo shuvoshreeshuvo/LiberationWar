@@ -49,6 +49,7 @@ class ArchiveController extends Controller
     public function Audio(){
         $periods=Period::all();
         $ff_titles=Ff_title::all();
+        $bookcategories=Bookcategory::all();
         $audio=DB::table('archives') 
                    ->where('type', 'audio')
                    ->get();
