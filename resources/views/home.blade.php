@@ -169,6 +169,7 @@ div.polaroid:hover .homeimage{
 
                         </div>
                     </div>
+                    
 
                 </li>
 
