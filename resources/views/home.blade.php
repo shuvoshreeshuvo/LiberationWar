@@ -74,7 +74,7 @@ span.wpb_button:hover a{
 
 div.polaroid {
     width: 300px;
-    background-color:red;
+    background-color:white;
     padding: 0px 20px 0px 20px;
     margin-bottom: 25px;
 }
@@ -163,7 +163,7 @@ div.polaroid:hover .homeimage{
                     <div class="dropdown" >
                         <div class="dropdown-content">
                             @foreach($bookcategories as $bookcategory)
-                                <a  href="{!! url('book/bookcategory/'.$bookcategory->id); !!}"> {{ $bookcategory->book_type}}</a>
+                                <a  href="{!! url('/books/bookcategory/'.$bookcategory->id); !!}"> {{ $bookcategory->book_type}}</a>
 
                             @endforeach
 
