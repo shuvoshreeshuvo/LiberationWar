@@ -15,16 +15,16 @@ class BooksController extends Controller
       $ff_titles=Ff_title::all();
       $bookcategories=Bookcategory::all();
       $book = Book::all();
-        return view('Books.Books', compact('periods','ff_titles','book','bookcategories'));
+        return view('Books.Books', compact('periods','ff_titles','bookcategories','book'));
     }
     public function Bookcategory($id){
         $periods=Period::all();
         $ff_titles=Ff_title::all();
-        $book = Book::all();
-        $bookcategories= DB::table('bookcategories')
+        $bookcategories=Bookcategory::all();
+        $book= DB::table('books')
             ->where('bookcategory_id', $id)
             ->get();
-        return view('Books.Bookcategory', compact('periods','ff_titles','book','bookcategories'));
+        return view('Books.Bookcategory', compact('periods','ff_titles','bookcategories','book'));
     }
 
 
