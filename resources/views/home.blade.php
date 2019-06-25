@@ -163,12 +163,13 @@ div.polaroid:hover .homeimage{
                     <div class="dropdown" >
                         <div class="dropdown-content">
                             @foreach($bookcategories as $bookcategory)
-                                <a  href="{!! url('/bookcategory/'.$bookcategory->id); !!}"> {{ $bookcategory->book_type}}</a>
+                                <a  href="{!! url('/bookcategory/'.$bookcategory->id); !!}"> {{ $bookcategories->book_type}}</a>
 
                             @endforeach
 
                         </div>
                     </div>
+                    
 
                 </li>
 
