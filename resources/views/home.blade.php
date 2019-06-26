@@ -74,7 +74,7 @@ span.wpb_button:hover a{
 
 div.polaroid {
     width: 300px;
-    background-color:red;
+    background-color:white;
     padding: 0px 20px 0px 20px;
     margin-bottom: 25px;
 }
