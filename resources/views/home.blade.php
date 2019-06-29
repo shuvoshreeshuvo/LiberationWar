@@ -11,6 +11,13 @@
     <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}">
 
    <style>
+
+       .headertwo{
+           color: red;
+           padding:10px 0px 10px 0px;
+           text-align: center;
+           font-size:25px;
+       }
     .homeimage{
             margin: auto;
             display: inline;
@@ -178,11 +185,11 @@ div.polaroid:hover .homeimage{
                 </li>
             </ul>
 
-            <!--
+
                         <form class="form-inline my-2 my-lg-0">
                             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                             <button class="btn btn-oumyine-success btn-sm my-2 my-sm-0" type="submit">Search</button>
-                        </form>-->
+                        </form>
 
         </div>
     </nav>
@@ -193,7 +200,7 @@ div.polaroid:hover .homeimage{
 
 <!-- Three major movement -->
 <div class="container" >
-    <h2 style="text-align: center;color: red">স্বাধীনতার যাত্রা</h2>
+    <h2 class="headertwo">স্বাধীনতার যাত্রা</h2>
 
 <div class="row">
 
@@ -202,7 +209,7 @@ div.polaroid:hover .homeimage{
 
            <div class="col-md-4">
             <div class="thumbnail">
-                <h3 style="text-align: center;font-size: 22px;color: #ff0000" >{{ $period->name }}</h3>
+                <h3 class="headerthree">{{ $period->name }}</h3>
                 <div class="polaroid">
                      <img  class="homeimage" src="{{ asset('/uploads/period/'.$period->image) }}"  class="img-thumbnail" alt="Fjords" width="304" height="236">
 
@@ -218,7 +225,7 @@ div.polaroid:hover .homeimage{
                 <p style="text-align: center;">
                            <span class="wpb_button align_center">
                                <a href="{!! url('/etihash/period/'.$period->id); !!}" class="g-btn color_green">
-                                   <span>Read More</span>
+                                   <span>আরো পড়ুন</span>
                                </a>
                            </span>
                 </p>
@@ -235,7 +242,7 @@ div.polaroid:hover .homeimage{
 
 
 
-<h4 class="section-heading3"><a href="#">ছবি</a></h4>
+<h6 class="headersix">ছবি</h6>
 
 <!--Carousel Wrapper-->
 <div id="carousel-with-lb" class="carousel slide carousel-multi-item" data-ride="carousel">
@@ -387,7 +394,7 @@ div.polaroid:hover .homeimage{
 
 <!--video gallery -->
 
-<h6>ভিডিও</h6>
+<h6 class="headersix">ভিডিও</h6>
 
 <main role="main">
     <article>
@@ -450,10 +457,7 @@ div.polaroid:hover .homeimage{
     </section>
 </main>
 
-
-
 <!-- Video Gallery -->
-
 
 <!-- Footer -->
 @include('layouts.user.include.footer')
