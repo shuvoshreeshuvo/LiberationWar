@@ -15,7 +15,7 @@
   </style>
 
 <div class="container">
-  <h3 style="text-align:center; color:red;" >ছবি</h3>
+  <h2 class="headertwo" >ছবি</h2>
   @foreach($image as $data)
 
 
