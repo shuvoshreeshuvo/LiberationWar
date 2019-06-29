@@ -26,6 +26,11 @@ tr:nth-child(odd) {
 tr:nth-child(even) {
   background-color: #dd6a6a;
 }
+
+.list{
+    color:white;
+    text-decoration: none;
+}
 </style>
 
 <div class="container">
@@ -44,7 +49,7 @@ tr:nth-child(even) {
 @foreach($freedom_fighters as $freedom_fighter)
   <tr>
     <td>{{ $freedom_fighter->number }}</td>
-    <td> <a style="color:#351fc4;" href="{!! url('freedom_fighter/details/'.$freedom_fighter->id); !!}"> {{ $freedom_fighter->name }}  </a></td>
+    <td> <a class="list" href="{!! url('freedom_fighter/details/'.$freedom_fighter->id); !!}"> {{ $freedom_fighter->name }}  </a></td>
     <td>{{ $freedom_fighter->sector }}</td>
     <td>{{ $freedom_fighter->title }}</td>
     <td>{{ $freedom_fighter->gadget_number }}</td>
