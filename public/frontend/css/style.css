@@ -22,7 +22,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    padding-top: 10rem;
+    padding-top: 20rem;
     padding-bottom: 8rem;
 }
 
@@ -185,12 +185,15 @@ span.wpb_button:hover a{
     background-color: #007236;
 }
 
-h2{
+.headertwo{
     color: red;
     padding:10px 0px 10px 0px;
+    text-align: center;
+    font-weight: 600;
+    font-size:22px;
 }
-p{
 
+.passage{
     display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
@@ -236,16 +239,19 @@ p{
     font-weight: bold;
     padding-top: 20px;
 }
+.headerthree{
+    text-align: center;
+    font-size: 22px;
+    color: #ff0000 ;
+}
 
-h4{
+.headerfour{
     color:red;
     font-size: 22px;
     text-align: center;
-
-
 }
 
-h4.section-heading3 {
+.headerfour.section-heading3 {
     color:white;
     padding-bottom: 5px;
     margin-bottom: 20px;
@@ -541,9 +547,8 @@ figcaption:hover {
     transform: translateY(50%);
 }
 
-
-h6 {
-    font-size: 3rem;
+ .headersix{
+    font-size: 2rem;
     font-weight: 700;
     text-align: center;
     letter-spacing: -0.03em;
