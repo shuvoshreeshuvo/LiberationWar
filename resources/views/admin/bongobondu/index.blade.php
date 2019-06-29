@@ -21,7 +21,7 @@
                
                <div class="card card-profile ">
                         <div class="card-body">
-                           <a href="#pablo">
+                           <a href="#">
                       <img class="card-img-top" src="{{ asset('uploads/bongobondu/'.$bongobondu->image) }}">
                           </a>
                           
