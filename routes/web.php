@@ -1,4 +1,6 @@
 <?php
+use Illuminate\Support\Facades\Input;
+use App\Freedom_fighter;
 
 /*
 |--------------------------------------------------------------------------
@@ -80,8 +82,23 @@ Route::post('/about', 'ContactController@sendMessage')->name('contact.send');
 
 Auth::routes();
 
+//search
 
+Route::get('/welcome', function () {
+    return view('welcome');
+});
 
+Route::post('/search',function(){
+    $q = Input::get('q');
+    if($q != ""){
+        $freedom_fighter=Freedom_fighter::where('name','LIKE','%'.$q.'%')
+                    ->orWhere('sector','LIKE','%'.$q.'%')
+                    ->get();
+        if(count($freedom_fighter)>0)
+            return view('welcome')->withDetails($freedom_fighter)->withQuery($q);
+    }
+    return view('welcome')->withMessage("No User Found!");
+});
 
 //Admin
 
