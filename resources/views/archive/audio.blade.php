@@ -5,7 +5,7 @@
 @section('content')
 
 <div class="container">
-  <h3 style="text-align:center; color:red;" >অডিও</h3>
+  <h2 class="headertwo" >অডিও</h2>
   @foreach($audio as $data)
 
     <div class="col-md-4">
