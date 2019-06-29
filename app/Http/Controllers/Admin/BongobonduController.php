@@ -60,7 +60,7 @@ class BongobonduController extends Controller
              $image->move('uploads/bongobondu',$imagename);
             }else {
 
-                $imagename ='dafault.png';
+                $imagename ='default.png';
             }
             $bongobondu = new Bongobondu();
             $bongobondu->title = $request->title;
