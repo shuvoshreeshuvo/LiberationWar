@@ -69,7 +69,7 @@ span.wpb_button:hover a{
 
 div.polaroid {
     width: 300px;
-    background-color:red;
+    background-color:white;
     padding: 0px 20px 0px 20px;
     margin-bottom: 25px;
 }
@@ -82,9 +82,9 @@ div.polaroid:hover .homeimage{
 
 
 <div class="container">
-    <h1 class="header"> দ্বিতীয় পর্যায় </h1>
 
-    @foreach($periods as $period)    
+    @foreach($periods as $period)
+        <h1 class="headertwo">{{ $period->name}} </h1>
      <div class="content">   
        <p>{!! $period->content !!}</p>
     </div>
@@ -96,7 +96,7 @@ div.polaroid:hover .homeimage{
     @foreach($events as $event)
         <div class="col-md-4">
             <div class="thumbnail">
-                <h2 class="header" >{{ $event->title }} ( {{ $event->year}} )</h2>
+                <h3 class="headerthree"  >{{ $event->title }} ( {{ $event->year}} )</h3>
                 <div class="polaroid">
                     <img class="homeimage"  src="{{ asset('/uploads/event/'.$event->image) }}"  class="img-thumbnail" alt="Fjords" width="304" height="236">
                     <div class="caption">
@@ -127,7 +127,7 @@ div.polaroid:hover .homeimage{
   </div>
   
 <div class="container">
-    <h4 style="text-align: center; color:red;" class="m-4">কিছু ছবি </h4>
+    <h2 class="headertwo" >কিছু ছবি </h2>
     <!--Carousel Wrapper-->
     <div id="multi-item-example" class="carousel slide carousel-multi-item carousel-multi-item-2" data-ride="carousel" style="margin-bottom: 5rem">
 
