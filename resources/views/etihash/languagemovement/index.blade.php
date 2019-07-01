@@ -111,7 +111,7 @@ div.polaroid:hover .homeimage{
                 <p style="text-align: center;">
                            <span class="wpb_button align_center">
                                <a href="{!! url('/etihash/period/brief/'.$event->id); !!}" class="g-btn color_green"  >
-                                   <span>Read More</span>
+                                   <span>আরো পড়ুন</span>
                                </a>
                            </span>
                 </p>
@@ -129,13 +129,13 @@ div.polaroid:hover .homeimage{
 <div class="container">
     <h2 class="headertwo" >কিছু ছবি </h2>
     <!--Carousel Wrapper-->
-    <div id="multi-item-example" class="carousel slide carousel-multi-item carousel-multi-item-2" data-ride="carousel" style="margin-bottom: 5rem">
+    <div id="multi-item-example" class="carousel slide carousel-multi-item carousel-multi-item-2" data-ride="carousel" >
 
         <!--Controls-->
-        <div class="controls-top" style="text-align:center;margin-bottom: 1.88rem">
+        <div class="controls-top" id="multi-item-control">
 
-            <a class="text-white" href="#multi-item-example" data-slide="prev" ><i class="fas fa-angle-left"></i></a>
-            <a class="text-white" style="font-size: 25px" href="#multi-item-example" data-slide="next"><i class="fas fa-angle-right"></i></a>
+            <a class="text-white" href="#multi-item-example" data-slide="prev" ><i class="fas fa-chevron-left"></i></a>
+            <a class="text-white"  href="#multi-item-example" data-slide="next"><i class="fas fa-chevron-right"></i></a>
         </div>
         <!--/.Controls-->
 
