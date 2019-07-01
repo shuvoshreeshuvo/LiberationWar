@@ -269,11 +269,53 @@ span.wpb_button:hover a{
     transform: scale(0.8,0.7);
 
 }
-
+/*footer*/
 .page-footer{
     background-color: #00A65E;
     color: white;
 }
+
+
+#social_icon_footer a {
+    color: white;
+    font-size: 3rem;
+    text-decoration: none;
+}
+
+#social_icon_footer .social:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+#social_icon_footer .social {
+    -webkit-transform: scale(0.8);
+    /* Browser Variations: */
+
+    -moz-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+}
+
+#social_icon_footer #social-fb:hover {
+    color: #3B5998;
+}
+
+#social_icon_footer #social-tw:hover {
+    color: #0174DF;
+}
+
+#social_icon_footer #social-gp:hover {
+    color: #d34836;
+}
+
+#social_icon_footer #social-em:hover {
+    color: #f39c12;
+}
+
+/*footer*/
 
 .bongobondhu .img {
     width: 45%;
@@ -367,14 +409,14 @@ span.wpb_button:hover a{
     cursor: pointer;
     text-decoration: none;
     background-color: transparent;
-    color:#000;
+    color:white;
     text-align: center;
 }
 .controls-top a i{
     padding-left: 1rem!important;
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
-    font-size: 3em ;
+    font-size: 1.5em ;
     -webkit-font-smoothing: antialiased;
     display: inline-block;
     font-style: normal;
