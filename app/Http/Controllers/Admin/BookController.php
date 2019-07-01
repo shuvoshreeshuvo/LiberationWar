@@ -45,7 +45,7 @@ class BookController extends Controller
            
            
             'image' => 'required|mimes:jpeg,jpg,png,bmp',
-            'path'  =>'required',
+            
             'caption' => 'required',
         ]);
 
@@ -70,6 +70,7 @@ class BookController extends Controller
             $book->title = $request->title;
             $book->image = $imagename;
             $book->path = $request->path;
+            $book->onlinepath = $request->onlinepath;
             $book->caption = $request->caption;
             $book->save();
             return redirect()->route('book.index')->with('successMsg','Book Added Succesfully');
@@ -113,7 +114,7 @@ class BookController extends Controller
         $this->validate($request,[
             
            'title' => 'required',
-            'path'  =>'required',
+            
             'caption' => 'required',
             
              //'image' => 'mimes:jpeg,jpg,bmp,png',
@@ -146,6 +147,7 @@ class BookController extends Controller
          $book->title = $request->title;
          $book->image= $imagetitle;
          $book->path = $request->path;
+         $book->onlinepath = $request->onlinepath;
          $book->caption = $request->caption;
          
          $book->save();

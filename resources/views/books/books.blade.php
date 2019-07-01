@@ -104,48 +104,45 @@
     <div class="container">
 
         <div class="row">
-            @foreach($book as $data)
-                @if($data->path=='pdf')
-
+        @foreach($book as $data)
+            
                 <div class="col-md-4">
                     <div class="books" style="margin-right: 25px;margin-bottom: 20px;">
-
+                          @if($data->type=='pdf') 
                         <div class="bookhovereffect">
                             <a class="show" target="_blank" href="{{URL::asset('frontend/books/'.$data->path.'.pdf') }}">
 
                             <img class="bookimage"
-                            class="img-responsive p-2" src="{{ asset('uploads/book/'.$data-> image) }}" alt="" width="300px" height="400px" >
+                            class="img-responsive p-2" src="{{ asset('uploads/book/'.$data-> image) }}" alt="" width="300px" height="400px" > 
                             <div class="overlay">
                                 <h2 class="title">{{ $data->title }}</h2>
                                 <p class="caption">{!! $data->caption !!}</p>
                             </div></a>
                         </div>
+                          else
+                          <div class="bookhovereffect">
+                            <a class="show" target="_blank" href="{{ $data->path }}">
 
-                    </div>
-                </div>
-
-                @else
-
-                    <div class="col-md-4">
-                        <div class="books" style="margin-right: 25px;margin-bottom: 20px;">
-
-                            <div class="bookhovereffect">
-                                <a class="show" target="_blank" href="{{ $data->path }}}">
-
-                                    <img class="bookimage"
-                                         class="img-responsive p-2" src="{{ asset('uploads/book/'.$data-> image) }}" alt="" width="300px" height="400px" >
-                                    <div class="overlay">
-                                        <h2 class="title">{{ $data->title }}</h2>
-                                        <p class="caption">{!! $data->caption !!}</p>
-                                    </div></a>
-                            </div>
-
+                            <img class="bookimage"
+                            class="img-responsive p-2" src="{{ asset('uploads/book/'.$data-> image) }}" alt="" width="300px" height="400px" > 
+                            <div class="overlay">
+                                <h2 class="title">{{ $data->title }}</h2>
+                                <p class="caption">{!! $data->caption !!}</p>
+                            </div></a>
                         </div>
-                    </div>
+                        
+
                 @endif
+
+
+                             </div>
+                          </div>
             @endforeach
         </div>
     </div>
 
 
 @endsection
+
+
+

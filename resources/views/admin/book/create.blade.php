@@ -65,6 +65,13 @@
 
                   <div class="row">
                       <div class="col-md-12">
+                        <label class="control-label">Onlinepath</label>
+                        <input type="text" class="form-control" name="onlinepath">
+                      </div>
+                  </div>
+
+                  <div class="row">
+                      <div class="col-md-12">
                         <div class="form-group label-floating">
                           <label class="control-label">Caption</label>
                          
