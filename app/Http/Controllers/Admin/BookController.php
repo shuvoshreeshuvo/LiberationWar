@@ -46,7 +46,7 @@ class BookController extends Controller
            
             'image' => 'required|mimes:jpeg,jpg,png,bmp',
             
-            'caption' => 'required',
+          
         ]);
 
         $image= $request->file('image');
@@ -115,7 +115,7 @@ class BookController extends Controller
             
            'title' => 'required',
             
-            'caption' => 'required',
+           
             
              //'image' => 'mimes:jpeg,jpg,bmp,png',
             
