@@ -20,40 +20,6 @@
 
       <hr class="clearfix w-100 d-md-none">
 
-       {{--<!-- Grid column -->
-      <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
-
-        <!-- Links -->
-       <h5 class="font-weight-bold text-uppercase mb-4">About</h5>
-
-        <ul class="list-unstyled">
-          <li>
-            <p>
-              <a href="#!">PROJECTS</a>
-            </p>
-          </li>
-          <li>
-            <p>
-              <a href="#!">ABOUT US</a>
-            </p>
-          </li>
-          <li>
-            <p>
-              <a href="#!">BLOG</a>
-            </p>
-          </li>
-          <li>
-            <p>
-              <a href="#!">AWARDS</a>
-            </p>
-          </li>
-        </ul>
-
-      </div>--}}
-      <!-- Grid column -->
-
-      <hr class="clearfix w-100 d-md-none">
-
       <!-- Grid column -->
       <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
 
@@ -85,26 +51,26 @@
       <hr class="clearfix w-100 d-md-none">
 
       <!-- Grid column -->
-      <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
+      <div id="social_icon_footer" class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
 
         <!-- Social buttons -->
         <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
 
         <!-- Facebook -->
-        <a type="button" class="btn-floating btn-fb">
-          <i class="fab fa-facebook-f"></i>
+        <a href="#" id="social-fb">
+            <i class="fab fa-facebook-square social"></i>
         </a>
         <!-- Twitter -->
-        <a type="button" class="btn-floating btn-tw">
-          <i class="fab fa-twitter"></i>
+        <a href="#" id="social-tw">
+          <i class="fab fa-twitter-square social"></i>
         </a>
         <!-- Google +-->
-        <a type="button" class="btn-floating btn-gplus">
-          <i class="fab fa-google-plus-g"></i>
+        <a href="#" id="social-gp">
+            <i class="fab fa-google-plus-square social"></i>
         </a>
-        <!-- Dribbble -->
-        <a type="button" class="btn-floating btn-dribbble">
-          <i class="fab fa-dribbble"></i>
+        <!-- envelope -->
+        <a href="#" id="social-em">
+          <i class="fas fa-envelope-square social"></i>
         </a>
 
       </div>
@@ -117,18 +83,13 @@
   <!-- Footer Links -->
 
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2019 Copyright:
+  <div class="footer-copyright text-center py-3">© 2019 All rights reserved.
     <a href="#"> </a>
   </div>
   <!-- Copyright -->
 
 </footer>
 <!-- Footer -->
-
-
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 
 <!-- CK Editor -->
 
