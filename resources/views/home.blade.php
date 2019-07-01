@@ -255,7 +255,7 @@ div.polaroid:hover .homeimage{
 <div id="carousel-with-lb" class="carousel slide carousel-multi-item" data-ride="carousel">
 
     <!--Controls-->
-    <div class="controls-top">
+    <div class="controls-top" id="control">
         <a  href="#carousel-with-lb" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
         <a  href="#carousel-with-lb" data-slide="next"><i class="fas fa-chevron-right"></i></a>
     </div>
