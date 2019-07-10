@@ -15,10 +15,10 @@
     </div>
 </form>
 <div class="container">
-    @if(isset($details))
         <p> The Search results for your query <b> {{ $query }} </b> are :</p>
         <h2>Sample User details</h2>
         <table class="table table-striped">
+            @if($freedom_fighter->count()>0)
             <thead>
             <tr>
                 <th>Name</th>
@@ -26,15 +26,31 @@
             </tr>
             </thead>
             <tbody>
-            @foreach($details as $freedom_fighter)
+            @foreach($freedom_fighter as $freedom)
                 <tr>
-                    <td>{{ $freedom_fighter->name}}</td>
-                    <td>{{$freedom_fighter->sector}}</td>
+                    <td><a href="#">{{ $freedom->name }}</a></td>
+                    <td>{{ $freedom->sector }}</td>
                 </tr>
             @endforeach
             </tbody>
+            @else
+                <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Writer</th>
+                </tr>
+                </thead>
+                <tbody>
+                    @foreach($book as $book)
+                        <tr>
+                            <td><a href="#">{{ $book->title }}</a></td>
+                            
+                        </tr>
+                    @endforeach
+                </tbody>
+            @endif
         </table>
-    @elseif(isset($message))
+    @if(isset($message))
         <p>{{ $message }}</p>
 @endif
 </div>
