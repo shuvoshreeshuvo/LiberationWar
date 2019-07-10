@@ -193,11 +193,13 @@ div.polaroid:hover .homeimage{
             </ul>
 
 
-                        <form class="form-inline my-2 my-lg-0">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <form class="form-inline my-2 my-lg-0" action="{{ url('/search') }}" method="GET">
+                            {{ csrf_field() }}
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" name="search" aria-label="Search">
                             <button class="btn btn-oumyine-success btn-sm my-2 my-sm-0" type="submit">Search</button>
                         </form>
 
+ 
         </div>
     </nav>
 
@@ -275,120 +277,49 @@ div.polaroid:hover .homeimage{
         <div id="mdb-lightbox-ui"></div>
         <!--First slide-->
         <div class=" carousel-item active text-center">
+             @foreach($image as $data)
 
             <figure class="col-md-3 d-md-inline-block">
                 <a href="#">
-                    <img src="http://www.liberationwarmuseumbd.org/wp-content/uploads/2014/05/13.jpg" class="img-fluid"  style="width: 400px; height: 200px; " >
+                    <img src="{{ asset('/uploads/archive/'.$data->media) }}" class="img-fluid"  style="width: 400px; height: 200px; " >
                 </a>
             </figure>
-
-            <figure class="col-md-3 d-md-inline-block">
-                <a href="#">
-                    <img src="http://www.liberationwarmuseumbd.org/wp-content/uploads/2014/05/surrender-copy.jpg" class="img-fluid" style="width: 400px; height: 200px; ">
-                </a>
-            </figure>
-
-            <figure class="col-md-3 d-md-inline-block">
-                <a href="#" >
-                    <img src="http://www.liberationwarmuseumbd.org/wp-content/uploads/2014/05/rivingtonplace-womenfighters.jpg" class="img-fluid" style="width: 400px; height: 200px; " >
-                </a>
-            </figure>
-
-            <figure class="col-md-3 d-md-inline-block">
-                <a href="#" >
-                    <img src="http://www.liberationwarmuseumbd.org/wp-content/uploads/2014/05/618889798.jpg" class="img-fluid" style="width: 400px; height: 200px; ">
-                </a>
-            </figure>
-            <figure class="col-md-3 d-md-inline-block">
-                <a href="#">
-                    <img src="http://www.liberationwarmuseumbd.org/wp-content/uploads/2014/05/rivingtonplace-bangladeshchild.jpg" class="img-fluid" style="width: 400px; height: 200px; ">
-                </a>
-            </figure>
-            <figure class="col-md-3 d-md-inline-block">
-                <a href="#" >
-                    <img src="http://www.liberationwarmuseumbd.org/wp-content/uploads/2014/05/liberation-war-460.jpg" class="img-fluid" style="width: 400px; height: 200px; ">
-                </a>
-            </figure>
+            @endforeach
+            
 
         </div>
         <!--/.First slide-->
 
         <!--Second slide-->
         <div class=" carousel-item text-center">
+            @foreach($image as $data)
 
             <figure class="col-md-3 d-md-inline-block">
                 <a href="#">
-                    <img src="http://www.liberationwarmuseumbd.org/wp-content/uploads/2014/05/13.jpg" class="img-fluid"  style="width: 400px; height: 200px; " >
+                    <img src="{{ asset('/uploads/archive/'.$data->media) }}" class="img-fluid"  style="width: 400px; height: 200px; " >
                 </a>
             </figure>
+            @endforeach
+            
 
-            <figure class="col-md-3 d-md-inline-block">
-                <a href="#">
-                    <img src="http://www.liberationwarmuseumbd.org/wp-content/uploads/2014/05/surrender-copy.jpg" class="img-fluid" style="width: 400px; height: 200px; ">
-                </a>
-            </figure>
-
-            <figure class="col-md-3 d-md-inline-block">
-                <a href="#" >
-                    <img src="http://www.liberationwarmuseumbd.org/wp-content/uploads/2014/05/rivingtonplace-womenfighters.jpg" class="img-fluid" style="width: 400px; height: 200px; " >
-                </a>
-            </figure>
-
-            <figure class="col-md-3 d-md-inline-block">
-                <a href="#" >
-                    <img src="http://www.liberationwarmuseumbd.org/wp-content/uploads/2014/05/618889798.jpg" class="img-fluid" style="width: 400px; height: 200px; ">
-                </a>
-            </figure>
-            <figure class="col-md-3 d-md-inline-block">
-                <a href="#">
-                    <img src="http://www.liberationwarmuseumbd.org/wp-content/uploads/2014/05/rivingtonplace-bangladeshchild.jpg" class="img-fluid" style="width: 400px; height: 200px; ">
-                </a>
-            </figure>
-            <figure class="col-md-3 d-md-inline-block">
-                <a href="#" >
-                    <img src="http://www.liberationwarmuseumbd.org/wp-content/uploads/2014/05/liberation-war-460.jpg" class="img-fluid" style="width: 400px; height: 200px; ">
-                </a>
-            </figure>
+            
 
         </div>
         <!--/.Second slide-->
 
         <!--Third slide-->
         <div class=" carousel-item text-center">
+            @foreach($image as $data)
 
             <figure class="col-md-3 d-md-inline-block">
                 <a href="#">
-                    <img src="http://www.liberationwarmuseumbd.org/wp-content/uploads/2014/05/13.jpg" class="img-fluid"  style="width: 400px; height: 200px; " >
+                    <img src="{{ asset('/uploads/archive/'.$data->media) }}" class="img-fluid"  style="width: 400px; height: 200px; " >
                 </a>
             </figure>
+            @endforeach
+            
 
-            <figure class="col-md-3 d-md-inline-block">
-                <a href="#">
-                    <img src="http://www.liberationwarmuseumbd.org/wp-content/uploads/2014/05/surrender-copy.jpg" class="img-fluid" style="width: 400px; height: 200px; ">
-                </a>
-            </figure>
-
-            <figure class="col-md-3 d-md-inline-block">
-                <a href="#" >
-                    <img src="http://www.liberationwarmuseumbd.org/wp-content/uploads/2014/05/rivingtonplace-womenfighters.jpg" class="img-fluid" style="width: 400px; height: 200px; " >
-                </a>
-            </figure>
-
-            <figure class="col-md-3 d-md-inline-block">
-                <a href="#" >
-                    <img src="http://www.liberationwarmuseumbd.org/wp-content/uploads/2014/05/618889798.jpg" class="img-fluid" style="width: 400px; height: 200px; ">
-                </a>
-            </figure>
-            <figure class="col-md-3 d-md-inline-block">
-                <a href="#">
-                    <img src="http://www.liberationwarmuseumbd.org/wp-content/uploads/2014/05/rivingtonplace-bangladeshchild.jpg" class="img-fluid" style="width: 400px; height: 200px; ">
-                </a>
-            </figure>
-            <figure class="col-md-3 d-md-inline-block">
-                <a href="#" >
-                    <img src="http://www.liberationwarmuseumbd.org/wp-content/uploads/2014/05/liberation-war-460.jpg" class="img-fluid" style="width: 400px; height: 200px; ">
-                </a>
-            </figure>
+            
 
         </div>
         <!--/.Third slide-->
@@ -411,7 +342,19 @@ div.polaroid:hover .homeimage{
     <section class="videos" id="featured-videos">
         <div class="video-grid front-page" id="front-page-videos">
             <ul class="video-list featured">
+                @foreach($Videofootage as $data)
                 <li class="video featured">
+                    <a data-fancybox href="{{ $data->media }}" class="featured-video">
+                        <figure style="background-image: url(https://img.youtube.com/vi/J9vUulq4tZI/hqdefault.jpg);">
+                            <img class="videoimage" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
+                            <figcaption>Swap-Meet Speed for Roadkill Nights</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                @endforeach
+
+
+              {{--  <li class="video featured">
                     <a data-fancybox href="https://www.youtube.com/embed/J9vUulq4tZI" class="featured-video">
                         <figure style="background-image: url(https://img.youtube.com/vi/J9vUulq4tZI/hqdefault.jpg);">
                             <img class="videoimage" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
@@ -450,15 +393,7 @@ div.polaroid:hover .homeimage{
                             <figcaption>Swap-Meet Speed for Roadkill Nights</figcaption>
                         </figure>
                     </a>
-                </li>
-                <li class="video featured">
-                    <a data-fancybox href="https://www.youtube.com/embed/J9vUulq4tZI" class="featured-video">
-                        <figure style="background-image: url(https://img.youtube.com/vi/J9vUulq4tZI/hqdefault.jpg);">
-                            <img class="videoimage" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
-                            <figcaption>Swap-Meet Speed for Roadkill Nights</figcaption>
-                        </figure>
-                    </a>
-                </li>
+                </li>--}}
             </ul>
         </div>
     </section>
