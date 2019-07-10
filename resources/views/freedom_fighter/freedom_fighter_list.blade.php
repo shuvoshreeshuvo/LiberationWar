@@ -50,8 +50,9 @@ tr:nth-child(even) {
   <tr>
     <td>{{ $freedom_fighter->number }}</td>
     <td> <a class="list" href="{!! url('freedom_fighter/details/'.$freedom_fighter->id); !!}"> {{ $freedom_fighter->name }}  </a></td>
-    <td>{{ $freedom_fighter->sector }}</td>
     <td>{{ $freedom_fighter->title }}</td>
+    <td>{{ $freedom_fighter->sector }}</td>
+    
     <td>{{ $freedom_fighter->gadget_number }}</td>
   </tr>
 
