@@ -47,7 +47,7 @@
                                <td>{{ $freedom_fighter->title }}</td>
                                <td>{{ $freedom_fighter->gadget_number }}</td>
                               <td><img class="img-responsive img-thumbnail" src="{{ asset('uploads/freedom_fighter/'.$freedom_fighter->image) }}" style="height:100px;width:100px" alt=""></td>
-                               <td>{{ $freedom_fighter->content }}</td>
+                               <td>{!! $freedom_fighter->content !!}</td>
                               <td>{{ $freedom_fighter->created_at }}</td>
                               <td>{{ $freedom_fighter->updated_at }}</td>
                               <td> 
