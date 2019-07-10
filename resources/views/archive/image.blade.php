@@ -19,7 +19,7 @@
   @foreach($image as $data)
 
 
-   <a  href="{{ URL::to('/uploads/archive/'.$data->media) }}"> <img class="images" src="{{ asset('uploads/archive/'.$data->media ) }} " style="width:100%;height:300px;max-width:300px" /> </a>
+   <a  href="{{ URL::to('/uploads/archive/'.$data->media) }}" target="_blank"> <img class="images" src="{{ asset('uploads/archive/'.$data->media ) }} " style="width:100%;height:300px;max-width:300px" /> </a>
   
 
 

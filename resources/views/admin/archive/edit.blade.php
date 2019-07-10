@@ -84,7 +84,7 @@
                 
                   <a href="{{ route('archive.index') }}" class="btn btn-danger">Back</a>
                   <button type="submit" class="btn btn-primary">Save</button>
-                
+                  </form>
               </div>
             </div>
             

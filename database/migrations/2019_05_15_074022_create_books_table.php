@@ -20,7 +20,7 @@ class CreateBooksTable extends Migration
             $table->string('title');
             $table->string('image');
             $table->string('path');
-            $table->string('onlinepath');
+            $table->string('type');
             $table->text('caption');
             $table->foreign('bookcategory_id')
                ->references('id')->on('bookcategories')

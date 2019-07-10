@@ -70,7 +70,7 @@ class BookController extends Controller
             $book->title = $request->title;
             $book->image = $imagename;
             $book->path = $request->path;
-            $book->onlinepath = $request->onlinepath;
+            $book->type = $request->type;
             $book->caption = $request->caption;
             $book->save();
             return redirect()->route('book.index')->with('successMsg','Book Added Succesfully');
@@ -147,7 +147,7 @@ class BookController extends Controller
          $book->title = $request->title;
          $book->image= $imagetitle;
          $book->path = $request->path;
-         $book->onlinepath = $request->onlinepath;
+         $book->type = $request->type;
          $book->caption = $request->caption;
          
          $book->save();

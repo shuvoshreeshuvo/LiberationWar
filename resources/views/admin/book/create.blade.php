@@ -63,12 +63,19 @@
                       </div>
                   </div>
 
-                  <div class="row">
-                      <div class="col-md-12">
-                        <label class="control-label">Onlinepath</label>
-                        <input type="text" class="form-control" name="onlinepath">
+
+                      <div class="row">
+                          <div class="col-md-12">
+                              <div class="form-group label-floating">
+                                  <label class="control-label">Type</label>
+                                  <select class="form-control" name="type">
+                                      <option value="pdf">Pdf</option>
+                                      <option value="link">Online Link</option>
+                                  </select>
+
+                              </div>
+                          </div>
                       </div>
-                  </div>
 
                   <div class="row">
                       <div class="col-md-12">

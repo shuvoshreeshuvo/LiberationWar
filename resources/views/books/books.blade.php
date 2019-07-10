@@ -4,9 +4,10 @@
 
 @section('content')
 <style>
-   
+
    .books{
-    float: left;
+       float: left;
+       margin: 20px 0px 40px 15px;
    }
 
 .bookhovereffect {
@@ -37,6 +38,8 @@
     position: relative;
     -webkit-transition: all .4s linear;
     transition: all .4s linear;
+    width: 200px;
+    height: 300px;
 }
 
 .bookhovereffect .title {
@@ -99,16 +102,14 @@
 
 </style>
 
-
-
     <div class="container">
-
+        <h3 class="headerthree">মুক্তিযুদ্ধ-ভিত্তিক বইসমূহের তালিকা</h3>
         <div class="row">
         @foreach($book as $data)
             
-                <div class="col-md-4">
-                    <div class="books" style="margin-right: 25px;margin-bottom: 20px;">
-                          @if($data->type=='pdf') 
+                <div class="col-md-3">
+                    <div class="books">
+                          @if($data->type=='pdf')
                         <div class="bookhovereffect">
                             <a class="show" target="_blank" href="{{URL::asset('frontend/books/'.$data->path.'.pdf') }}">
 
@@ -119,22 +120,20 @@
                                 <p class="caption">{!! $data->caption !!}</p>
                             </div></a>
                         </div>
-                          else
+                          @else
                           <div class="bookhovereffect">
                             <a class="show" target="_blank" href="{{ $data->path }}">
 
                             <img class="bookimage"
-                            class="img-responsive p-2" src="{{ asset('uploads/book/'.$data-> image) }}" alt="" width="300px" height="400px" > 
+                            class="img-responsive p-2" src="{{ asset('uploads/book/'.$data-> image) }}" alt="" width="300px" height="400px" >
                             <div class="overlay">
                                 <h2 class="title">{{ $data->title }}</h2>
                                 <p class="caption">{!! $data->caption !!}</p>
                             </div></a>
                         </div>
-                        
+
 
                 @endif
-
-
                              </div>
                           </div>
             @endforeach
