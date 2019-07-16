@@ -1,7 +1,5 @@
 <?php
-use Illuminate\Support\Facades\Input;
-use App\Freedom_fighter;
-use App\Book;
+
 
 
 /*
@@ -22,6 +20,7 @@ use App\Book;
 // Home Page
 
 Route::get('/', 'HomeController@index');
+Route::get('/search', 'searchController@search');
 
 
 
@@ -84,38 +83,6 @@ Route::post('/about', 'ContactController@sendMessage')->name('contact.send');
 
 Auth::routes();
 
-//search
-
-Route::get('/welcome', function () {
-    return view('welcome');
-});
-
-Route::get('/search',function(){
-    $q = Input::get('search');
-    if($q == 'হোম'){
-        return redirect(url('/'));
-    }
-    if($q == 'history'){
-        $period = DB::table('periods')->inRandomOrder()->first();
-        $id = $period->id;
-        return redirect(url('/etihash/period/'.$period->id));
-    }
-    if($q != ""){
-        $freedom_fighter=Freedom_fighter::where('name','LIKE','%'.$q.'%')
-                    ->orWhere('sector','LIKE','%'.$q.'%')
-                    ->get();
-        $book=Book::where('title','LIKE','%'.$q.'%')
-                    ->get();
-        if(count($freedom_fighter)>0)
-            $book= 0;
-            return view('welcome')->with('freedom_fighter','book')->withQuery($q);
-
-        if(count($book)>0)
-            $freedom_fighter = '0';
-            return view('welcome')->with('book','freedom_fighter')->withQuery($q);
-    }
-    return view('welcome')->withMessage("No User Found!");
-});
 
 //Admin
 
