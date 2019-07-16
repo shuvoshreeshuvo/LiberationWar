@@ -277,7 +277,7 @@ div.polaroid:hover .homeimage{
         <div id="mdb-lightbox-ui"></div>
         <!--First slide-->
         <div class=" carousel-item active text-center">
-             @foreach($image as $data)
+             @foreach($specialname as $data)
 
             <figure class="col-md-3 d-md-inline-block">
                 <a href="#">
