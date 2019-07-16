@@ -114,11 +114,11 @@
             </li>
         </ul>
 
-        <!--
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-oumyine-success btn-sm my-2 my-sm-0" type="submit">Search</button>
-                    </form>-->
+                        <form class="form-inline my-2 my-lg-0" action="{{ url('/search') }}" method="GET">
+                            {{ csrf_field() }}
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" name="search" aria-label="Search">
+                            <button class="btn btn-oumyine-success btn-sm my-2 my-sm-0" type="submit">Search</button>
+                        </form>
 
     </div>
 </nav>
