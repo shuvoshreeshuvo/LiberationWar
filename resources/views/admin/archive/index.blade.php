@@ -27,7 +27,8 @@
                           <th>Year</th>
                           <th>Type</th>
                           <th>Media</th>
-                           <th>Path</th>
+                          <th>Special Media</th>
+                          <th>Path</th>
                           <th>Description</th>
                           <th>Created At</th>
                           <th>Updated At</th>
@@ -61,7 +62,7 @@
                                 <td><audio controls> <source  src="{{ asset('frontend/archive/audio/'.$archive->path) }}" type="audio/mpeg"></audio></td>
                               @endif
                                
-                               
+                              <td>{{ $archive->specialmedia }}</td> 
                              <td>{!! $archive->description !!}</td>
                               <td>{{ $archive->created_at }}</td>
                               <td>{{ $archive->updated_at }}</td>
