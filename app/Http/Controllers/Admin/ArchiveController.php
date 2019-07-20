@@ -74,6 +74,7 @@ class ArchiveController extends Controller
             $archive->year = $request->year;
             $archive->type = $request->type;
             $archive->media =  $medianame;
+             $archive->specialmedia = $request->specialmedia;
             $archive->path = $request->path;
             $archive->description = $request->description;
 
@@ -147,12 +148,13 @@ class ArchiveController extends Controller
             }
            
            
-         $archive->title = $request->title;
+            $archive->title = $request->title;
             $archive->year = $request->year;
-               $archive->type = $request->type;
-                  $archive->media = $medianame;
-                  $archive->path = $request->path;
-                     $archive->description = $request->description;
+            $archive->type = $request->type;
+            $archive->media = $medianame;
+           $archive->specialmedia = $request->specialmedia;
+            $archive->path = $request->path;
+             $archive->description = $request->description;
          
          $archive->save();
          return redirect()->route('archive.index')->with('successMsg','Archive Succesfully Updated');
