@@ -22,16 +22,13 @@
                   <div class="table-responsive">
                     <table id="table" class="table" width="100%">
                        <thead class="text-primary">
-                          <th style="width: 50px;">Id</th>
+                          <th>Id</th>
                           <th>Title</th>
                           <th>Year</th>
                           <th>Type</th>
                           <th>Media</th>
-                          <th>Special Media</th>
-                          <th>Path</th>
-                          <th>Description</th>
+                          <th>Is Special</th>
                           <th>Created At</th>
-                          <th>Updated At</th>
                           <th>Action</th>
                       </thead>
 
@@ -43,11 +40,11 @@
                               <td>{{ $archive->year }}</td>
                               <td>{{ $archive->type }}</td>
                               @if($archive->type == 'image')
-                              <td><img class="img-responsive img-thumbnail" src="{{ asset('uploads/archive/'.$archive->media) }}" style="height:100px;width:100px" alt=""></td>
+                              <td><img width="300" height="150" class="img-responsive img-thumbnail" src="{{ asset('uploads/archive/'.$archive->media) }}" style="height:100px;width:100px" alt=""></td>
                               @endif
 
                               @if($archive->type == 'document')
-                                <td><img class="img-responsive img-thumbnail" src="{{ asset('uploads/archive/'.$archive->media) }}" style="height:100px;width:100px" alt=""></td>
+                                <td><img width="300" height="150" class="img-responsive img-thumbnail" src="{{ asset('uploads/archive/'.$archive->media) }}" style="height:100px;width:100px" alt=""></td>
                               @endif
 
                                @if($archive->type == 'video')
@@ -61,12 +58,25 @@
                                @if($archive->type == 'audio')
                                 <td><audio controls> <source  src="{{ asset('frontend/archive/audio/'.$archive->path) }}" type="audio/mpeg"></audio></td>
                               @endif
-                               
-                              <td>{{ $archive->specialmedia }}</td> 
-                             <td>{!! $archive->description !!}</td>
+
+
+
+                              <td>
+                              	@if($archive->special == 1)
+                              		<span class="badge badge-success">Special</span>
+                              	@else 
+                              		<span class="badge badge-primary">Normal</span>
+                              	@endif
+                              </td>
+                              
                               <td>{{ $archive->created_at }}</td>
-                              <td>{{ $archive->updated_at }}</td>
-                              <td> 
+                              
+                              <td>
+                              	@if($archive->special == 0)
+                              	<a href="{{ route('archive.special',$archive->id) }}" class="btn btn-success btn-sm"><i class="material-icons">check_circle_outline</i></a>
+                              	@else
+                              	<a href="{{ route('archive.normal',$archive->id) }}" class="btn btn-primary btn-sm"><i class="material-icons">highlight_off</i></a>
+                              	@endif 
                                 <a href="{{ route('archive.edit',$archive->id) }}" class="btn btn-info btn-sm"><i class="material-icons">mode_edit</i></a>
                                  <form  id="delete-form-{{ $archive->id }}"  action="{{ route('archive.destroy',$archive->id) }}" style="display:none;"method="POST">
                                     {{ csrf_field() }}
