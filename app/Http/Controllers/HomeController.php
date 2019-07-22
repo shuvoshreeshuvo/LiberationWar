@@ -17,14 +17,31 @@ class HomeController extends Controller
 		$periods = Period::all();
 		$ff_titles=Ff_title::all();
         $bookcategories=Bookcategory::all();
-        $image=DB::table('archives') 
+        $image1=DB::table('archives') 
                    ->where('type', 'image')
+                   ->where('special', '1')
+                   ->orderBy('id')
+                   ->take(6)
+                   ->get();
+        $image2=DB::table('archives') 
+                   ->where('type', 'image')
+                   ->where('special', '1')
+                   ->orderBy('id')
+                   ->skip(6)
+                   ->take(6)
+                   ->get();
+        $image3=DB::table('archives') 
+                   ->where('type', 'image')
+                   ->where('special', '1')
+                   ->orderBy('id')
+                   ->skip(12)
+                   ->take(6)
                    ->get();
         $Videofootage=DB::table('archives')
             ->where('type', 'video')
             ->get();
 
-		return view('home', compact('periods','ff_titles','bookcategories','image','Videofootage'));
+		return view('home', compact('periods','ff_titles','bookcategories','image1','image2','image3','Videofootage'));
 	}
 
 	
