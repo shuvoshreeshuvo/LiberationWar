@@ -97,6 +97,8 @@ Route::group(['prefix'=>'admin','middleware'=>'auth','namespace'=>'admin'], func
     Route::resource('event','EventController');
     Route::resource('bongobondu','BongobonduController');
     Route::resource('archive','ArchiveController');
+    Route::get('/archive/special/{id}', 'ArchiveController@special')->name('archive.special');
+    Route::get('/archive/normal/{id}', 'ArchiveController@normal')->name('archive.normal');
     Route::resource('book','BookController');
     Route::resource('b_category','BookcategoryController');
     Route::resource('freedomfighter_title','Ff_titleController');
