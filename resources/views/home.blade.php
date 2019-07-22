@@ -277,8 +277,8 @@ div.polaroid:hover .homeimage{
         <div id="mdb-lightbox-ui"></div>
         <!--First slide-->
         <div class=" carousel-item active text-center">
-             @foreach($image as $data)
-
+             
+             @foreach($image1 as $data)
             <figure class="col-md-3 d-md-inline-block">
                 <a href="#">
                     <img src="{{ asset('/uploads/archive/'.$data->media) }}" class="img-fluid"  style="width: 400px; height: 200px; " >
@@ -292,7 +292,7 @@ div.polaroid:hover .homeimage{
 
         <!--Second slide-->
         <div class=" carousel-item text-center">
-            @foreach($image as $data)
+            @foreach($image2 as $data)
 
             <figure class="col-md-3 d-md-inline-block">
                 <a href="#">
@@ -309,7 +309,7 @@ div.polaroid:hover .homeimage{
 
         <!--Third slide-->
         <div class=" carousel-item text-center">
-            @foreach($image as $data)
+            @foreach($image3 as $data)
 
             <figure class="col-md-3 d-md-inline-block">
                 <a href="#">
