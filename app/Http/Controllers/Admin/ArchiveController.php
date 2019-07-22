@@ -69,12 +69,32 @@ class ArchiveController extends Controller
 
                 $medianame ='default.png';
             }
+
+
+
+            $specialmedia= $request->file('specialmedia');
+            $slug= str_slug($request->title);
+           if(isset($specialmedia))
+           {
+            $currentdate =Carbon::now()->toDateString();
+            $specialmedianame =$slug .'-'. $currentdate .'-'. uniqid() .'.'.
+            $specialmedia->getClientOriginalExtension();
+            if(!file_exists('uploads/specialarchive'))
+             {
+                 mkdir('uploads/specialarchive', 0777,true);
+             }
+             $specialmedia->move('uploads/specialarchive',$specialmedianame);
+            }else {
+
+                $specialmedianame ='default.png';
+            }
+
             $archive = new Archive();
             $archive->title = $request->title;
             $archive->year = $request->year;
             $archive->type = $request->type;
             $archive->media =  $medianame;
-             $archive->specialmedia = $request->specialmedia;
+            $archive->specialmedia =  $specialmedianame;
             $archive->path = $request->path;
             $archive->description = $request->description;
 
@@ -146,13 +166,32 @@ class ArchiveController extends Controller
 
                 $medianame =$archive->media;
             }
+
+
+             $specialmedia= $request->file('specialmedia');
+            $slug= str_slug($request->title);
+           if(isset($specialmedia))
+           {
+            $currentdate =Carbon::now()->toDateString();
+            $specialmedianame =$slug .'-'. $currentdate .'-'. uniqid() .'.'.
+            $specialmedia->getClientOriginalExtension();
+            if(!file_exists('uploads/specialarchive'))
+             {
+                 mkdir('uploads/specialarchive', 0777,true);
+             }
+             $specialmedia->move('uploads/specialarchive',$specialmedianame);
+            }else {
+
+                $specialmedianame ='default.png';
+            }
+
            
            
             $archive->title = $request->title;
             $archive->year = $request->year;
             $archive->type = $request->type;
             $archive->media = $medianame;
-           $archive->specialmedia = $request->specialmedia;
+             $archive->specialmedia =  $specialmedianame;
             $archive->path = $request->path;
              $archive->description = $request->description;
          
@@ -174,11 +213,28 @@ class ArchiveController extends Controller
         if($archive->media != 'default.png'){
             if(file_exists('uploads/archive/'.$archive->media)){
             
-                unlink('uploads/archive/'.$archive->media);
+               // unlink('uploads/archive/'.$archive->media);
             }
         }
         $archive->delete();  
          return redirect()->back()->with('successMsg','Archive  Succesfully Deleted');
  
+    }
+
+
+    public function special($id){
+        $archive = Archive::find($id);
+        $archive->special = '1';
+        $archive->save();
+
+        return redirect()->back()->with('successMsg', 'Archive has been spcialed.');
+    }
+
+    public function normal($id){
+        $archive = Archive::find($id);
+        $archive->special = '0';
+        $archive->save();
+
+        return redirect()->back()->with('successMsg', 'Archive has been normalized.');
     }
 }
