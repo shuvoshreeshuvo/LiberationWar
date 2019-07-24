@@ -1,6 +1,6 @@
 @extends('layouts.front')
 
-@section('title','Our History || Bongobondu')
+@section('title','বঙ্গবন্ধু ||  আমার ইতিহাস')
 
 @section('content')
 
