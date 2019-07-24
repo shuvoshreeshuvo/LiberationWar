@@ -1,6 +1,6 @@
 @extends('layouts.front')
 
-@section('title', 'Our History || About')
+@section('title', ' আমাদের সম্পর্কে || আমার ইতিহাস')
 
 @section('content')
 <div class="container">
