@@ -1,7 +1,7 @@
 @extends('layouts.front')
 
 @section('title', 'ছবি || আমার ইতিহাস')
-
+<link href="{{asset('frontend/images/imagegallery.png')}}" rel="icon">
 @section('content')
 <style>
  .images{
