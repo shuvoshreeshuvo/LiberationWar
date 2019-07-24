@@ -1,6 +1,6 @@
 @extends('layouts.front')
 
-@section('title', 'Our History || 1952')
+@section('title', 'পর্যায়কাল  || আমার ইতিহাস')
 
 @section('content') 
 
