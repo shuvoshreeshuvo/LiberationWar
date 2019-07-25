@@ -34,8 +34,12 @@ body::-webkit-scrollbar-thumb {
 }
 
 .jumbotron {
+<<<<<<< HEAD
     background-image: url('../assets/frontend/images/bangladeshi.jpg');
    
+=======
+    background-image: url('../../frontend/images/Bangladeshi-Flag.jpg');
+>>>>>>> c6dcb04282cae0ce911793e90670fb1e4ef629a7
     height: 100px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -275,6 +279,11 @@ span.wpb_button:hover a{
     padding-bottom: 5px;
     margin-bottom: 20px;
     font-weight: 700;
+}
+
+.headerfive{
+    color:red;
+    font-size: 18px;
 }
 
 .card img{
