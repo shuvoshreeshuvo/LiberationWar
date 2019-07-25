@@ -34,7 +34,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .jumbotron {
-    background-image: url('https://www.aeromate.com.bd/data/frontImages/gallery/product_image/Bangladeshi-Flag.jpg');
+    background-image: url('../assets/frontend/images/bangladeshi.jpg');
+   
     height: 100px;
     background-repeat: no-repeat;
     background-size: cover;
