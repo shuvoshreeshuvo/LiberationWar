@@ -1,6 +1,7 @@
 @extends('layouts.front')
 
-@section('title', 'Our History || About')
+@section('title', ' আমাদের সম্পর্কে || আমার ইতিহাস')
+<link href="{{asset('frontend/images/Contact-Book.png')}}" rel="icon">
 
 @section('content')
 <div class="container">

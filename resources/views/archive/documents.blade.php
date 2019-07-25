@@ -1,6 +1,7 @@
 @extends('layouts.front')
 
-@section('title', 'Our History || Documents')
+@section('title', 'ডকুমেন্টস || আমার ইতিহাস')
+<link href="{{asset('frontend/images/file.png')}}" rel="icon">
 
 @section('content')
 <style>

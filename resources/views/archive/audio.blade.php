@@ -1,11 +1,13 @@
 @extends('layouts.front')
 
-@section('title', 'Our History || Audio')
+@section('title', 'অডিও || আমার ইতিহাস')
+<link href="{{asset('frontend/images/audio.png')}}" rel="icon">
 
 @section('content')
 
 <div class="container">
   <h2 class="headertwo" >অডিও</h2>
+
   @foreach($audio as $data)
 
     <div class="col-md-4">

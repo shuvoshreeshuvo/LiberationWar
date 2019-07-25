@@ -41,7 +41,9 @@
                               <td>{{ $period->starting_year }}</td>
                               <td>{{ $period->ending_year }}</td>
                               <td><img class="img-responsive img-thumbnail" src="{{ asset('uploads/period/'.$period->image) }}" style="height:100px;width:100px" alt=""></td>
-                              <td>{!! $period->content !!}</td>
+                              <td>{!! $period->content !!} </td>
+                              <!--  <a data-text-id="8371494541895216970" href="#" onclick="swapContent($(this));; return false;">...more</a>
+                                <a data-text-id="8371494541895216970" href="#" onclick="swapContent($(this));; return false;">(less)</a> -->
                               <td>{{ $period->created_at }}</td>
                               <td>{{ $period->updated_at }}</td>
                               <td> 

@@ -1,6 +1,7 @@
 @extends('layouts.front')
 
-@section('title','Our History || Bongobondu')
+@section('title','বঙ্গবন্ধু ||  আমার ইতিহাস')
+<link href="{{asset('frontend/images/bongobondhu.png')}}" rel="icon">
 
 @section('content')
 
