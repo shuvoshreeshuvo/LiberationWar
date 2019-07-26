@@ -66,8 +66,8 @@
 
                    <div class="row">
                       <div class="col-md-12">
-                        <label class="control-label">Special Media</label>
-                        <input type="file" class="form-control" name="specialmedia">
+                        <label class="control-label">Figure</label>
+                        <input type="file" class="form-control" name="figure">
                       </div>
                   </div>
 

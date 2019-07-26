@@ -344,7 +344,7 @@ div.polaroid:hover .homeimage{
             <ul class="video-list featured">
                 @foreach($Videofootage as $data)
                 <li class="video featured">
-                    <a data-fancybox href="{{ $data->media }}" class="featured-video">
+                    <a data-fancybox href="{{ $data->path }}" class="featured-video">
                         <figure style="background-image: url(https://img.youtube.com/vi/J9vUulq4tZI/hqdefault.jpg);">
                             <img class="videoimage" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
                             <figcaption>Swap-Meet Speed for Roadkill Nights</figcaption>
@@ -354,46 +354,7 @@ div.polaroid:hover .homeimage{
                 @endforeach
 
 
-              {{--  <li class="video featured">
-                    <a data-fancybox href="https://www.youtube.com/embed/J9vUulq4tZI" class="featured-video">
-                        <figure style="background-image: url(https://img.youtube.com/vi/J9vUulq4tZI/hqdefault.jpg);">
-                            <img class="videoimage" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
-                            <figcaption>Swap-Meet Speed for Roadkill Nights</figcaption>
-                        </figure>
-                    </a>
-                </li>
-                <li class="video featured">
-                    <a data-fancybox href="https://www.youtube.com/embed/J9vUulq4tZI" class="featured-video">
-                        <figure style="background-image: url(https://img.youtube.com/vi/J9vUulq4tZI/hqdefault.jpg);">
-                            <img class="videoimage" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
-                            <figcaption>Swap-Meet Speed for Roadkill Nights</figcaption>
-                        </figure>
-                    </a>
-                </li>
-                <li class="video featured">
-                    <a data-fancybox href="https://www.youtube.com/embed/J9vUulq4tZI" class="featured-video">
-                        <figure style="background-image: url(https://img.youtube.com/vi/J9vUulq4tZI/hqdefault.jpg);">
-                            <img class="videoimage" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
-                            <figcaption>Swap-Meet Speed for Roadkill Nights</figcaption>
-                        </figure>
-                    </a>
-                </li>
-                <li class="video featured">
-                    <a data-fancybox href="https://www.youtube.com/embed/J9vUulq4tZI" class="featured-video">
-                        <figure style="background-image: url(https://img.youtube.com/vi/J9vUulq4tZI/hqdefault.jpg);">
-                            <img class="videoimage" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
-                            <figcaption>Swap-Meet Speed for Roadkill Nights</figcaption>
-                        </figure>
-                    </a>
-                </li>
-                <li class="video featured">
-                    <a data-fancybox href="https://www.youtube.com/embed/J9vUulq4tZI" class="featured-video">
-                        <figure style="background-image: url(https://img.youtube.com/vi/J9vUulq4tZI/hqdefault.jpg);">
-                            <img class="videoimage" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
-                            <figcaption>Swap-Meet Speed for Roadkill Nights</figcaption>
-                        </figure>
-                    </a>
-                </li>--}}
+             
             </ul>
         </div>
     </section>
