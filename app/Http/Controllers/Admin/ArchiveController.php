@@ -54,7 +54,8 @@ class ArchiveController extends Controller
 
 
          $media= $request->file('media');
-        $slug= str_slug($request->title);
+         $figure= $request->file('figure');
+         $slug= str_slug($request->title);
         if(isset($media))
         {
             $currentdate =Carbon::now()->toDateString();
@@ -71,30 +72,28 @@ class ArchiveController extends Controller
             }
 
 
-
-            $specialmedia= $request->file('specialmedia');
-            $slug= str_slug($request->title);
-           if(isset($specialmedia))
-           {
+             if(isset($figure))
+            {
             $currentdate =Carbon::now()->toDateString();
-            $specialmedianame =$slug .'-'. $currentdate .'-'. uniqid() .'.'.
-            $specialmedia->getClientOriginalExtension();
-            if(!file_exists('uploads/specialarchive'))
+            $figurename =$slug .'-'. $currentdate .'-'. uniqid() .'.'.
+            $figure->getClientOriginalExtension();
+            if(!file_exists('uploads/figure'))
              {
-                 mkdir('uploads/specialarchive', 0777,true);
+                 mkdir('uploads/figure', 0777,true);
              }
-             $specialmedia->move('uploads/specialarchive',$specialmedianame);
+             $figure->move('uploads/figure',$figurename);
             }else {
 
-                $specialmedianame ='default.png';
+                $figurename ='default.png';
             }
+
 
             $archive = new Archive();
             $archive->title = $request->title;
             $archive->year = $request->year;
             $archive->type = $request->type;
             $archive->media =  $medianame;
-            $archive->specialmedia =  $specialmedianame;
+            $archive->figure =  $figure;
             $archive->path = $request->path;
             $archive->description = $request->description;
 
@@ -150,39 +149,26 @@ class ArchiveController extends Controller
 
 
           $archive=Archive::find($id);
-          $media= $request->file('media');
+
+           $media= $request->file('media');
+          
           $slug= str_slug($request->title);
                if(isset($media))
         {
             $currentdate =Carbon::now()->toDateString();
             $medianame =$slug .'-'. $currentdate .'-'. uniqid() .'.'.
+           
             $media->getClientOriginalExtension();
+
             if(!file_exists('uploads/archive'))
              {
                  mkdir('uploads/archive', 0777,true);
              }
+
              $media->move('uploads/archive',$medianame);
-            }else {
+             }else {
 
                 $medianame =$archive->media;
-            }
-
-
-             $specialmedia= $request->file('specialmedia');
-            $slug= str_slug($request->title);
-           if(isset($specialmedia))
-           {
-            $currentdate =Carbon::now()->toDateString();
-            $specialmedianame =$slug .'-'. $currentdate .'-'. uniqid() .'.'.
-            $specialmedia->getClientOriginalExtension();
-            if(!file_exists('uploads/specialarchive'))
-             {
-                 mkdir('uploads/specialarchive', 0777,true);
-             }
-             $specialmedia->move('uploads/specialarchive',$specialmedianame);
-            }else {
-
-                $specialmedianame ='default.png';
             }
 
            
@@ -191,7 +177,7 @@ class ArchiveController extends Controller
             $archive->year = $request->year;
             $archive->type = $request->type;
             $archive->media = $medianame;
-             $archive->specialmedia =  $specialmedianame;
+             $archive->figure =  $figure;
             $archive->path = $request->path;
              $archive->description = $request->description;
          

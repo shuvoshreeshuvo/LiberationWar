@@ -43,6 +43,8 @@ class HomeController extends Controller
             ->orderBy('id')
             ->get();
 
+            
+
 		return view('home', compact('periods','ff_titles','bookcategories','image1','image2','image3','Videofootage'));
 	}
 
