@@ -34,12 +34,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 .jumbotron {
-<<<<<<< HEAD
-    background-image: url('../assets/frontend/images/bangladeshi.jpg');
-   
-=======
-    background-image: url('../../frontend/images/Bangladeshi-Flag.jpg');
->>>>>>> c6dcb04282cae0ce911793e90670fb1e4ef629a7
+
+ background-image: url('../../frontend/images/Bangladeshi-Flag.jpg');
+
     height: 100px;
     background-repeat: no-repeat;
     background-size: cover;
