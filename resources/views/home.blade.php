@@ -339,7 +339,7 @@ div.polaroid:hover .homeimage{
         <p>এখানে বাংলাদেশের মুক্তিযুদ্ধ বিষয়ক ভিডিও, টেলিভিশন রিপোর্ট এবং বিশেষ ডকুমেন্টারি সংগ্রহ করে দেখানোর চেষ্টা করা হয়েছে। যুদ্ধক্ষেত্রের বিভিন্ ফুটেজ,পাকিস্তানের আত্মসমর্পণের
             ফুটেজ, গণহত্যার বিবরণ ও ধর্ষণের বিস্তারিত বর্ণনা, পূর্ব পাকিস্তানে পাকিস্তান সেনাবাহিনী যে অত্যাচার করেছিল তার বিবরণ তুলে ধরা হয়েছে।</p>
     </article>
-    <section class="videos" id="featured-videos">
+    <!--<section class="videos" id="featured-videos">
         <div class="video-grid front-page" id="front-page-videos">
             <ul class="video-list featured">
                 @foreach($Videofootage as $data)
@@ -357,7 +357,25 @@ div.polaroid:hover .homeimage{
              
             </ul>
         </div>
-    </section>
+    </section>-->
+
+
+
+<div class="row">
+@foreach($Videofootage as $data)
+
+    <div class="col-md-4">
+                     <div class="videogallery">
+               
+                <iframe width="300" height="400" src="{{ $data->path }} " frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <h4 class="videoTitle">{{ $data->description }}</h4>
+            
+        </div>
+            
+            </div>
+             @endforeach
+         </div>
 </main>
 
 <!-- Video Gallery -->
