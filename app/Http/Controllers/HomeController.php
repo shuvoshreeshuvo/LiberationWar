@@ -43,9 +43,11 @@ class HomeController extends Controller
             ->orderBy('id')
             ->get();
 
-            
+           // dd($Videofootage);
 
-		return view('home', compact('periods','ff_titles','bookcategories','image1','image2','image3','Videofootage'));
+          //echo json_encode($Videofootage);
+
+		 return view('home', compact('periods','ff_titles','bookcategories','image1','image2','image3','Videofootage'));
 	}
 
 	
