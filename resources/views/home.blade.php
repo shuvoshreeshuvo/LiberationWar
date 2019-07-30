@@ -171,7 +171,7 @@ div.polaroid:hover .homeimage{
 
                 <li class="nav-item dropdown">
 
-                    <a class="nav-link " href="{!! url('/books/books'); !!}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link " href="{!! url('/books'); !!}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         বই
                     </a>
                     <div class="dropdown" >
@@ -183,9 +183,9 @@ div.polaroid:hover .homeimage{
 
                         </div>
                     </div>
-                    
 
                 </li>
+
 
                 <li class="nav-item">
                     <a class="nav-link " href="{!! url('/about'); !!}">আমাদের সম্পর্কে</a>
