@@ -9,9 +9,9 @@
   <h2 class="headertwo" >অডিও</h2>
 
   @foreach($audio as $data)
+        <h5 class="headerfive">{{ $data->title }}</h5>
+        <div class="col-md-4">
 
-    <div class="col-md-4">
-                    
         <audio controls> <source  src="{{ asset('frontend/archive/audio/'.$data->path) }}" type="audio/mpeg"></audio>
     </div>
 
