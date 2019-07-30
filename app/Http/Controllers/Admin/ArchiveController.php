@@ -19,7 +19,7 @@ class ArchiveController extends Controller
     {
         $archives=Archive::all();
         return view('admin.archive.index',compact('archives'));
-   
+
     }
 
     /**
@@ -41,51 +41,68 @@ class ArchiveController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-           // 'title' => 'required',
-           // 'year' => 'required',
-           // 'type' => 'required',
-            
-           // 'description' => 'required',
+            // 'title' => 'required',
+            // 'year' => 'required',
+            // 'type' => 'required',
 
-           //'media' =>'nullable|mimes:audio/mpeg,mpga,mp3,wav,aac',
+            // 'description' => 'required',
+
+            //'media' =>'nullable|mimes:audio/mpeg,mpga,mp3,wav,aac',
 
 
         ]);
 
 
-         $media= $request->file('media');
+        $media= $request->file('media');
+        $figure= $request->file('figure');
         $slug= str_slug($request->title);
         if(isset($media))
         {
             $currentdate =Carbon::now()->toDateString();
             $medianame =$slug .'-'. $currentdate .'-'. uniqid() .'.'.
-            $media->getClientOriginalExtension();
+                $media->getClientOriginalExtension();
             if(!file_exists('uploads/archive'))
-             {
-                 mkdir('uploads/archive', 0777,true);
-             }
-             $media->move('uploads/archive',$medianame);
-            }else {
-
-                $medianame ='default.png';
+            {
+                mkdir('uploads/archive', 0777,true);
             }
+            $media->move('uploads/archive',$medianame);
+        }else {
 
-
-
-            $archive = new Archive();
-            $archive->title = $request->title;
-            $archive->year = $request->year;
-            $archive->type = $request->type;
-            $archive->media =  $medianame;
-            $archive->path = $request->path;
-            $archive->description = $request->description;
-
-         $archive->save();
-         return redirect()->route('archive.index')->with('successMsg','Archive Succesfully Saved');
-
+            $medianame ='default.png';
         }
 
-   
+
+        if(isset($figure))
+        {
+            $currentdate =Carbon::now()->toDateString();
+            $figurename =$slug .'-'. $currentdate .'-'. uniqid() .'.'.
+                $figure->getClientOriginalExtension();
+            if(!file_exists('uploads/figure'))
+            {
+                mkdir('uploads/figure', 0777,true);
+            }
+            $figure->move('uploads/figure',$figurename);
+        }else {
+
+            $figurename ='default.png';
+        }
+
+
+        $archive = new Archive();
+        $archive->title = $request->title;
+        $archive->year = $request->year;
+        $archive->type = $request->type;
+        $archive->media =  $medianame;
+        $archive->figure =  $figure;
+        $archive->path = $request->path;
+        $archive->description = $request->description;
+
+        $archive->save();
+        return redirect()->route('archive.index')->with('successMsg','Archive Succesfully Saved');
+
+    }
+
+
 
     /**
      * Display the specified resource.
@@ -106,9 +123,9 @@ class ArchiveController extends Controller
      */
     public function edit($id)
     {
-       $archive=Archive::find($id);
+        $archive=Archive::find($id);
         return view('admin.archive.edit',compact('archive'));
- 
+
     }
 
     /**
@@ -124,41 +141,49 @@ class ArchiveController extends Controller
             'title' => 'required',
             'year' => 'required',
             'type' => 'required',
-           
+
             'description' => 'required',
-            
+
 
         ]);
 
 
-          $archive=Archive::find($id);
-          $media= $request->file('media');
-          $slug= str_slug($request->title);
-               if(isset($media))
+        $archive=Archive::find($id);
+
+        $media= $request->file('media');
+
+        $slug= str_slug($request->title);
+        if(isset($media))
         {
             $currentdate =Carbon::now()->toDateString();
             $medianame =$slug .'-'. $currentdate .'-'. uniqid() .'.'.
-            $media->getClientOriginalExtension();
-            if(!file_exists('uploads/archive'))
-             {
-                 mkdir('uploads/archive', 0777,true);
-             }
-             $media->move('uploads/archive',$medianame);
-            }else {
 
-                $medianame =$archive->media;
+                $media->getClientOriginalExtension();
+
+            if(!file_exists('uploads/archive'))
+            {
+                mkdir('uploads/archive', 0777,true);
             }
-           
-            $archive->title = $request->title;
-            $archive->year = $request->year;
-            $archive->type = $request->type;
-            $archive->media = $medianame;
-            $archive->path = $request->path;
-             $archive->description = $request->description;
-         
-         $archive->save();
-         return redirect()->route('archive.index')->with('successMsg','Archive Succesfully Updated');
- 
+
+            $media->move('uploads/archive',$medianame);
+        }else {
+
+            $medianame =$archive->media;
+        }
+
+
+
+        $archive->title = $request->title;
+        $archive->year = $request->year;
+        $archive->type = $request->type;
+        $archive->media = $medianame;
+        $archive->figure =  $figure;
+        $archive->path = $request->path;
+        $archive->description = $request->description;
+
+        $archive->save();
+        return redirect()->route('archive.index')->with('successMsg','Archive Succesfully Updated');
+
 
     }
 
@@ -173,13 +198,13 @@ class ArchiveController extends Controller
         $archive=Archive::find($id);
         if($archive->media != 'default.png'){
             if(file_exists('uploads/archive/'.$archive->media)){
-            
-               // unlink('uploads/archive/'.$archive->media);
+
+                // unlink('uploads/archive/'.$archive->media);
             }
         }
-        $archive->delete();  
-         return redirect()->back()->with('successMsg','Archive  Succesfully Deleted');
- 
+        $archive->delete();
+        return redirect()->back()->with('successMsg','Archive  Succesfully Deleted');
+
     }
 
 

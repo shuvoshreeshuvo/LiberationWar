@@ -27,6 +27,7 @@
                           <th>Year</th>
                           <th>Type</th>
                           <th>Media</th>
+                          <th>Figure</th>
                           <th>Is Special</th>
                           <th>Created At</th>
                           <th>Action</th>
@@ -59,6 +60,8 @@
                                 <td><audio controls> <source  src="{{ asset('frontend/archive/audio/'.$archive->path) }}" type="audio/mpeg"></audio></td>
                               @endif
 
+
+                              <td>{{ $archive->figure }}</td>
 
 
                               <td>

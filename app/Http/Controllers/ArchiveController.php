@@ -42,6 +42,7 @@ class ArchiveController extends Controller
 		$Videofootage=DB::table('archives')
             ->where('type', 'video')
             ->get();
+
         return view('archive.video_footage',compact('periods','ff_titles','Videofootage','bookcategories'));
     }
 

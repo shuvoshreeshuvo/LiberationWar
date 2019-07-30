@@ -39,9 +39,15 @@ class HomeController extends Controller
                    ->get();
         $Videofootage=DB::table('archives')
             ->where('type', 'video')
+            ->where('special', '1')
+            ->orderBy('id')
             ->get();
 
-		return view('home', compact('periods','ff_titles','bookcategories','image1','image2','image3','Videofootage'));
+           // dd($Videofootage);
+
+          //echo json_encode($Videofootage);
+
+		 return view('home', compact('periods','ff_titles','bookcategories','image1','image2','image3','Videofootage'));
 	}
 
 	

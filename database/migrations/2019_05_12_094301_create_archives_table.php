@@ -20,6 +20,7 @@ class CreateArchivesTable extends Migration
             $table->string('type');
             $table->string('media');
             $table->smallInteger('special');
+            $table->string('figure');
             $table->string('path');
             $table->text('description');
             $table->timestamps();
