@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Input;
 use App\Freedom_fighter;
 use App\Book;
 
-class searchcontroller extends Controller
+class SearchController extends Controller
 {
     public function search(){
     
