@@ -72,29 +72,11 @@ class ArchiveController extends Controller
 
 
 
-            $specialmedia= $request->file('specialmedia');
-            $slug= str_slug($request->title);
-           if(isset($specialmedia))
-           {
-            $currentdate =Carbon::now()->toDateString();
-            $specialmedianame =$slug .'-'. $currentdate .'-'. uniqid() .'.'.
-            $specialmedia->getClientOriginalExtension();
-            if(!file_exists('uploads/specialarchive'))
-             {
-                 mkdir('uploads/specialarchive', 0777,true);
-             }
-             $specialmedia->move('uploads/specialarchive',$specialmedianame);
-            }else {
-
-                $specialmedianame ='default.png';
-            }
-
             $archive = new Archive();
             $archive->title = $request->title;
             $archive->year = $request->year;
             $archive->type = $request->type;
             $archive->media =  $medianame;
-            $archive->specialmedia =  $specialmedianame;
             $archive->path = $request->path;
             $archive->description = $request->description;
 
@@ -166,32 +148,11 @@ class ArchiveController extends Controller
 
                 $medianame =$archive->media;
             }
-
-
-             $specialmedia= $request->file('specialmedia');
-            $slug= str_slug($request->title);
-           if(isset($specialmedia))
-           {
-            $currentdate =Carbon::now()->toDateString();
-            $specialmedianame =$slug .'-'. $currentdate .'-'. uniqid() .'.'.
-            $specialmedia->getClientOriginalExtension();
-            if(!file_exists('uploads/specialarchive'))
-             {
-                 mkdir('uploads/specialarchive', 0777,true);
-             }
-             $specialmedia->move('uploads/specialarchive',$specialmedianame);
-            }else {
-
-                $specialmedianame ='default.png';
-            }
-
-           
            
             $archive->title = $request->title;
             $archive->year = $request->year;
             $archive->type = $request->type;
             $archive->media = $medianame;
-             $archive->specialmedia =  $specialmedianame;
             $archive->path = $request->path;
              $archive->description = $request->description;
          
