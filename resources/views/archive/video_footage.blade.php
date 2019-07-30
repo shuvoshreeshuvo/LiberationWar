@@ -10,7 +10,7 @@
 	<div class="row">
 
 
-   			<!--<section class="videos" id="featured-videos">
+   			<section class="videos" id="featured-videos">
         <div class="video-grid front-page" id="front-page-videos">
             <ul class="video-list featured">
                 @foreach($Videofootage as $data)
@@ -28,8 +28,8 @@
              
             </ul>
         </div>
-    </section>-->
-    @foreach($Videofootage as $data)
+    </section>
+   <!-- @foreach($Videofootage as $data)
         <div class="col-md-3">
 
    		<div class="videogallery">
@@ -42,7 +42,7 @@
 			</div>
    			
 
-  @endforeach
+  @endforeach-->
 
    </div>
 </div>
