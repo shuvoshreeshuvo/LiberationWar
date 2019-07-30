@@ -66,15 +66,6 @@
 
                    <div class="row">
                       <div class="col-md-12">
-                        <label class="control-label">Special Media</label>
-                        <input type="file" class="form-control" name="specialmedia">
-                      </div>
-                  </div>
-
-
-
-                   <div class="row">
-                      <div class="col-md-12">
                         <label class="control-label">Path</label>
                         <input type="text" class="form-control" name="path">
                       </div>
