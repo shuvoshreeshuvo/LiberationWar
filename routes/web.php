@@ -17,6 +17,8 @@
     return view('home');
 });*/
 
+
+
 // Home Page
 
 Route::get('/', 'HomeController@index');
