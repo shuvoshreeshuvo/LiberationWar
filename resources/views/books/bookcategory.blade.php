@@ -8,6 +8,7 @@
 
         .books{
             float: left;
+            margin: 20px 0px 40px 15px;
         }
 
         .bookhovereffect {
@@ -38,6 +39,8 @@
             position: relative;
             -webkit-transition: all .4s linear;
             transition: all .4s linear;
+            width: 200px;
+            height: 300px;
         }
 
         .bookhovereffect .title {
@@ -98,6 +101,7 @@
             transition-delay: .2s;
         }
 
+
     </style>
 
 
@@ -107,8 +111,8 @@
         <div class="row">
             @foreach($book as $data)
 
-                <div class="col-md-4">
-                    <div class="books" style="margin-right: 25px;margin-bottom: 20px;">
+                <div class="col-md-3">
+                    <div class="books">
                         @if($data->type=='pdf')
                             <div class="bookhovereffect">
                                 <a class="show" target="_blank" href="{{URL::asset('frontend/books/'.$data->path.'.pdf') }}">
@@ -134,8 +138,6 @@
 
 
                         @endif
-
-
                     </div>
                 </div>
             @endforeach

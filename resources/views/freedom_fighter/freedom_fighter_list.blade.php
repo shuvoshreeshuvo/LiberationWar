@@ -7,10 +7,11 @@
 
 <style>
 table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    padding-top: 20px;
+}   
 
 td, th {
   border: 1px solid #dddddd;
@@ -21,11 +22,11 @@ td, th {
 }
 
 tr:nth-child(odd) {
-  background-color: #5de282;
+  background-color: dimgrey;
 }
 
 tr:nth-child(even) {
-  background-color: #dd6a6a;
+  background-color: darkgray;
 }
 
 .list{

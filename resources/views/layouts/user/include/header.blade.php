@@ -15,7 +15,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
   
     
+<style>
+    .form-inline .form-control{
+        width: 200px;
+    }
+    input[type=search] {
+        border: 1px solid #00885A;
+        box-shadow: 0 1px 0 0 #00885A;
+    }
+    input[type=search]::placeholder {
+        color: #F93B00 ;
+        font-size: 12px;
+        font-weight: bold;
 
+    }
+</style>
     
 
 </head>
@@ -113,12 +127,12 @@
                 <a class="nav-link " href="{!! url('/about'); !!}">আমাদের সম্পর্কে</a>
             </li>
         </ul>
-
-                        <form class="form-inline my-2 my-lg-0" action="{{ url('/search') }}" method="GET">
-                            {{ csrf_field() }}
-                            <input class="form-control mr-sm-2" type="search" placeholder="Search" name="search" aria-label="Search">
-                            <button class="btn btn-oumyine-success btn-sm my-2 my-sm-0" type="submit">Search</button>
-                        </form>
+        <!-- Search form -->
+        <form class="form-inline my-2 my-lg-0" action="{{ url('/search') }}" method="GET">
+            {{ csrf_field() }}
+            <i class="fas fa-search" aria-hidden="true"></i>
+            <input class="form-control mr-sm-2 ml-3" type="search" placeholder="খোঁজ করুন" name="search" aria-label="Search">
+        </form>
 
     </div>
 </nav>
