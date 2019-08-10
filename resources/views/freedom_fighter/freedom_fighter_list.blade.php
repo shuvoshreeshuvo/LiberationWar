@@ -11,7 +11,7 @@ table {
     border-collapse: collapse;
     width: 100%;
     padding-top: 20px;
-}   
+}
 
 td, th {
   border: 1px solid #dddddd;
