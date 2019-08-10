@@ -15,12 +15,19 @@
             <ul class="video-list featured">
                 @foreach($Videofootage as $data)
                 <li class="video featured">
-                    <a data-fancybox href="{{ $data->path }}" class="featured-video">
-                        <figure style="background-image: url(https://img.youtube.com/vi/J9vUulq4tZI/hqdefault.jpg);">
+                   <a data-fancybox href="{{ $data->path }}" class="featured-video">
+                    @if(file_exists('uploads/figure/'.$data->figure))
+                        <figure style="background-image: url(uploads/figure/{{$data->figure}})">
                             <img class="videoimage" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
-                            <figcaption>Swap-Meet Speed for Roadkill Nights</figcaption>
+                            <figcaption>{{ $data->title }}</figcaption>
                         </figure>
-                    </a>
+                    @else
+                        <figure style="background-image: url({{$data->figure}})">
+                            <img class="videoimage" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
+                            <figcaption>{{ $data->title }}</figcaption>
+                        </figure>
+                    @endif
+                    </a> 
                 </li>
                 @endforeach
 
@@ -29,20 +36,6 @@
             </ul>
         </div>
     </section>
-   <!-- @foreach($Videofootage as $data)
-        <div class="col-md-3">
-
-   		<div class="videogallery">
-                
-				<iframe width="250" height="300" src="{{ $data->path }} " frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-			<h4 class="videoTitle">{{ $data->description }}</h4>
-      	</div>
-
-			</div>
-   			
-
-  @endforeach-->
 
    </div>
 </div>

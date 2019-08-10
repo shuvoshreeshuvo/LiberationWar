@@ -381,24 +381,6 @@ div.polaroid:hover .homeimage{
             </ul>
         </div>
     </section>
-
-
-<!--
-<div class="row">
-@foreach($Videofootage as $data)
-
-    <div class="col-md-4">
-                     <div class="videogallery">
-               
-                <iframe width="300" height="400" src="{{ $data->path }} " frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-            <h4 class="videoTitle">{{ $data->description }}</h4>
-            
-        </div>
-            
-            </div>
-             @endforeach
-         </div>-->
 </main>
 
 <!-- Video Gallery -->
