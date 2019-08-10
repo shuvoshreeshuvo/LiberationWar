@@ -51,7 +51,7 @@
             </li>
 
             <li class="nav-item dropdown">
-                <a class="nav-link " href="archive" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     ইতিহাস
                 </a>
                 <div class="dropdown" >
