@@ -1,7 +1,7 @@
 <?php
 
 return[
-
+    'title' => ' || ',
     'logo' => 'Amar Etihash',
     'home' => 'Home',
     'history' => 'History',
