@@ -100,7 +100,11 @@
     <div class="col-md-4">
         <div class="images">
     <div class="imagehovereffect">
+<<<<<<< HEAD
         <a class="show" target="_blank"href="{{ URL::to('/uploads/archive/'.$data->media) }}">
+=======
+        <a class="show" target="_blank" href="{{ $data->media }}">
+>>>>>>> 4994e24d42a21bd073467c4af72537a0d9adabee
 
             <img class="allimage"
                  class="img-responsive p-2" src="{{ asset('/uploads/archive/'.$data->media) }}" alt="" >
