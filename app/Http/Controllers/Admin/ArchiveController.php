@@ -224,3 +224,5 @@ class ArchiveController extends Controller
         return redirect()->back()->with('successMsg', 'Archive has been normalized.');
     }
 }
+
+
