@@ -13,24 +13,6 @@
      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-  
-    
-<style>
-    .form-inline .form-control{
-        width: 200px;
-    }
-    input[type=search] {
-        border: 1px solid #00885A;
-        box-shadow: 0 1px 0 0 #00885A;
-    }
-    input[type=search]::placeholder {
-        color: #F93B00 ;
-        font-size: 12px;
-        font-weight: bold;
-
-    }
-</style>
-    
 
 </head>
 
