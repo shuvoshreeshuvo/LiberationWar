@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> {{ __('header.home') }}{{ __('header.title') }}{{ __('header.logo') }}</title>
@@ -16,100 +17,6 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
-
-    <style>
-
-       .headertwo{
-           color: red;
-           padding:10px 0px 10px 0px;
-           text-align: center;
-           font-size:25px;
-       }
-    .homeimage{
-            margin: auto;
-            display: inline;
-            vertical-align: middle;
-            border-style: none;
-             border: 10px solid #fff;
-            width:100%;
-            height: 200px;
-            transition: transform 0.3s, filter 0.5s ease-in-out;
-            transform-origin: center center;
-            overflow: hidden;
-        }
-
-.img-thumbnail {
-    padding: .25rem;
-    background-color: blue;
-    border: 10px solid #fff;
-    border: 1px solid #dee2e6;
-    border-radius: .25rem;
-    max-width: 100%;
-    height: 150px;
-}
-
-span.wpb_button a{
-    text-decoration: none;
-}
-
-span.wpb_button:hover a{
-    background-color: #007236;
-}
-
-.g-btn span {
-    position: relative;
-}
-.g-btn, button, input[type="submit"] {
-    font-size: 15px;
-    line-height: 20px;
-    font-weight: 700;
-    text-transform: uppercase;
-    padding: 10px 36px;
-    margin: 5px 0;
-    border: none;
-    border-radius: 5px;
-    overflow: hidden;
-    -webkit-transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
-    transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
-
-    display: inline-block;
-    vertical-align: middle;
-    text-align: center;
-    white-space: nowrap;
-    position: relative;
-    cursor: pointer;
-}
-
-
-.g-btn.color_green {
-    background-color:#59ba41;
-    color: #fff;
-}
-
-div.polaroid {
-    width: 300px;
-    background-color:white;
-    padding: 0px 20px 0px 20px;
-    margin-bottom: 25px;
-}
-div.polaroid:hover .homeimage{
-    filter: brightness(100%);
-    transform: scale(1.3);
-}
-    .form-inline .form-control{
-        width: 200px;
-    }
-       input[type=search] {
-           border: 1px solid #00885A;
-           box-shadow: 0 1px 0 0 #00885A;
-       }
-       input[type=search]::placeholder {
-           color: #F93B00 ;
-           font-size: 12px;
-           font-weight: bold;
-
-       }
-    </style>
 
 </head>
 
@@ -296,8 +203,6 @@ div.polaroid:hover .homeimage{
                 </a>
             </figure>
             @endforeach
-            
-
         </div>
         <!--/.First slide-->
 
@@ -311,9 +216,6 @@ div.polaroid:hover .homeimage{
                 </a>
             </figure>
             @endforeach
-            
-
-            
 
         </div>
         <!--/.Second slide-->
@@ -328,9 +230,6 @@ div.polaroid:hover .homeimage{
                 </a>
             </figure>
             @endforeach
-            
-
-            
 
         </div>
         <!--/.Third slide-->
@@ -357,7 +256,7 @@ div.polaroid:hover .homeimage{
                 <li class="video featured">
                    <a data-fancybox href="{{ $data->path }}" class="featured-video">
                     @if(file_exists('uploads/figure/'.$data->figure))
-                        <figure style="background-image: url(uploads/figure/{{$data->figure}})">
+                        <figure style="background-image: url('uploads/figure/{{$data->figure}}')">
                             <img class="videoimage" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
                             <figcaption>{{ $data->title }}</figcaption>
                         </figure>
@@ -367,12 +266,7 @@ div.polaroid:hover .homeimage{
                             <figcaption>{{ $data->title }}</figcaption>
                         </figure>
                     @endif
-                    </a> 
-                      <!--<video width="320" height="240" poster="{{asset('/uploads/figure/'.$data->figure)}}" controls>
-                        <source src="{{ $data->path }}" type="video/mp4">
-  
-   
-                    </video>-->
+                    </a>
                 </li>
                 @endforeach
 
