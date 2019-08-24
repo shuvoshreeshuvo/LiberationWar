@@ -1,33 +1,5 @@
-<style>
+<div class="container">
 
-.sidenav {
-  height: 100%;
-  width: 160px;
-  position: fixed;
-  z-index: 1;
-  top:0;
-  left: 0;
-  background: #eee;
-  overflow-x: hidden;
- padding-top: 70px;
-}
-
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 20px;
-  color: red;
-  display: block;
-}
-
-.sidenav a:hover {
-  color: #064579;
-}
-
-</style>
-
- <div class="container">
-        
 <div class="col-md-3 ">
 <div class="sidenav">
   <ul>
