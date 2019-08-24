@@ -100,12 +100,11 @@
     <div class="col-md-4">
         <div class="images">
     <div class="imagehovereffect">
-        <a class="show" target="_blank" href="{{ $data->media }}">
+        <a class="show" target="_blank" href="{{ asset('/uploads/archive/'.$data->media)}}">
 
             <img class="allimage"
                  class="img-responsive p-2" src="{{ asset('/uploads/archive/'.$data->media) }}" alt="" >
             <div class="overlay">
-                <h2 class="title">{{ $data->title }}</h2>
                 <p class="description">{!! $data->description !!}</p>
             </div></a>
     </div>
