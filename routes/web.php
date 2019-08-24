@@ -29,15 +29,16 @@
 Route::get('/', 'HomeController@index1');
 
 // Custom Route
-Route::get('/{lang}', 'HomeController@index');
+Route::get('/lang', 'HomeController@index');
 
 
+/* shuvoy korsil ami off korsi
 
 Route::group(['prefix' => '{lang?}', 'middleware' => 'setlocale', 'where' => ['lang' => '[a-zA-Z]{2}'], 'namespace'=>'lang'], function($lang = Null){
     App::setlocale($lang);
 
     //Route::get('/', 'HomeController@index');
-});
+});*/
 
 
 /*Route::get('/{lang?}', function ($lang=null) {
