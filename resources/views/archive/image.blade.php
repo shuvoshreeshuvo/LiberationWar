@@ -101,7 +101,7 @@
         <div class="images">
     <div class="imagehovereffect">
             <img class="allimage"
-                 class="img-responsive p-2" src="{{ asset('/uploads/archive/'.$data->media) }}" alt="" >
+                 class="img-responsive p-2" src="{{ asset('/uploads/archive/'.$data->media) }}"  target="_blank" alt="" >
             <div class="overlay">
                 <h2 class="title">{{ $data->title }}</h2>
                 <p class="description">{!! $data->description !!}</p>
