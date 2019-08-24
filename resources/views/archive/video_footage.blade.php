@@ -9,33 +9,30 @@
 
 	<div class="row">
 
+        <section class="videos" id="featured-videos">
+            <div class="video-grid front-page" id="front-page-videos">
+                <ul class="video-list featured">
+                    @foreach($Videofootage as $data)
+                        <li class="video featured">
+                            <a data-fancybox href="{{ $data->path }}" class="featured-video">
+                                @if(file_exists('uploads/figure/'.$data->figure))
+                                    <figure style="background-image: url('uploads/figure/{{$data->figure}}')">
+                                        <img class="videoimage" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
+                                        <figcaption>{{ $data->title }}</figcaption>
+                                    </figure>
+                                @else
+                                    <figure style="background-image: url('{{$data->figure}}')">
+                                        <img class="videoimage" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
+                                        <figcaption>{{ $data->title }}</figcaption>
+                                    </figure>
+                                @endif
+                            </a>
+                        </li>
+                    @endforeach
 
-   			<section class="videos" id="featured-videos">
-        <div class="video-grid front-page" id="front-page-videos">
-            <ul class="video-list featured">
-                @foreach($Videofootage as $data)
-                <li class="video featured">
-                   <a data-fancybox href="{{ $data->path }}" class="featured-video">
-                    @if(file_exists('uploads/figure/'.$data->figure))
-                        <figure style="background-image: url(uploads/figure/{{$data->figure}})">
-                            <img class="videoimage" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
-                            <figcaption>{{ $data->title }}</figcaption>
-                        </figure>
-                    @else
-                        <figure style="background-image: url({{$data->figure}})">
-                            <img class="videoimage" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
-                            <figcaption>{{ $data->title }}</figcaption>
-                        </figure>
-                    @endif
-                    </a> 
-                </li>
-                @endforeach
-
-
-             
-            </ul>
-        </div>
-    </section>
+                </ul>
+            </div>
+        </section>
 
    </div>
 </div>
