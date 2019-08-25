@@ -1,7 +1,7 @@
 <?php
 
     return[
-
+        'title' => ' || ',
         'logo' => 'আমার ইতিহাস',
         'home' => 'হোম',
         'history' => 'ইতিহাস',

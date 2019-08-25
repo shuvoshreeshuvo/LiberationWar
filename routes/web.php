@@ -20,8 +20,33 @@
 
 
 // Home Page
+/*Route::get('/', function () {
+    return redirect(app()->getLocale());
+});*/
 
-Route::get('/', 'HomeController@index');
+
+// Default Route
+Route::get('/', 'HomeController@index1');
+
+// Custom Route
+Route::get('/{lang}', 'HomeController@index');
+
+
+
+Route::group(['prefix' => '{lang?}', 'middleware' => 'setlocale', 'where' => ['lang' => '[a-zA-Z]{2}'], 'namespace'=>'lang'], function($lang = Null){
+    App::setlocale($lang);
+
+    //Route::get('/', 'HomeController@index');
+});
+
+
+/*Route::get('/{lang?}', function ($lang=null) {
+    App::setlocale($lang);
+    return view('home');
+}, 'HomeController@index');*/
+
+//Route::get('/', 'HomeController@index');
+
 Route::get('/search', 'searchController@search');
 
 
@@ -91,6 +116,7 @@ Route::get('/locale/{lang?}', function ($lang=null) {
     App::setlocale($lang);
     return view('welcome');
 });
+
 //Admin
 
 

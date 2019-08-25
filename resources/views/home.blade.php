@@ -4,7 +4,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> হোম || আমার ইতিহাস</title>
+    <title> {{ __('header.home') }}{{ __('header.title') }}{{ __('header.logo') }}</title>
     <link href="{{asset('frontend/images/bd.png')}}" rel="icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" rel="stylesheet">
@@ -31,12 +31,12 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <h1 class="display-4">আমার ইতিহাস</h1>
+        <h1 class="display-4">{{ __('header.logo') }}</h1>
         
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="nav navbar-nav mx-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/">হোম<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/{{app()->getLocale()}}">{{ __('header.home') }}<span class="sr-only">(current)</span></a>
                 </li>
 
                 <li class="nav-item dropdown">
