@@ -93,7 +93,7 @@ class ArchiveController extends Controller
         $archive->year = $request->year;
         $archive->type = $request->type;
         $archive->media =  $medianame;
-        $archive->figure =  $figure;
+        $archive->figure =  $figurename;
         $archive->path = $request->path;
         $archive->description = $request->description;
 
@@ -148,11 +148,10 @@ class ArchiveController extends Controller
         ]);
 
 
-        $archive=Archive::find($id);
-
         $media= $request->file('media');
-
+        $figure= $request->file('figure');
         $slug= str_slug($request->title);
+        $archive=Archive::find($id);
         if(isset($media))
         {
             $currentdate =Carbon::now()->toDateString();
@@ -172,12 +171,28 @@ class ArchiveController extends Controller
         }
 
 
+        if(isset($figure))
+        {
+            $currentdate =Carbon::now()->toDateString();
+            $figurename =$slug .'-'. $currentdate .'-'. uniqid() .'.'.
+                $figure->getClientOriginalExtension();
+            if(!file_exists('uploads/figure'))
+            {
+                mkdir('uploads/figure', 0777,true);
+            }
+            $figure->move('uploads/figure',$figurename);
+        }else {
+
+            $figurename =$archive->figure;
+        }
+
+
 
         $archive->title = $request->title;
         $archive->year = $request->year;
         $archive->type = $request->type;
         $archive->media = $medianame;
-        $archive->figure =  $figure;
+        $archive->figure =  $figurename;
         $archive->path = $request->path;
         $archive->description = $request->description;
 

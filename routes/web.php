@@ -123,7 +123,7 @@ Route::get('/locale/{lang?}', function ($lang=null) {
 
 
 Route::group(['prefix'=>'admin','middleware'=>'auth','namespace'=>'admin'], function (){
-     
+
     Route::get('dashboard','DashboardController@index')->name('admin.dashboard');
     Route::resource('Slider','SliderController');
     Route::resource('Category','CategoryController');
@@ -139,8 +139,8 @@ Route::group(['prefix'=>'admin','middleware'=>'auth','namespace'=>'admin'], func
     Route::resource('freedom_fighter','Freedom_fighterController');
     Route::resource('Item','ItemController');
     Route::get('Contact','ContactController@index')->name('contact.index');
-     Route::get('Contact/{id}','ContactController@show')->name('contact.show');
-     Route::delete('Contact/{id}','ContactController@destroy')->name('contact.destroy');
+    Route::get('Contact/{id}','ContactController@show')->name('contact.show');
+    Route::delete('Contact/{id}','ContactController@destroy')->name('contact.destroy');
 
 
 });

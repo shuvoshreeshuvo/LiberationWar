@@ -56,12 +56,19 @@
                   </div>
 
 
-                    <div class="row">
-                      <div class="col-md-12">
-                        <label class="control-label">Image</label>
-                        <input type="file" class="form-control" name="image">
+                      <div class="row">
+                          <div class="col-md-12">
+                              <label class="control-label">Media</label>
+                              <input type="file" class="form-control" name="media">
+                          </div>
                       </div>
-                  </div>
+
+                      <div class="row">
+                          <div class="col-md-12">
+                              <label class="control-label">Figure</label>
+                              <input type="file" class="form-control" name="figure">
+                          </div>
+                      </div>
 
                   <div class="row">
                       <div class="col-md-12">

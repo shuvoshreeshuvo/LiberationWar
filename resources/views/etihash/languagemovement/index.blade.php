@@ -4,86 +4,8 @@
 <link href="{{asset('frontend/images/period.png')}}" rel="icon">
 @section('content') 
 
-
-<style>
-
-    .homeimage{
-     margin: auto;
-            display: inline;
-            vertical-align: middle;
-            border-style: none;
-             border: 10px solid #fff;
-            width:100%;
-            height: 200px;
-            transition: transform 0.3s, filter 0.5s ease-in-out;
-            transform-origin: center center;
-            overflow: hidden;
-        }
-
-.img-thumbnail {
-    padding: .25rem;
-    background-color: blue;
-    border: 1px solid #dee2e6;
-    border-radius: .25rem;
-    max-width: 100%;
-    height: 150px;
-}
-
-span.wpb_button a{
-    text-decoration: none;
-}
-
-span.wpb_button:hover a{
-    background-color: #007236;
-}
-
-.g-btn span {
-    position: relative;
-}
-.g-btn, button, input[type="submit"] {
-    font-size: 15px;
-    line-height: 20px;
-    font-weight: 700;
-    text-transform: uppercase;
-    padding: 10px 36px;
-    margin: 5px 0;
-    border: none;
-    border-radius: 5px;
-    overflow: hidden;
-    -webkit-transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
-    transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
-
-    display: inline-block;
-    vertical-align: middle;
-    text-align: center;
-    white-space: nowrap;
-    position: relative;
-    cursor: pointer;
-}
-
-
-.g-btn.color_green {
-    background-color:#59ba41;
-    color: #fff;
-}
-
-div.polaroid {
-    width: 300px;
-    background-color:white;
-    padding: 0px 20px 0px 20px;
-    margin-bottom: 25px;
-}
-div.polaroid:hover .homeimage{
-    filter: brightness(100%);
-    transform: scale(1.3);
-}
-
-   </style> 
-
-
 <div class="container">
 
-   
         <h1 class="headertwo">{{ $period->name}} </h1>
      <div class="content">   
        <p>{!! $period->content !!}</p>

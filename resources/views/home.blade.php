@@ -261,7 +261,7 @@
                             <figcaption>{{ $data->title }}</figcaption>
                         </figure>
                     @else
-                        <figure style="background-image: url({{$data->figure}})">
+                        <figure style="background-image: url('{{$data->figure}}')">
                             <img class="videoimage" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
                             <figcaption>{{ $data->title }}</figcaption>
                         </figure>

@@ -3,37 +3,7 @@
 @section('title', 'মুক্তিযোদ্ধার তালিকা || আমার ইতিহাস')
 <link href="{{asset('frontend/images/list.png')}}" rel="icon">
 
-@section('content') 
-
-<style>
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-    padding-top: 20px;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-  color: white;
-
-}
-
-tr:nth-child(odd) {
-  background-color: dimgrey;
-}
-
-tr:nth-child(even) {
-  background-color: darkgray;
-}
-
-.list{
-    color:white;
-    text-decoration: none;
-}
-</style>
+@section('content')
 
 <div class="container">
     <h3 style="text-align: center; color:red;" class="m-4">বাংলাদেশের স্বাধীনতা যুদ্ধের খেতাবপ্রাপ্ত মুক্তিযোদ্ধা </h3>
