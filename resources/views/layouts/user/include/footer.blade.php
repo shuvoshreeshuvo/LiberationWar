@@ -115,5 +115,3 @@
 {!! Toastr::message() !!}
 
 
-</body>
-</html>
