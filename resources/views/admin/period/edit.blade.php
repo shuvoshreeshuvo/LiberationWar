@@ -30,6 +30,14 @@
                         </div>
                       </div>
                   </div>
+                  <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group label-floating">
+                          <label class="control-label">Eng Name</label>
+                          <input type="text" class="form-control" name="ename" value="{{ $period->ename }}">
+                        </div>
+                      </div>
+                  </div>
 
                    <div class="row">
                       <div class="col-md-12">
