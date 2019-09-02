@@ -41,7 +41,8 @@
 
                 <li class="nav-item dropdown">
                     <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        ইতিহাস
+                        {{ __('header.history') }}
+                    
                     </a>
                     <div class="dropdown" >
                         <div class="dropdown-content">
@@ -52,14 +53,14 @@
                         </div>
                     </div>
                 </li>
-
+                <?php $lang =  app()->getLocale(); ?>
                 <li class="nav-item">
-                    <a class="nav-link " href="{!! url('/bongobondu'); !!}">বঙ্গবন্ধু</a>
+                    <a class="nav-link " href="{!! url($lang.'/bongobondu'); !!}">{{ __('header.bongobondhu') }}</a>
                 </li>
 
                 <li class="nav-item dropdown">
                     <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        আর্কাইভ
+                     {{ __('header.archive') }}
                     </a>
                     <div class="dropdown" >
                         <div class="dropdown-content">
@@ -75,7 +76,7 @@
 
                 <li class="nav-item dropdown">
                     <a class="nav-link " href="{!! url('/freedom_fighter'); !!}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        মুক্তিযোদ্ধা‎
+                         {{ __('header.freedom fighter') }}
                     </a>
                     <div class="dropdown" >
                         <div class="dropdown-content">
@@ -91,7 +92,7 @@
                 <li class="nav-item dropdown">
 
                     <a class="nav-link " href="{!! url('/books'); !!}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        বই
+                        {{ __('header.book') }}
                     </a>
                     <div class="dropdown" >
                         <div class="dropdown-content">
@@ -107,7 +108,7 @@
 
 
                 <li class="nav-item">
-                    <a class="nav-link " href="{!! url('/about'); !!}">আমাদের সম্পর্কে</a>
+                    <a class="nav-link " href="{!! url('/about'); !!}"> {{ __('header.about') }}</a>
                 </li>
             </ul>
 
@@ -116,7 +117,7 @@
             <form class="form-inline my-2 my-lg-0" action="{{ url('/search') }}" method="GET">
                 {{ csrf_field() }}
                 <i class="fas fa-search" aria-hidden="true"></i>
-                <input class="form-control mr-sm-2 ml-3" type="search" placeholder="খোঁজ করুন" name="search" aria-label="Search">
+                <input class="form-control mr-sm-2 ml-3" type="search" placeholder="{{ __('header.search') }}" name="search" aria-label="Search">
             </form>
 
         </div>
