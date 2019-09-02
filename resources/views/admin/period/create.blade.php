@@ -31,6 +31,14 @@
                   <div class="row">
                       <div class="col-md-12">
                         <div class="form-group label-floating">
+                          <label class="control-label">Eng Name</label>
+                          <input type="text" class="form-control" name="ename">
+                        </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group label-floating">
                           <label class="control-label">Starting Year</label>
                           <input type="text" class="form-control" name="starting_year">
                         </div>
