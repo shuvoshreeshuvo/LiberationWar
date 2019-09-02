@@ -2,7 +2,7 @@
 
 return[
     'title' => ' || ',
-    'logo' => 'Amar Etihash',
+    'logo' => 'Our History',
     'home' => 'Home',
     'history' => 'History',
     'bongobondhu' => 'Bongobondhu',
