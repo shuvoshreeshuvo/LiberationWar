@@ -138,11 +138,11 @@ class ArchiveController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request,[
-            'title' => 'required',
-            'year' => 'required',
-            'type' => 'required',
+           // 'title' => 'required',
+          //  'year' => 'required',
+           // 'type' => 'required',
 
-            'description' => 'required',
+           // 'description' => 'required',
 
 
         ]);
