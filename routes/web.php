@@ -32,13 +32,14 @@ Route::get('/', 'HomeController@index1');
 Route::get('/lang', 'HomeController@index');
 
 
-/* shuvoy korsil ami off korsi
+// shuvoy korsil ami off korsi
 
-Route::group(['prefix' => '{lang?}', 'middleware' => 'setlocale', 'where' => ['lang' => '[a-zA-Z]{2}'], 'namespace'=>'lang'], function($lang = Null){
+Route::group(['prefix' => '{lang?}', 'middleware' => 'setlocale', 'where' => ['lang' => '[a-zA-Z]{2}']], function($lang = Null){
     App::setlocale($lang);
 
-    //Route::get('/', 'HomeController@index');
-});*/
+    Route::get('/', 'HomeController@index');
+    Route::get('/bongobondu', 'BongobonduController@Bongobondu');
+});
 
 
 /*Route::get('/{lang?}', function ($lang=null) {
