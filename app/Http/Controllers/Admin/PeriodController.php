@@ -40,6 +40,7 @@ class PeriodController extends Controller
         $this->validate($request,[
 
             'name' => 'required',
+            'ename' => 'required',
             'starting_year' => 'required',
             'ending_year' => 'required',
             // 'image'=>'mimes:jpeg,jpg,bmp,png',
@@ -63,6 +64,7 @@ class PeriodController extends Controller
 
          $period = new Period();
          $period->name = $request->name;
+         $period->ename = $request->ename;
          $period->starting_year = $request->starting_year;
          $period->ending_year = $request->ending_year;
          $period->image = $imagename;
@@ -107,6 +109,7 @@ class PeriodController extends Controller
         $this->validate($request,[
 
             'name' => 'required',
+            'ename' => 'required',
             'starting_year' => 'required',
             'ending_year' => 'required',
            // 'image'=>'mimes:jpeg,jpg,bmp,png',
@@ -131,6 +134,7 @@ class PeriodController extends Controller
 
          
          $period->name = $request->name;
+         $period->ename = $request->ename;
          $period->starting_year = $request->starting_year;
          $period->ending_year = $request->ending_year;
          $period->image = $imagename;
