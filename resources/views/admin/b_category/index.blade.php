@@ -24,6 +24,7 @@
                        <thead class="text-primary">
                           <th style="width: 50px;">Id</th>
                           <th>Book Type</th>
+                          <th>Eng Book Type</th>
                           <th>Slug</th>
                           <th>Created At</th>
                           <th>Updated At</th>
@@ -35,7 +36,7 @@
                             <tr>
                               <td>{{ $key + 1 }}</td>
                               <td>{{ $bookcategory->book_type }}</td>
-                             
+                              <td>{{ $bookcategory->ebook_type }}</td>
                               <td>{{ $bookcategory->created_at }}</td>
                               <td>{{ $bookcategory->updated_at }}</td>
                                <td> 
