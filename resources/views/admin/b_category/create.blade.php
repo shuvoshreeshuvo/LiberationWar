@@ -29,6 +29,15 @@
                       </div>
                   </div>
 
+                   <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group label-floating">
+                          <label class="control-label">Eng Book Type</label>
+                          <input type="text" class="form-control" name="ebook_type">
+                        </div>
+                      </div>
+                  </div>
+
                   <a href="{{ route('b_category.index') }}" class="btn btn-danger">Back</a>
                   <button type="submit" class="btn btn-primary">Save</button>
                 
