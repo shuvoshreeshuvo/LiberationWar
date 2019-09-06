@@ -32,16 +32,20 @@
                 <a class="nav-link" href="/">{{ __('header.home') }} <span class="sr-only">(current)</span></a>
             </li>
 
+
+           <?php $lang =  app()->getLocale(); ?>
             <li class="nav-item dropdown">
                 <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     {{ __('header.history') }}
                 </a>
+
+                 
                 <div class="dropdown" >
                     <div class="dropdown-content">
                         <!-- <a  href="{!! url('/etihash/languagemovement/index'); !!}">প্রথম পর্যায়</a> -->
-
+                        
                         @foreach($periods as $period)
-                            <a  href="{!! url('/etihash/period/'.$period->id); !!}"> 
+                            <a  href="{!! url($lang.'/etihash/period/'.$period->id); !!}"> 
 
                             @if(app()->getLocale() == 'bn')
                                 {{ $period->name }}
@@ -56,24 +60,29 @@
                         <a  href="{!! url('/etihash/liberationwar/liberationwar'); !!}">তৃতীয় পর্যায়</a> -->
                     </div>
                 </div>
-
-
             </li>
+            <?php $lang =  app()->getLocale(); ?>
 
             <li class="nav-item">
                 <a class="nav-link " href="{!! url('/bongobondu'); !!}">{{ __('header.bongobondhu') }}</a>
             </li>
 
+
+
+            <?php $lang =  app()->getLocale(); ?>
+
             <li class="nav-item dropdown">
                 <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     {{ __('header.archive') }}
                 </a>
+
+
                 <div class="dropdown" >
                     <div class="dropdown-content">
-                        <a  href="{!! url('/archive/image'); !!}">ছবি</a>
-                        <a  href="{!! url('/archive/documents'); !!}">ডকুমেন্টস</a>
-                        <a  href="{!! url('/archive/video'); !!}">ভিডিও ফুটেজ</a>
-                         <a  href="{!! url('/archive/audio'); !!}">অডিও</a>
+                        <a  href="{!! url($lang.'/archive/image'); !!}">{{ __('header.image') }}</a>
+                        <a  href="{!! url($lang.'/archive/documents'); !!}">{{ __('header.documents') }}</a>
+                        <a  href="{!! url($lang.'/archive/video'); !!}">{{ __('header.video') }}</a>
+                         <a  href="{!! url($lang.'/archive/audio'); !!}">{{ __('header.audio') }}</a>
 
                     </div>
                 </div>
@@ -94,7 +103,8 @@
                     </div>
                 
                 </li>
-
+              
+                <?php $lang =  app()->getLocale(); ?>
 
             <li class="nav-item dropdown">
 
@@ -104,8 +114,14 @@
                 <div class="dropdown" >
                     <div class="dropdown-content">
                         @foreach($bookcategories as $bookcategory)
-                            <a  href="{!! url('/books/bookcategory/'.$bookcategory->id); !!}"> {{ $bookcategory->book_type}}</a>
+                            <a  href="{!! url($lang.'/books/bookcategory/'.$bookcategory->id); !!}"> 
+                             @if(app()->getLocale() == 'bn')
+                                {{ $bookcategory->book_type }}
+                            @else
+                                {{ $bookcategory->ebook_type }}
+                            @endif</a>
 
+                    
                         @endforeach
 
                     </div>
