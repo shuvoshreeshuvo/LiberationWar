@@ -45,7 +45,8 @@ class bookcategoryController extends Controller
 
          $bookcategory = new Bookcategory();
          $bookcategory->book_type= $request->book_type;
-         
+         $bookcategory->ebook_type= $request->ebook_type;
+
          $bookcategory->save();
          return redirect()->route('b_category.index')->with('successMsg','Book Category Succesfully Saved');
     }
@@ -91,6 +92,7 @@ class bookcategoryController extends Controller
         
         $bookcategory=Bookcategory::find($id); 
         $bookcategory->book_type = $request->book_type;
+        $bookcategory->ebook_type= $request->ebook_type;
         $bookcategory->save();
          return redirect()->route('b_category.index')->with('successMsg','Book Category Succesfully Updated');
    
