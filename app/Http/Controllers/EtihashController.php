@@ -12,23 +12,7 @@ use App\Bookcategory;
 
 class EtihashController extends Controller
 {
-   /* public function Languagemovement(){
-    	
-        $Languagemovement=Languagemovement::all();
-        return view('etihash.languagemovement.index',compact('Languagemovement'));
-    }
-
-    public function MassUprisingg(){
-
-        $Massuprisingg=Massuprisingg::all();
-        return view('etihash.massuprisingg',compact('Massuprisingg'));
-    }
-
-    public function LiberationWar(){
-
-        return view('etihash.liberationwar.liberationwar');
-    } */
-
+   
     
 
     public function period_history($id)
