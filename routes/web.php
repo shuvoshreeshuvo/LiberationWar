@@ -13,16 +13,11 @@
 |
 */
 
-/*Route::get('/', function () {
-    return view('home');
-});*/
 
 
 
-// Home Page
-/*Route::get('/', function () {
-    return redirect(app()->getLocale());
-});*/
+
+
 
 
 // Default Route
@@ -39,19 +34,23 @@ Route::group(['prefix' => '{lang?}', 'middleware' => 'setlocale', 'where' => ['l
 
     Route::get('/', 'HomeController@index');
     Route::get('/bongobondu', 'BongobonduController@Bongobondu');
+    Route::get('/etihash/period/{id}', 'EtihashController@period_history');
+    Route::get('/etihash/period/brief/{id}', 'EtihashController@event_brief');
+    Route::get('/archive/documents', 'ArchiveController@Documents');
+    Route::get('/archive/image', 'ArchiveController@Image');
+    Route::get('/archive/video', 'ArchiveController@VideoFootage');
+    Route::get('/archive/audio', 'ArchiveController@Audio');
+    Route::get('/books', 'BooksController@Books');
+    Route::get('/books/bookcategory/{id}', 'BooksController@Bookcategory');
+
+
+    Route::get('/about', 'AboutController@About');
 });
 
 
-/*Route::get('/{lang?}', function ($lang=null) {
-    App::setlocale($lang);
-    return view('home');
-}, 'HomeController@index');*/
 
-//Route::get('/', 'HomeController@index');
 
 Route::get('/search', 'searchController@search');
-
-
 
 
 //Route::get('/LanguageMovement', 'EtihashController@LanguageMovement')
@@ -60,7 +59,6 @@ Route::get('/etihash/languagemovement/bongovongo', 'LanguageMovementController@B
 Route::get('/etihash/languagemovement/languagemovement', 'LanguageMovementController@LanguageMovement');
 Route::get('/etihash/languagemovement/juktofront', 'LanguageMovementController@Juktofront');
 Route::get('/etihash/languagemovement/sixdofa', 'LanguageMovementController@Sixdofa');
-
 
 Route::get('/etihash/massuprisingg', 'EtihashController@MassUprisingg');
 
@@ -87,8 +85,6 @@ Route::get('/1971', function () {
 
 
 Route::get('/bongobondu', 'BongobonduController@Bongobondu');
-
-
 Route::get('/archive/documents', 'ArchiveController@Documents');
 Route::get('/archive/image', 'ArchiveController@Image');
 Route::get('/archive/video', 'ArchiveController@VideoFootage');
@@ -102,7 +98,7 @@ Route::get('/freedom_fighter/details/{id}', 'Freedom_fighterController@freedom_f
 
 
 Route::get('/books', 'BooksController@Books');
-Route::get('books/bookcategory/{id}', 'BooksController@Bookcategory');
+Route::get('/books/bookcategory/{id}', 'BooksController@Bookcategory');
 
 Route::get('/about', 'AboutController@About');
 Route::post('/about', 'ContactController@sendMessage')->name('contact.send');
@@ -112,17 +108,17 @@ Route::post('/about', 'ContactController@sendMessage')->name('contact.send');
 
 Auth::routes();
 
-//lang
 
+//lang
 Route::get('/locale/{lang?}', function ($lang=null) {
     App::setlocale($lang);
     return view('welcome');
 });
 
+
+
+
 //Admin
-
-
-
 Route::group(['prefix'=>'admin','middleware'=>'auth','namespace'=>'admin'], function (){
 
     Route::get('dashboard','DashboardController@index')->name('admin.dashboard');
@@ -142,7 +138,6 @@ Route::group(['prefix'=>'admin','middleware'=>'auth','namespace'=>'admin'], func
     Route::get('Contact','ContactController@index')->name('contact.index');
     Route::get('Contact/{id}','ContactController@show')->name('contact.show');
     Route::delete('Contact/{id}','ContactController@destroy')->name('contact.destroy');
-
 
 });
 
