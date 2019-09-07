@@ -14,12 +14,6 @@
 */
 
 
-
-
-
-
-
-
 // Default Route
 Route::get('/', 'HomeController@index1');
 
@@ -48,62 +42,41 @@ Route::group(['prefix' => '{lang?}', 'middleware' => 'setlocale', 'where' => ['l
 });
 
 
-
+//search
 
 Route::get('/search', 'searchController@search');
 
-
-//Route::get('/LanguageMovement', 'EtihashController@LanguageMovement')
+//etihash
 Route::get('/etihash/period/{id}', 'EtihashController@period_history');
+Route::get('/etihash/period/brief/{id}', 'EtihashController@event_brief');
+
 Route::get('/etihash/languagemovement/bongovongo', 'LanguageMovementController@Bongovongo');
 Route::get('/etihash/languagemovement/languagemovement', 'LanguageMovementController@LanguageMovement');
 Route::get('/etihash/languagemovement/juktofront', 'LanguageMovementController@Juktofront');
 Route::get('/etihash/languagemovement/sixdofa', 'LanguageMovementController@Sixdofa');
 
-Route::get('/etihash/massuprisingg', 'EtihashController@MassUprisingg');
 
-//LiberationWar
-Route::get('/etihash/period/brief/{id}', 'EtihashController@event_brief');
-Route::get('/etihash/liberationwar/potovumi', 'LiberationwarController@potovumi');
-Route::get('/etihash/liberationwar/shadhinotajuddho', 'LiberationwarController@Shadhinotajuddho');
-
-Route::get('/etihash/liberationwar/indiapakistanjuddho', 'LiberationwarController@Indiapakistanjuddho');
-
-Route::get('/etihash/liberationwar/gonohottaa', 'LiberationwarController@Gonohottaa');
-Route::get('/etihash/liberationwar/protikria', 'LiberationwarController@Protikria');
-Route::get('/etihash/liberationwar/juddherkalpunji', 'LiberationwarController@Juddherkalpunji');
-
-
-
-Route::get('/1969', function () {
-    return view('1969');
-})->name('1969');
-
-Route::get('/1971', function () {
-    return view('1971');
-})->name('1971');
-
-
+//bongobondhu
 Route::get('/bongobondu', 'BongobonduController@Bongobondu');
+
+//archive
 Route::get('/archive/documents', 'ArchiveController@Documents');
 Route::get('/archive/image', 'ArchiveController@Image');
 Route::get('/archive/video', 'ArchiveController@VideoFootage');
 Route::get('/archive/audio', 'ArchiveController@Audio');
 
-
+//freedom fighter
 Route::get('/freedom_fighter', 'Freedom_fighterController@index');
 Route::get('/freedom_fighter/freedomfighter_title/{id}', 'Freedom_fighterController@freedom_fighter');
 Route::get('/freedom_fighter/details/{id}', 'Freedom_fighterController@freedom_fighter_details');
 
-
-
+//books
 Route::get('/books', 'BooksController@Books');
 Route::get('/books/bookcategory/{id}', 'BooksController@Bookcategory');
 
+//about
 Route::get('/about', 'AboutController@About');
 Route::post('/about', 'ContactController@sendMessage')->name('contact.send');
-
-
 
 
 Auth::routes();
@@ -114,8 +87,6 @@ Route::get('/locale/{lang?}', function ($lang=null) {
     App::setlocale($lang);
     return view('welcome');
 });
-
-
 
 
 //Admin
