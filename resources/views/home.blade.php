@@ -39,6 +39,7 @@
                     <a class="nav-link" href="/{{app()->getLocale()}}">{{ __('header.home') }}<span class="sr-only">(current)</span></a>
                 </li>
 
+                <?php $lang =  app()->getLocale(); ?>
                 <li class="nav-item dropdown">
                     <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         {{ __('header.history') }}
@@ -47,31 +48,45 @@
                     <div class="dropdown" >
                         <div class="dropdown-content">
                             @foreach($periods as $period)
-                            <a  href="{!! url('/etihash/period/'.$period->id); !!}"> {{ $period->name }} ( {{ $period->starting_year .' - '. $period->ending_year }} )</a>
+
+                                <a  href="{!! url($lang.'/etihash/period/'.$period->id); !!}"> {{ $period->name }}
+
+                                @if(app()->getLocale() == 'bn')
+                                    {{ $period->name }}
+                                @else
+                                    {{ $period->ename }}
+                                @endif
+
+                                    ( {{ $period->starting_year .' - '. $period->ending_year }} )</a>
+
                             @endforeach
                             
+                         </div>
                         </div>
-                    </div>
                 </li>
-                <?php $lang =  app()->getLocale(); ?>
-                <li class="nav-item">
-                    <a class="nav-link " href="{!! url($lang.'/bongobondu'); !!}">{{ __('header.bongobondhu') }}</a>
-                </li>
+                            <?php $lang =  app()->getLocale(); ?>
+                            <li class="nav-item">
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     {{ __('header.archive') }}
-                    </a>
-                    <div class="dropdown" >
-                        <div class="dropdown-content">
-                            <a  href="{!! url('/archive/image'); !!}">ছবি</a>
-                            <a  href="{!! url('/archive/documents'); !!}">ডকুমেন্টস</a>
-                            <a  href="{!! url('/archive/video'); !!}">ভিডিও ফুটেজ</a>
-                            <a  href="{!! url('/archive/audio'); !!}">অডিও</a>
+                                <a class="nav-link " href="{!! url($lang.'/bongobondu'); !!}">{{ __('header.bongobondhu') }}</a>
 
-                        </div>
-                    </div>
-                </li>
+                            </li>
+
+                             <?php $lang =  app()->getLocale(); ?>
+                            <li class="nav-item dropdown">
+                                 <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    {{ __('header.archive') }}
+                                 </a>
+
+                                <div class="dropdown" >
+                                    <div class="dropdown-content">
+                                        <a  href="{!! url($lang.'/archive/image'); !!}">{{ __('header.image') }}</a>
+                                        <a  href="{!! url($lang.'/archive/documents'); !!}">{{ __('header.documents') }}</a>
+                                        <a  href="{!! url($lang.'/archive/video'); !!}">{{ __('header.video') }}</a>
+                                        <a  href="{!! url($lang.'/archive/audio'); !!}">{{ __('header.audio') }}</a>
+
+                                    </div>
+                                </div>
+                            </li>
 
 
                 <li class="nav-item dropdown">
@@ -89,6 +104,7 @@
                     </div>
                 </li>
 
+                <?php $lang =  app()->getLocale(); ?>
                 <li class="nav-item dropdown">
 
                     <a class="nav-link " href="{!! url('/books'); !!}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -97,7 +113,14 @@
                     <div class="dropdown" >
                         <div class="dropdown-content">
                             @foreach($bookcategories as $bookcategory)
-                                <a  href="{!! url('/books/bookcategory/'.$bookcategory->id); !!}"> {{ $bookcategory->book_type}}</a>
+
+                                <a  href="{!! url($lang.'/books/bookcategory/'.$bookcategory->id); !!}">
+                                    @if(app()->getLocale() == 'bn')
+                                        {{ $bookcategory->book_type }}
+                                    @else
+                                        {{ $bookcategory->ebook_type }}
+                                    @endif
+                                </a>
 
                             @endforeach
 
@@ -106,9 +129,9 @@
 
                 </li>
 
-
+                <?php $lang =  app()->getLocale(); ?>
                 <li class="nav-item">
-                    <a class="nav-link " href="{!! url('/about'); !!}"> {{ __('header.about') }}</a>
+                    <a class="nav-link " href="{!! url($lang.'/about'); !!}"> {{ __('header.about') }}</a>
                 </li>
             </ul>
 
