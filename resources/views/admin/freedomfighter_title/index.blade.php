@@ -24,6 +24,7 @@
                        <thead class="text-primary">
                           <th style="width: 50px;">Id</th>
                           <th>Nickname</th>
+                          <th>Eng Nickname</th>
                           <th>Number</th>
                            <th>Image</th>
                             <th>Content</th>
@@ -38,6 +39,7 @@
                             <tr>
                               <td>{{ $key + 1 }}</td>
                               <td>{{ $ff_title->nickname }}</td>
+                                <td>{{ $ff_title->enickname }}</td>
                               <td>{{ $ff_title->number }}</td>
                               <td><img class="img-responsive img-thumbnail" src="{{ asset('uploads/ff_title/'.$ff_title->image) }}" style="height:100px;width:100px" alt=""></td>
                                <td>{!! $ff_title->content !!}</td>
