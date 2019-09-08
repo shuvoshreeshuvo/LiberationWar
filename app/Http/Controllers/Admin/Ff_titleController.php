@@ -68,6 +68,7 @@ class Ff_titleController extends Controller
 
          $ff_title = new Ff_title();
          $ff_title->nickname = $request->nickname;
+        $ff_title->nickname = $request->enickname;
          $ff_title->number = $request->number;
          $ff_title->image =  $imagetitle;
          $ff_title->content = $request->content;
@@ -138,8 +139,9 @@ class Ff_titleController extends Controller
          }
 
          
-         $ff_title->nickname = $request->nickname;
-         $ff_title->number = $request->number;
+          $ff_title->nickname = $request->nickname;
+          $ff_title->nickname = $request->enickname;
+          $ff_title->number = $request->number;
           $ff_title->image = $imagetitle;
           $ff_title->content = $request->content;
           $ff_title->intro = $request->intro;
