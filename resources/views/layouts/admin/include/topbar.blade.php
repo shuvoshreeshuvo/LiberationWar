@@ -39,7 +39,7 @@
                              <i class="material-icons">exit_to_app</i>
                               <p class="d-lg-none d-md-block">Logout</p>
                   </a>
-                  <form id="logout-form" method="POST" action="{{ route('logout')}}" style="display: 
+                  <form id="logout-form" method="POST" action="{{ route('logout')}}" style="display:
                   none">
                  {{ csrf_field() }}
                     
