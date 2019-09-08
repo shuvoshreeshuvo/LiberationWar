@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ app()->getLocale() }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -110,13 +110,14 @@
             <?php $lang =  app()->getLocale(); ?>
             <li class="nav-item dropdown">
 
-                <a class="nav-link " href="{!! url('/books'); !!}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                    {{ __('header.book') }}
                 </a>
                 <div class="dropdown" >
                     <div class="dropdown-content">
                         @foreach($bookcategories as $bookcategory)
                             <a  href="{!! url($lang.'/books/bookcategory/'.$bookcategory->id); !!}"> 
+
                              @if(app()->getLocale() == 'bn')
                                 {{ $bookcategory->book_type }}
                             @else
