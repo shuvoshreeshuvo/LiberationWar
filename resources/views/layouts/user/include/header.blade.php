@@ -90,6 +90,7 @@
                 </div>
             </li>
 
+            <?php $lang =  app()->getLocale(); ?>
             <li class="nav-item dropdown">
                    <a class="nav-link " href="{!! url('/freedom_fighter'); !!}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                        {{ __('header.freedom fighter') }}
@@ -97,7 +98,14 @@
                      <div class="dropdown" >
                         <div class="dropdown-content">
                             @foreach($ff_titles as $ff_title)
-                            <a  href="{!! url('/freedom_fighter/freedomfighter_title/'.$ff_title->id); !!}"> {{ $ff_title->nickname }}</a>
+                            <a  href="{!! url($lang.'/freedom_fighter/freedomfighter_title/'.$ff_title->id); !!}">
+
+                                @if(app()->getLocale() == 'bn')
+                                    {{ $ff_title->nickname }}
+                                @else
+                                    {{ $ff_title->enickname }}
+                                @endif
+                            </a>
 
                              @endforeach                                              
 
