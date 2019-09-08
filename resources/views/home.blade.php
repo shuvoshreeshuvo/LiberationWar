@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ app()->getLocale() }}">
 <head>
 
     <meta charset="UTF-8">
@@ -49,7 +49,7 @@
                         <div class="dropdown-content">
                             @foreach($periods as $period)
 
-                                <a  href="{!! url($lang.'/etihash/period/'.$period->id); !!}"> {{ $period->name }}
+                                <a  href="{!! url($lang.'/etihash/period/'.$period->id); !!}">
 
                                 @if(app()->getLocale() == 'bn')
                                     {{ $period->name }}
