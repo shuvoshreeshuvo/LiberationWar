@@ -39,15 +39,31 @@
                     <a class="nav-link" href="/{{app()->getLocale()}}">{{ __('header.home') }}<span class="sr-only">(current)</span></a>
                 </li>
 
+
+               <?php $lang =  app()->getLocale(); ?>
                 <li class="nav-item dropdown">
                     <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         {{ __('header.history') }}
                     
                     </a>
+
+                   
                     <div class="dropdown" >
                         <div class="dropdown-content">
+
                             @foreach($periods as $period)
-                            <a  href="{!! url('/etihash/period/'.$period->id); !!}"> {{ $period->name }} ( {{ $period->starting_year .' - '. $period->ending_year }} )</a>
+                            <a  href="{!! url($lang.'/etihash/period/'.$period->id); !!}"> 
+
+                                 @if(app()->getLocale() == 'bn')
+
+                                      {{ $period->name }}
+                                 @else
+                                      {{ $period->ename }}
+
+                                 @endif
+
+
+                               ({{ $period->name }} ( {{ $period->starting_year .' - '. $period->ending_year }} )</a>
                             @endforeach
                             
                         </div>
@@ -108,7 +124,7 @@
 
 
                 <li class="nav-item">
-                    <a class="nav-link " href="{!! url('/about'); !!}"> {{ __('header.about') }}</a>
+                    <a class="nav-link " href="{!! url($lang.'/about'); !!}"> {{ __('header.about') }}</a>
                 </li>
             </ul>
 
