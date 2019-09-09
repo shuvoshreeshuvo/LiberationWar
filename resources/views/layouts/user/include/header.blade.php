@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ app()->getLocale() }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title')</title>
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri" rel="stylesheet">
@@ -61,10 +60,13 @@
                     </div>
                 </div>
             </li>
+
             <?php $lang =  app()->getLocale(); ?>
 
             <li class="nav-item">
-                <a class="nav-link " href="{!! url('/bongobondu'); !!}">{{ __('header.bongobondhu') }}</a>
+
+                <a class="nav-link " href="{!! url($lang.'/bongobondu'); !!}">{{ __('header.bongobondhu') }}</a>
+
             </li>
 
 
@@ -88,6 +90,7 @@
                 </div>
             </li>
 
+            <?php $lang =  app()->getLocale(); ?>
             <li class="nav-item dropdown">
                    <a class="nav-link " href="{!! url('/freedom_fighter'); !!}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                        {{ __('header.freedom fighter') }}
@@ -95,7 +98,14 @@
                      <div class="dropdown" >
                         <div class="dropdown-content">
                             @foreach($ff_titles as $ff_title)
-                            <a  href="{!! url('/freedom_fighter/freedomfighter_title/'.$ff_title->id); !!}"> {{ $ff_title->nickname }}</a>
+                            <a  href="{!! url($lang.'/freedom_fighter/freedomfighter_title/'.$ff_title->id); !!}">
+
+                                @if(app()->getLocale() == 'bn')
+                                    {{ $ff_title->nickname }}
+                                @else
+                                    {{ $ff_title->enickname }}
+                                @endif
+                            </a>
 
                              @endforeach                                              
 
@@ -103,18 +113,19 @@
                     </div>
                 
                 </li>
-              
-                <?php $lang =  app()->getLocale(); ?>
 
+
+            <?php $lang =  app()->getLocale(); ?>
             <li class="nav-item dropdown">
 
-                <a class="nav-link " href="{!! url('/books'); !!}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                    {{ __('header.book') }}
                 </a>
                 <div class="dropdown" >
                     <div class="dropdown-content">
                         @foreach($bookcategories as $bookcategory)
                             <a  href="{!! url($lang.'/books/bookcategory/'.$bookcategory->id); !!}"> 
+
                              @if(app()->getLocale() == 'bn')
                                 {{ $bookcategory->book_type }}
                             @else
@@ -129,8 +140,9 @@
 
             </li>
 
+            <?php $lang =  app()->getLocale(); ?>
             <li class="nav-item">
-                <a class="nav-link " href="{!! url('/about'); !!}">{{ __('header.about') }}</a>
+                <a class="nav-link " href="{!! url($lang.'/about'); !!}">{{ __('header.about') }}</a>
             </li>
         </ul>
         <!-- Search form -->

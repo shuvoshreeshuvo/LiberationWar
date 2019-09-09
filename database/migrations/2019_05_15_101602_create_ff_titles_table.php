@@ -16,6 +16,7 @@ class CreateFfTitlesTable extends Migration
         Schema::create('ff_titles', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nickname');
+            $table->string('enickname');
             $table->integer('number');
             $table->string('image');
             $table->text('content');

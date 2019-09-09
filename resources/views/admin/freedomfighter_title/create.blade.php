@@ -28,6 +28,16 @@
                         </div>
                       </div>
                   </div>
+
+                      <div class="row">
+                          <div class="col-md-12">
+                              <div class="form-group label-floating">
+                                  <label class="control-label">Eng Nickname</label>
+                                  <input type="text" class="form-control" name="enickname">
+                              </div>
+                          </div>
+                      </div>
+
                   <div class="row">
                       <div class="col-md-12">
                         <div class="form-group label-floating">
