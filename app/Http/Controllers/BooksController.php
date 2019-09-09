@@ -24,7 +24,8 @@ class BooksController extends Controller
         $book= DB::table('books')
             ->where('bookcategory_id', $id)
             ->get();
-        return view('Books.Bookcategory', compact('periods','ff_titles','bookcategories','book'));
+        dd($bookcategories);
+        //return view('Books.Bookcategory', compact('periods','ff_titles','bookcategories','book'));
     }
 
 
