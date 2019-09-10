@@ -21,6 +21,8 @@ class CreateArchivesTable extends Migration
             $table->string('media');
             $table->smallInteger('special');
             $table->string('figure');
+            $table->string('audimg');
+            $table->string('	audduratn');
             $table->string('path');
             $table->text('description');
             $table->timestamps();
