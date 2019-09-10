@@ -55,6 +55,7 @@ class ArchiveController extends Controller
 
         $media= $request->file('media');
         $figure= $request->file('figure');
+        $audimg= $request->file('audimg');
         $slug= str_slug($request->title);
         if(isset($media))
         {
@@ -87,6 +88,21 @@ class ArchiveController extends Controller
             $figurename ='default.png';
         }
 
+        if(isset($audimg))
+        {
+            $currentdate =Carbon::now()->toDateString();
+            $audimgname =$slug .'-'. $currentdate .'-'. uniqid() .'.'.
+                $audimg->getClientOriginalExtension();
+            if(!file_exists('uploads/audimg'))
+            {
+                mkdir('uploads/audimg', 0777,true);
+            }
+            $figure->move('uploads/audimg',$audimgname);
+        }else {
+
+            $audimgname ='default.png';
+        }
+
 
         $archive = new Archive();
         $archive->title = $request->title;
@@ -94,6 +110,8 @@ class ArchiveController extends Controller
         $archive->type = $request->type;
         $archive->media =  $medianame;
         $archive->figure =  $figurename;
+        $archive->audimg = $audimgname;
+        $archive->audduratn = $request->audduratn;
         $archive->path = $request->path;
         $archive->description = $request->description;
 
@@ -150,6 +168,7 @@ class ArchiveController extends Controller
 
         $media= $request->file('media');
         $figure= $request->file('figure');
+        $audimg= $request->file('audimg');
         $slug= str_slug($request->title);
         $archive=Archive::find($id);
         if(isset($media))
@@ -186,6 +205,21 @@ class ArchiveController extends Controller
             $figurename =$archive->figure;
         }
 
+        if(isset($audimg))
+        {
+            $currentdate =Carbon::now()->toDateString();
+            $audimgname =$slug .'-'. $currentdate .'-'. uniqid() .'.'.
+                $audimg->getClientOriginalExtension();
+            if(!file_exists('uploads/audimg'))
+            {
+                mkdir('uploads/audimg', 0777,true);
+            }
+            $audimg->move('uploads/audimg',$audimgname);
+        }else {
+
+            $audimgname =$archive->audimg;
+        }
+
 
 
         $archive->title = $request->title;
@@ -193,6 +227,8 @@ class ArchiveController extends Controller
         $archive->type = $request->type;
         $archive->media = $medianame;
         $archive->figure =  $figurename;
+        $archive->audimg = $audimgname;
+        $archive->audduratn = $request->audduratn;
         $archive->path = $request->path;
         $archive->description = $request->description;
 
