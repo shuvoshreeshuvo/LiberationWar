@@ -14,7 +14,7 @@
         list-style: none;
     }
     .audio-list ul li {
-        border: 1px solid #dbdbdb;
+        border:#A9A9A9;
         overflow: hidden;
         margin-bottom: 8px;
         -webkit-transition: all 700ms ease;
@@ -25,19 +25,19 @@
         padding: 6px 0 8px 8px;
     }
 
-    .audio-play-list-wrap-thumb a {
+    .audio-play-list-wrap-right .audio-play-list-wrap-thumb {
         background: rgba(0, 0, 0, 0) url(http://bangabandhumuseum.org.bd/assets/media/audio/thumb/1488887110.jpg) repeat scroll center top;
         float: left;
-        height: 100px;
+        height: 107px;
         margin-right: 16px;
         width: 98px;
         overflow: hidden;
-        border: 1px solid #f2a29f;
+
 
     }
     .audio-play-list-wrap-right {
-        margin-left: 116px;
-        border: 1px solid #f2a29f;
+
+
     }
 
     .audio-play-list {
@@ -64,13 +64,13 @@
         font-weight: 400;
     }
     .audio-play-share {
-        background: #dbdbdb;
+        background: #A9A9A9;
         display: block;
-        padding: 15px 15px 4px;
+        /*padding: 15px 15px 4px;*/
         text-align: right;
     }
     .audio-play-icon {
-        background: rgb(0,0,0) url(../frontend/images/play-arrow.png) no-repeat scroll center 5px;
+        background:  url(../frontend/images/play-arrow.png) no-repeat scroll center 5px;
         color: red;
         float: left;
         height: 26px;
@@ -101,22 +101,22 @@
                     <ul id="audio_container">
 
                         <li>
-                            <div class="audio-play-list-wrap-thumb">
-
-                                <a href="{{ asset('frontend/archive/audio/'.$data->path) }}">
-                                    <img src="http://bangabandhumuseum.org.bd/assets/media/audio/thumb/1488887110.jpg">
-                                </a>
-                            </div>
                             <div class="audio-play-list-wrap-right">
+
+                                <div class="audio-play-list-wrap-thumb">
+
+                                    <img src="{{ asset('/uploads/audimg/'.$data->audimg)}}">
+
+                                </div>
+
                                 <div class="audio-play-list">
                                     <div class="audio-play-title">
-                                        <a href="{{ asset('frontend/archive/audio/'.$data->path) }}">
-                                            ৭ মার্চের ভাষণ                                    </a>
+
+                                        <h3> {{ $data->title }} </h3>
                                         <div class="audio-play-share">
-                                            <div class="audio-play-icon"></div>
-                                            <audio id="sound1">
-                                                <source src="{{ asset('frontend/archive/audio/'.$data->path) }}" type="audio/mp3">
-                                            </audio>
+
+                                                <a class="audio-play-icon play" href="{{ asset('frontend/archive/audio/'.$data->path) }}" type="audio/mp3"></a>
+
                                             <div class="audio-play-share-inner">
                                                 <ul>
                                                     <li><span>&nbsp;</span></li>
@@ -132,7 +132,7 @@
                                         </div>
 
                                     </div>
-                                    <span class="audio-play-time">১৫:১২</span>
+                                    <span class="audio-play-time">{{$data->audduratn}}</span>
 
 
                                 </div>
