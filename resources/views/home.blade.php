@@ -36,7 +36,8 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="nav navbar-nav mx-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/{{app()->getLocale()}}">{{ __('header.home') }}<span class="sr-only">(current)</span></a>
+                   {{-- <a class="nav-link" href="/{{app()->getLocale()}}">{{ __('header.home') }}<span class="sr-only">(current)</span></a>--}}
+                    <a class="nav-link" href="/">{{ __('header.home') }}<span class="sr-only">(current)</span></a>
                 </li>
 
                 <?php $lang =  app()->getLocale(); ?>
@@ -49,7 +50,7 @@
                         <div class="dropdown-content">
                             @foreach($periods as $period)
 
-                                <a  href="{!! url($lang.'/etihash/period/'.$period->id); !!}">
+                                <a  href="{!! url('/etihash/period/'.$period->id); !!}">
 
                                 @if(app()->getLocale() == 'bn')
                                     {{ $period->name }}
@@ -67,7 +68,7 @@
                             <?php $lang =  app()->getLocale(); ?>
                             <li class="nav-item">
 
-                                <a class="nav-link " href="{!! url($lang.'/bongobondu'); !!}">{{ __('header.bongobondhu') }}</a>
+                                <a class="nav-link " href="{!! url('/bongobondu'); !!}">{{ __('header.bongobondhu') }}</a>
 
                             </li>
 
@@ -139,7 +140,7 @@
 
                 <?php $lang =  app()->getLocale(); ?>
                 <li class="nav-item">
-                    <a class="nav-link " href="{!! url($lang.'/about'); !!}"> {{ __('header.about') }}</a>
+                    <a class="nav-link " href="{!! url('/about'); !!}"> {{ __('header.about') }}</a>
                 </li>
             </ul>
 
