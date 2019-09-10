@@ -22,7 +22,7 @@ Route::get('/lang', 'HomeController@index');
 
 
 // shuvoy korsil ami off korsi
-
+/*
 Route::group(['prefix' => '{lang?}', 'middleware' => 'setlocale', 'where' => ['lang' => '[a-zA-Z]{2}']], function($lang = Null){
 
     App::setlocale($lang);
@@ -46,7 +46,7 @@ Route::group(['prefix' => '{lang?}', 'middleware' => 'setlocale', 'where' => ['l
 
 
 });
-
+*/
 
 //search
 
