@@ -79,6 +79,11 @@ return [
 
     'locale' => 'en',
 
+    /*List Of Locale*/
+
+
+    'locales' => ['bn', 'en'],
+
     /*
     |--------------------------------------------------------------------------
     | Application Fallback Locale
