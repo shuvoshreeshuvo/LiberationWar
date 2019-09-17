@@ -6,8 +6,8 @@
 
 <div class="container">
 
-        <h1 class="headertwo">{{ $period->name}} </h1>
-     <div class="content">   
+    <h1 class="headertwo">{{ $period->name }}</h1>
+    <div class="content">   
        <p>{!! $period->content !!}</p>
     </div>
     
