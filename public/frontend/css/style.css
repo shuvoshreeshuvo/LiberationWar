@@ -32,7 +32,7 @@ body::-webkit-scrollbar-thumb {
 
 .jumbotron {
 
- background-image: url('../../frontend/images/Bangladeshi-Flag.jpg');
+    background-image: url('../../frontend/images/Bangladeshi-Flag.jpg');
 
     height: 100px;
     background-repeat: no-repeat;
@@ -783,7 +783,7 @@ figcaption:hover {
     transform: translateY(50%);
 }
 
- .headersix{
+.headersix{
     font-size: 2rem;
     font-weight: 700;
     text-align: center;
