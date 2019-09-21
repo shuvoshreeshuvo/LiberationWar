@@ -38,11 +38,8 @@
                     {{ __('header.history') }}
                 </a>
 
-                 
                 <div class="dropdown" >
                     <div class="dropdown-content">
-                        <!-- <a  href="{!! url('/etihash/languagemovement/index'); !!}">প্রথম পর্যায়</a> -->
-                        
                         @foreach($periods as $period)
                             <a  href="{!! url('/etihash/period/'.$period->id); !!}">
 
@@ -54,9 +51,6 @@
 
                              ( {{ $period->starting_year .' - '. $period->ending_year }} )</a>
                         @endforeach
-                        <!-- 
-                        <a  href="{!! url('/etihash/massuprisingg'); !!}">দ্বিতীয় পর্যায়</a>
-                        <a  href="{!! url('/etihash/liberationwar/liberationwar'); !!}">তৃতীয় পর্যায়</a> -->
                     </div>
                 </div>
             </li>
