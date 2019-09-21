@@ -32,99 +32,71 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <h1 class="display-4">{{ __('header.logo') }}</h1>
-        
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="nav navbar-nav mx-auto">
                 <li class="nav-item active">
-                   {{-- <a class="nav-link" href="/{{app()->getLocale()}}">{{ __('header.home') }}<span class="sr-only">(current)</span></a>--}}
                     <a class="nav-link" href="/">{{ __('header.home') }}<span class="sr-only">(current)</span></a>
+                    {{--<a class="nav-link" href="/{{app()->getLocale()}}">{{ __('header.home') }}<span class="sr-only">(current)</span></a>--}}
                 </li>
 
 
 
-               <?php $lang =  app()->getLocale(); ?>
-
-                
-
+                <?php $lang =  app()->getLocale(); ?>
                 <li class="nav-item dropdown">
                     <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         {{ __('header.history') }}
-                    
                     </a>
-
-                   
                     <div class="dropdown" >
                         <div class="dropdown-content">
 
                             @foreach($periods as $period)
-
-<<<<<<< HEAD
                                 <a  href="{!! url('/etihash/period/'.$period->id); !!}">
-=======
-                            <a  href="{!! url($lang.'/etihash/period/'.$period->id); !!}"> 
 
-                                 @if(app()->getLocale() == 'bn')
+                                    @if(app()->getLocale() == 'bn')
+                                        {{ $period->name }}
+                                    @else
+                                        {{ $period->ename }}
+                                    @endif
 
-                                      {{ $period->name }}
-                                 @else
-                                      {{ $period->ename }}
-
-                                 @endif
-
-
-                               ({{ $period->name }} ( {{ $period->starting_year .' - '. $period->ending_year }} )</a>
-
-
-                                <a  href="{!! url($lang.'/etihash/period/'.$period->id); !!}">
->>>>>>> 0b77c63ebe0752b3c82893927c065f7b6bdfc68b
-
-                                @if(app()->getLocale() == 'bn')
-                                    {{ $period->name }}
-                                @else
-                                    {{ $period->ename }}
-                                @endif
-
-                                    ( {{ $period->starting_year .' - '. $period->ending_year }} )</a>
-
+                                        ( {{ $period->starting_year .' - '. $period->ending_year }} )</a>
 
                             @endforeach
-                            
-                         </div>
                         </div>
+                    </div>
                 </li>
-                            <?php $lang =  app()->getLocale(); ?>
-                            <li class="nav-item">
 
-                                <a class="nav-link " href="{!! url('/bongobondu'); !!}">{{ __('header.bongobondhu') }}</a>
-
-                            </li>
-
-                             <?php $lang =  app()->getLocale(); ?>
-                            <li class="nav-item dropdown">
-                                 <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    {{ __('header.archive') }}
-                                 </a>
-
-                                <div class="dropdown" >
-                                    <div class="dropdown-content">
-                                        <a  href="{!! url($lang.'/archive/image'); !!}">{{ __('header.image') }}</a>
-                                        <a  href="{!! url($lang.'/archive/documents'); !!}">{{ __('header.documents') }}</a>
-                                        <a  href="{!! url($lang.'/archive/video'); !!}">{{ __('header.video') }}</a>
-                                        <a  href="{!! url($lang.'/archive/audio'); !!}">{{ __('header.audio') }}</a>
-
-                                    </div>
-                                </div>
-                            </li>
+                <?php $lang =  app()->getLocale(); ?>
+                <li class="nav-item">
+                    <a class="nav-link " href="{!! url('/bongobondu'); !!}">{{ __('header.bongobondhu') }}</a>
+                </li>
 
                 <?php $lang =  app()->getLocale(); ?>
                 <li class="nav-item dropdown">
-                    <a class="nav-link " href="{!! url('/freedom_fighter'); !!}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{ __('header.archive') }}
+                    </a>
+
+                    <div class="dropdown" >
+                        <div class="dropdown-content">
+                            <a  href="{!! url('/archive/image'); !!}">{{ __('header.image') }}</a>
+                            <a  href="{!! url('/archive/documents'); !!}">{{ __('header.documents') }}</a>
+                            <a  href="{!! url('/archive/video'); !!}">{{ __('header.video') }}</a>
+                            <a  href="{!! url('/archive/audio'); !!}">{{ __('header.audio') }}</a>
+
+                        </div>
+                    </div>
+                </li>
+
+                <?php $lang =  app()->getLocale(); ?>
+                <li class="nav-item dropdown">
+                    <a class="nav-link " href="{!! url('$lang./freedom_fighter'); !!}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         {{ __('header.freedom fighter') }}
                     </a>
                     <div class="dropdown" >
                         <div class="dropdown-content">
                             @foreach($ff_titles as $ff_title)
-                                <a  href="{!! url($lang.'/freedom_fighter/freedomfighter_title/'.$ff_title->id); !!}">
+                                <a  href="{!! url('/freedom_fighter/freedomfighter_title/'.$ff_title->id); !!}">
 
                                     @if(app()->getLocale() == 'bn')
                                         {{ $ff_title->nickname }}
@@ -150,7 +122,7 @@
                         <div class="dropdown-content">
                             @foreach($bookcategories as $bookcategory)
 
-                                <a  href="{!! url($lang.'/books/bookcategory/'.$bookcategory->id); !!}">
+                                <a  href="{!! url('/books/bookcategory/'.$bookcategory->id); !!}">
                                     @if(app()->getLocale() == 'bn')
                                         {{ $bookcategory->book_type }}
                                     @else
@@ -189,37 +161,37 @@
 <div class="container" >
     <h2 class="headertwo">স্বাধীনতার যাত্রা</h2>
 
-<div class="row">
+    <div class="row">
 
-   @if($periods->count() > 0)
-    @foreach($periods as $period)
+        @if($periods->count() > 0)
+            @foreach($periods as $period)
 
-           <div class="col-md-4">
-            <div class="thumbnail">
-                <h3 class="headerthree">{{ $period->name }}</h3>
-                <div class="polaroid">
-                     <img  class="homeimage" src="{{ asset('/uploads/period/'.$period->image) }}"  class="img-thumbnail" alt="Fjords" width="304" height="236">
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <h3 class="headerthree">{{ $period->name }}</h3>
+                        <div class="polaroid">
+                            <img  class="homeimage" src="{{ asset('/uploads/period/'.$period->image) }}"  class="img-thumbnail" alt="Fjords" width="304" height="236">
 
-                    <div class="caption">
-                        <p class="lead text-secondary">
-                        
-                        {!! str_limit($period->content, $limit = 100, $end = '...') !!}
-                    </p>
-                    </div>
-                </div>
+                            <div class="caption">
+                                <p class="lead text-secondary">
+
+                                    {!! str_limit($period->content, $limit = 100, $end = '...') !!}
+                                </p>
+                            </div>
+                        </div>
 
 
-                <p style="text-align: center;">
+                        <p style="text-align: center;">
                            <span class="wpb_button align_center">
                                <a href="{!! url('/etihash/period/'.$period->id); !!}" class="g-btn color_green">
                                    <span>আরো পড়ুন</span>
                                </a>
                            </span>
-                </p>
-            </div>
-        </div>
-        @endforeach
-         @else
+                        </p>
+                    </div>
+                </div>
+            @endforeach
+        @else
             <div class="col-md-12" style="text-align: center;">
                 <h1>No Data Found.</h1>
             </div>
@@ -255,13 +227,13 @@
         <div id="mdb-lightbox-ui"></div>
         <!--First slide-->
         <div class=" carousel-item active text-center">
-             
-             @foreach($image1 as $data)
-            <figure class="col-md-3 d-md-inline-block">
-                <a href="#">
-                    <img src="{{ asset('/uploads/archive/'.$data->media) }}" class="img-fluid"  style="width: 400px; height: 200px; " >
-                </a>
-            </figure>
+
+            @foreach($image1 as $data)
+                <figure class="col-md-3 d-md-inline-block">
+                    <a href="#">
+                        <img src="{{ asset('/uploads/archive/'.$data->media) }}" class="img-fluid"  style="width: 400px; height: 200px; " >
+                    </a>
+                </figure>
             @endforeach
         </div>
         <!--/.First slide-->
@@ -270,11 +242,11 @@
         <div class=" carousel-item text-center">
             @foreach($image2 as $data)
 
-            <figure class="col-md-3 d-md-inline-block">
-                <a href="#">
-                    <img src="{{ asset('/uploads/archive/'.$data->media) }}" class="img-fluid"  style="width: 400px; height: 200px; " >
-                </a>
-            </figure>
+                <figure class="col-md-3 d-md-inline-block">
+                    <a href="#">
+                        <img src="{{ asset('/uploads/archive/'.$data->media) }}" class="img-fluid"  style="width: 400px; height: 200px; " >
+                    </a>
+                </figure>
             @endforeach
 
         </div>
@@ -284,11 +256,11 @@
         <div class=" carousel-item text-center">
             @foreach($image3 as $data)
 
-            <figure class="col-md-3 d-md-inline-block">
-                <a href="#">
-                    <img src="{{ asset('/uploads/archive/'.$data->media) }}" class="img-fluid"  style="width: 400px; height: 200px; " >
-                </a>
-            </figure>
+                <figure class="col-md-3 d-md-inline-block">
+                    <a href="#">
+                        <img src="{{ asset('/uploads/archive/'.$data->media) }}" class="img-fluid"  style="width: 400px; height: 200px; " >
+                    </a>
+                </figure>
             @endforeach
 
         </div>
@@ -313,25 +285,25 @@
         <div class="video-grid front-page" id="front-page-videos">
             <ul class="video-list featured">
                 @foreach($Videofootage as $data)
-                <li class="video featured">
-                   <a data-fancybox href="{{ $data->path }}" class="featured-video">
-                    @if(file_exists('uploads/figure/'.$data->figure))
-                        <figure style="background-image: url('uploads/figure/{{$data->figure}}')">
-                            <img class="videoimage" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
-                            <figcaption>{{ $data->title }}</figcaption>
-                        </figure>
-                    @else
-                        <figure style="background-image: url('{{$data->figure}}')">
-                            <img class="videoimage" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
-                            <figcaption>{{ $data->title }}</figcaption>
-                        </figure>
-                    @endif
-                    </a>
-                </li>
+                    <li class="video featured">
+                        <a data-fancybox href="{{ $data->path }}" class="featured-video">
+                            @if(file_exists('uploads/figure/'.$data->figure))
+                                <figure style="background-image: url('uploads/figure/{{$data->figure}}')">
+                                    <img class="videoimage" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
+                                    <figcaption>{{ $data->title }}</figcaption>
+                                </figure>
+                            @else
+                                <figure style="background-image: url('{{$data->figure}}')">
+                                    <img class="videoimage" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
+                                    <figcaption>{{ $data->title }}</figcaption>
+                                </figure>
+                            @endif
+                        </a>
+                    </li>
                 @endforeach
 
 
-             
+
             </ul>
         </div>
     </section>
