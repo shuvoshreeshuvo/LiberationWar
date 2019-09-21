@@ -51,7 +51,6 @@
     .audio-play-time {
         color: #a8a8a8;
         float: right;
-        font-size: 24px;
         line-height: 24px;
         position: absolute;
         right: 30px;
