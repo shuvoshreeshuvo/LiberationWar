@@ -158,7 +158,7 @@
 
 
 <!-- Three major movement -->
-<div class="container" >
+<div class="home-container" >
     <h2 class="headertwo">স্বাধীনতার যাত্রা</h2>
 
     <div class="row">
@@ -273,7 +273,7 @@
 <!--/.Carousel Wrapper-->
 
 <!--video gallery -->
-
+<div class="home-container" >
 <h6 class="headersix">ভিডিও</h6>
 
 <main role="main">
@@ -301,14 +301,11 @@
                         </a>
                     </li>
                 @endforeach
-
-
-
             </ul>
         </div>
     </section>
 </main>
-
+</div>
 <!-- Video Gallery -->
 
 <!-- Footer -->
