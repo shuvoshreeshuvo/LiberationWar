@@ -23,17 +23,23 @@ body::-webkit-scrollbar-thumb {
 }
 
 
-.container {
-    margin-top: 50px;
-    margin-left: 200px;
+.container{
+    margin: 50px 0px 0px 200px;
 }
 
+.home-container{
+    margin: 50px 100px 0px 100px;
+}
+
+.thumbnail{
+   margin-left: 50px;
+    margin-right: 50px;
+}
 /* home pager er imager er design*/
 
 .jumbotron {
 
     background-image: url('../../frontend/images/Bangladeshi-Flag.jpg');
-
     height: 100px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -309,7 +315,7 @@ input[type=search]::placeholder {
     font-weight: 700;
     text-transform: uppercase;
     padding: 10px 36px;
-    margin: 5px 0;
+    margin: 5px 0px 0px 50px;
     border: none;
     border-radius: 5px;
     overflow: hidden;
