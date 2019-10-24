@@ -99,6 +99,7 @@ Route::get('/locale/{lang?}', function ($lang=null) {
 Route::group(['prefix'=>'admin','middleware'=>'auth','namespace'=>'admin'], function (){
 
     Route::get('dashboard','DashboardController@index')->name('admin.dashboard');
+    Route::resource('Profile','ProfileController');
     Route::resource('Slider','SliderController');
     Route::resource('Category','CategoryController');
     Route::resource('period','PeriodController');
