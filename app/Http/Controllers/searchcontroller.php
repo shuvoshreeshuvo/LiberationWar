@@ -26,12 +26,12 @@ class SearchController extends Controller
  
     $q = Input::get('search');
     if($q == 'বঙ্গবন্ধু'){
-        return redirect(url('/bongobondu'));
+        return redirect(url('/bn/bongobondu'));
      }
 
      $q = Input::get('search');
     if($q == 'ছবি'){
-        return redirect(url('/archive/image'));
+        return redirect(url('/bn/archive/image'));
      }
 
       $q = Input::get('search');
