@@ -17,8 +17,8 @@
               <p>Dashboard</p>
             </a>
           </li>
-            <li class="nav-item ">
-                <a class="nav-link" href="#">
+            <li class="nav-item  {{ Request::is('admin/Profile*') ? 'active': '' }} ">
+                <a class="nav-link" href="{{ route('Profile.index') }}">
                     <i class="material-icons">person</i>
                     <p>Admin Profile</p>
                 </a>
