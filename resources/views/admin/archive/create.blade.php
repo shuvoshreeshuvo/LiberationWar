@@ -71,6 +71,19 @@
                                     </div>
                                 </div>
 
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label class="control-label">Audio Image</label>
+                                        <input type="file" class="form-control" name="audimg">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                <div class="col-md-12">
+                                    <label class="control-label">Aud Duration</label>
+                                        <input type="text" class="form-control" name="audduratn">
+                                </div>
+                                </div>
 
 
                                 <div class="row">

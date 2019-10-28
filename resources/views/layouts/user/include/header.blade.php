@@ -38,13 +38,10 @@
                     {{ __('header.history') }}
                 </a>
 
-                 
                 <div class="dropdown" >
                     <div class="dropdown-content">
-                        <!-- <a  href="{!! url('/etihash/languagemovement/index'); !!}">প্রথম পর্যায়</a> -->
-                        
                         @foreach($periods as $period)
-                            <a  href="{!! url($lang.'/etihash/period/'.$period->id); !!}"> 
+                            <a  href="{!! url('/etihash/period/'.$period->id); !!}">
 
                             @if(app()->getLocale() == 'bn')
                                 {{ $period->name }}
@@ -54,9 +51,6 @@
 
                              ( {{ $period->starting_year .' - '. $period->ending_year }} )</a>
                         @endforeach
-                        <!-- 
-                        <a  href="{!! url('/etihash/massuprisingg'); !!}">দ্বিতীয় পর্যায়</a>
-                        <a  href="{!! url('/etihash/liberationwar/liberationwar'); !!}">তৃতীয় পর্যায়</a> -->
                     </div>
                 </div>
             </li>
@@ -65,7 +59,7 @@
 
             <li class="nav-item">
 
-                <a class="nav-link " href="{!! url($lang.'/bongobondu'); !!}">{{ __('header.bongobondhu') }}</a>
+                <a class="nav-link " href="{!! url('/bongobondu'); !!}">{{ __('header.bongobondhu') }}</a>
 
             </li>
 
@@ -81,10 +75,10 @@
 
                 <div class="dropdown" >
                     <div class="dropdown-content">
-                        <a  href="{!! url($lang.'/archive/image'); !!}">{{ __('header.image') }}</a>
-                        <a  href="{!! url($lang.'/archive/documents'); !!}">{{ __('header.documents') }}</a>
-                        <a  href="{!! url($lang.'/archive/video'); !!}">{{ __('header.video') }}</a>
-                         <a  href="{!! url($lang.'/archive/audio'); !!}">{{ __('header.audio') }}</a>
+                        <a  href="{!! url('/archive/image'); !!}">{{ __('header.image') }}</a>
+                        <a  href="{!! url('/archive/documents'); !!}">{{ __('header.documents') }}</a>
+                        <a  href="{!! url('/archive/video'); !!}">{{ __('header.video') }}</a>
+                         <a  href="{!! url('/archive/audio'); !!}">{{ __('header.audio') }}</a>
 
                     </div>
                 </div>
@@ -98,7 +92,7 @@
                      <div class="dropdown" >
                         <div class="dropdown-content">
                             @foreach($ff_titles as $ff_title)
-                            <a  href="{!! url($lang.'/freedom_fighter/freedomfighter_title/'.$ff_title->id); !!}">
+                            <a  href="{!! url('/freedom_fighter/freedomfighter_title/'.$ff_title->id); !!}">
 
                                 @if(app()->getLocale() == 'bn')
                                     {{ $ff_title->nickname }}
@@ -124,7 +118,7 @@
                 <div class="dropdown" >
                     <div class="dropdown-content">
                         @foreach($bookcategories as $bookcategory)
-                            <a  href="{!! url($lang.'/books/bookcategory/'.$bookcategory->id); !!}"> 
+                            <a  href="{!! url('/books/bookcategory/'.$bookcategory->id); !!}">
 
                              @if(app()->getLocale() == 'bn')
                                 {{ $bookcategory->book_type }}
@@ -142,7 +136,7 @@
 
             <?php $lang =  app()->getLocale(); ?>
             <li class="nav-item">
-                <a class="nav-link " href="{!! url($lang.'/about'); !!}">{{ __('header.about') }}</a>
+                <a class="nav-link " href="{!! url('/about'); !!}">{{ __('header.about') }}</a>
             </li>
         </ul>
         <!-- Search form -->

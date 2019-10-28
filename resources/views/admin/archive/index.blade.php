@@ -28,6 +28,8 @@
                           <th>Type</th>
                           <th>Media</th>
                           <th>Figure</th>
+                          <th>Audio Image</th>
+                          <th>Aud Duration</th>
                           <th>Is Special</th>
                           <th>Created At</th>
                           <th>Action</th>
