@@ -27,8 +27,13 @@ Route::get('/lang', 'HomeController@index');
 
 Route::get('/test', 'dummy@index');
 // shuvoy korsil ami off korsi
+<<<<<<< HEAD
 
 /*Route::group(['prefix' => '{lang?}', 'middleware' => 'setlocale', 'where' => ['lang' => '[a-zA-Z]{2}']], function($lang = Null){
+=======
+/*
+Route::group(['prefix' => '{lang?}', 'middleware' => 'setlocale', 'where' => ['lang' => '[a-zA-Z]{2}']], function($lang = Null){
+>>>>>>> 8d9e011199eedc3ef0a2afd50d04099371178eea
 
     App::setlocale($lang);
 
@@ -50,8 +55,13 @@ Route::get('/test', 'dummy@index');
     Route::get('/about', 'AboutController@About');
 
 
+<<<<<<< HEAD
 });*/
 
+=======
+});
+*/
+>>>>>>> 8d9e011199eedc3ef0a2afd50d04099371178eea
 
 //search
 
@@ -104,6 +114,7 @@ Route::get('/locale/{lang?}', function ($lang=null) {
 Route::group(['prefix'=>'admin','middleware'=>'auth','namespace'=>'admin'], function (){
 
     Route::get('dashboard','DashboardController@index')->name('admin.dashboard');
+    Route::resource('Profile','ProfileController');
     Route::resource('Slider','SliderController');
     Route::resource('Category','CategoryController');
     Route::resource('period','PeriodController');
