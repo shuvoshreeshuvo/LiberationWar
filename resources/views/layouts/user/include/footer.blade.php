@@ -57,20 +57,20 @@
         <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
 
         <!-- Facebook -->
-        <a href="#" id="social-fb">
+        <a href="https://www.facebook.com"  target="_blank" id="social-fb">
             <i class="fab fa-facebook-square social"></i>
         </a>
         <!-- Twitter -->
-        <a href="#" id="social-tw">
+        <a href="https://twitter.com/login?lang=en"  target="_blank" id="social-tw">
           <i class="fab fa-twitter-square social"></i>
         </a>
         <!-- Google +-->
-        <a href="#" id="social-gp">
+        <a href="#" id="social-gp" target="_blank">
             <i class="fab fa-google-plus-square social"></i>
         </a>
         <!-- envelope -->
-        <a href="#" id="social-em">
-          <i class="fas fa-envelope-square social"></i>
+        <a href="https://www.youtube.com" id="social-yt"  target="_blank">
+          <i class="fab fa-youtube-square social"></i>
         </a>
 
       </div>
