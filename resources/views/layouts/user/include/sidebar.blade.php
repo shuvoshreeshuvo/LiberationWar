@@ -6,25 +6,27 @@
     }
     .stage{
         height: 100%;
-        width: 200px;
+        width: 170px;
         position: fixed;
         z-index: 1;
         top:0;
         left: 0;
         overflow-x: hidden;
         padding-top: 200px;
+        background: #ff6666;
     }
     .p{
-        font-size: 35px;
+        font-size: 30px;
         text-align: center;
         margin-top: 0;
         cursor: pointer;
         width: 100%;
-        background: #ff3333;
-        color: white;
+        background:white;
+        color:  #ff3333;
         border-radius: 10px;
         font-family: Century Gothic;
         letter-spacing: 3px;
+        text-decoration: none;
 
 
     }
@@ -32,15 +34,21 @@
         margin-left: auto;
         margin-right: auto;
         border-radius: 10px;
-        width: 170px;
+        width: 160px;
         height: 40px;
         margin-top: 4%;
         transition-duration: 0.2s;
 
     }
+
+    .div a{
+
+        text-decoration: none;
+
+    }
     .p:hover{
-        background: white;
-        color: #ff3333;
+        background: #00A65E;
+        color:white ;
 
     }
     .div:nth-child(odd){
