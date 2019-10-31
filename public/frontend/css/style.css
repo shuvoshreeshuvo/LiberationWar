@@ -601,6 +601,7 @@ tr:nth-child(even) {
     background-color: transparent;
     color:white;
 }
+
 .controls-top a i{
     padding-left: 1rem!important;
     font-family: 'Font Awesome 5 Free';
@@ -631,7 +632,13 @@ tr:nth-child(even) {
         max-width: 100%;
     }
 }
+
+
+
 /*image*/
+.imagehovereffect a{
+    color: white;
+}
 .images{
 
     margin: 20px 0px 40px 15px;
