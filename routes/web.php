@@ -27,13 +27,9 @@ Route::get('/lang', 'HomeController@index');
 
 Route::get('/test', 'dummy@index');
 // shuvoy korsil ami off korsi
-<<<<<<< HEAD
 
-/*Route::group(['prefix' => '{lang?}', 'middleware' => 'setlocale', 'where' => ['lang' => '[a-zA-Z]{2}']], function($lang = Null){
-=======
 /*
 Route::group(['prefix' => '{lang?}', 'middleware' => 'setlocale', 'where' => ['lang' => '[a-zA-Z]{2}']], function($lang = Null){
->>>>>>> 8d9e011199eedc3ef0a2afd50d04099371178eea
 
     App::setlocale($lang);
 
@@ -55,13 +51,10 @@ Route::group(['prefix' => '{lang?}', 'middleware' => 'setlocale', 'where' => ['l
     Route::get('/about', 'AboutController@About');
 
 
-<<<<<<< HEAD
+
 });*/
 
-=======
-});
-*/
->>>>>>> 8d9e011199eedc3ef0a2afd50d04099371178eea
+
 
 //search
 
