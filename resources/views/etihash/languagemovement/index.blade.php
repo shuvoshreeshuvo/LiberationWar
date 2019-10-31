@@ -163,7 +163,6 @@
 
                     </div>
                 </div>
-                <a href="{!! url('/Archive/Image'); !!}"style="text-align: left;text-decoration: none"> More Photos </a>
 
             </div>
             <!--/.Third slide-->
