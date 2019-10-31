@@ -48,36 +48,21 @@
                         {{ __('header.history') }}
                     </a>
                     <div class="dropdown" >
-                        <div class="dropdown-content">
+                         <div class="dropdown" >
+                    <div class="dropdown-content">
+                        @foreach($periods as $period)
+                            <a  href="{!! url('/etihash/period/'.$period->id); !!}">
 
-                            @foreach($periods as $period)
-                                <a  href="{!! url('/etihash/period/'.$period->id); !!}">
+                            @if(app()->getLocale() == 'bn')
+                                {{ $period->name }}
+                            @else
+                                {{ $period->ename }}
+                            @endif
 
-<<<<<<< HEAD
-                            
-
-                                <a  href="{!!url($lang.'/etihash/period/'.$period->id); !!}">
-
-                                @if(app()->getLocale() == 'bn')
-                                    {{ $period->name }}
-                                @else
-                                    {{ $period->ename }}
-                                @endif
-
-                                    ( {{ $period->starting_year .' - '. $period->ending_year }} ) </a>
-=======
-                                    @if(app()->getLocale() == 'bn')
-                                        {{ $period->name }}
-                                    @else
-                                        {{ $period->ename }}
-                                    @endif
->>>>>>> 8d9e011199eedc3ef0a2afd50d04099371178eea
-
-                                        ( {{ $period->starting_year .' - '. $period->ending_year }} )</a>
-
-                            @endforeach
-                        </div>
+                             ( {{ $period->starting_year .' - '. $period->ending_year }} )</a>
+                        @endforeach
                     </div>
+                </div>                    </div>
                 </li>
 
                 <?php $lang =  app()->getLocale(); ?>
@@ -101,33 +86,28 @@
                         </div>
                     </div>
                 </li>
-
-                <?php $lang =  app()->getLocale(); ?>
-                <li class="nav-item dropdown">
-<<<<<<< HEAD
-                    <a class="nav-link " href="{!! url($lang.'/freedom_fighter'); !!}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-=======
-                    <a class="nav-link " href="{!! url('$lang./freedom_fighter'); !!}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
->>>>>>> 8d9e011199eedc3ef0a2afd50d04099371178eea
-                        {{ __('header.freedom fighter') }}
+              <?php $lang =  app()->getLocale(); ?>
+               <li class="nav-item dropdown">
+                   <a class="nav-link " href="{!! url('/freedom_fighter'); !!}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       {{ __('header.freedom fighter') }}
                     </a>
-                    <div class="dropdown" >
+                     <div class="dropdown" >
                         <div class="dropdown-content">
                             @foreach($ff_titles as $ff_title)
-                                <a  href="{!! url('/freedom_fighter/freedomfighter_title/'.$ff_title->id); !!}">
+                            <a  href="{!! url('/freedom_fighter/freedomfighter_title/'.$ff_title->id); !!}">
 
-                                    @if(app()->getLocale() == 'bn')
-                                        {{ $ff_title->nickname }}
-                                    @else
-                                        {{ $ff_title->enickname }}
-                                    @endif
-                                </a>
+                                @if(app()->getLocale() == 'bn')
+                                    {{ $ff_title->nickname }}
+                                @else
+                                    {{ $ff_title->enickname }}
+                                @endif
+                            </a>
 
-                            @endforeach
+                             @endforeach                                              
 
                         </div>
                     </div>
-
+                
                 </li>
 
                 <?php $lang =  app()->getLocale(); ?>
