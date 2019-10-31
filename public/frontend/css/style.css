@@ -70,9 +70,10 @@ body::-webkit-scrollbar-thumb {
 /* navigation bar*/
 
 .navbar{
-    margin:0 auto;
+    margin: auto;
     background-color: white;
-    height: 51px;
+    height: 45px;
+
 
 }
 
@@ -80,11 +81,10 @@ body::-webkit-scrollbar-thumb {
     color:red;
     font-size: 15px;
     font-weight: bold;
-    padding-top: 14px;
-    padding-bottom: 14px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 14px;
+    margin: auto;
     transition: color 0.3s;
+    min-width: 50px;
 
 }
 
@@ -92,8 +92,7 @@ body::-webkit-scrollbar-thumb {
 .navbar-expand-lg .nav-link:hover{
     background-color: red;
     color: white;
-
-
+    min-width: 50px;
 }
 
 .navbar-expand-lg .ul{
@@ -449,8 +448,8 @@ tr:nth-child(even) {
     color: #d34836;
 }
 
-#social_icon_footer #social-em:hover {
-    color: #f39c12;
+#social_icon_footer #social-yt:hover {
+    color:  #c4302b;
 }
 
 /*footer*/
