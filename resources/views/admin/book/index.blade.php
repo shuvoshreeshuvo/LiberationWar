@@ -41,7 +41,7 @@
 
                               <td>{{ $book->bookcategory->book_type }}</td>
                               <td>{{ $book->title }}</td>
-                               <td>{{ $book->image }}</td>
+                              <td><img width="300" height="150" class="img-responsive img-thumbnail" src="{{ asset('uploads/book/'.$book->image) }}" style="height:100px;width:100px" alt=""></td>
                               <td>{{ $book->path }}</td>
                               <td>{{ $book->type }}</td>
                                 <td>{!! str_limit($book->caption, $limit = 100, $end = '...') !!} </td>
