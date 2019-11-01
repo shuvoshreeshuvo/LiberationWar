@@ -34,7 +34,7 @@
                   <div class="row">
                       <div class="col-md-12">
                         <label class="control-label">Image</label>
-                        <input type="file" class="form-control" name="image">
+                        <input type="file"  name="image">
                       </div>
                   </div>
 
