@@ -19,6 +19,7 @@
       		<img style="height: 300px;width: 300px" class="rounded float-right" src="{{ asset('uploads/bongobondu/'.$data-> image) }}"/>
     	</div>
 		@else
+		
 		@endif
     	<div style="text-align: left;color: black;" class="content">
        		{!! $data->content !!}
