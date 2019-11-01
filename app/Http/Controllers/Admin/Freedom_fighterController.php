@@ -174,7 +174,7 @@ class Freedom_fighterController extends Controller
          $freedom_fighter=freedom_fighter::find($id);
          if(file_exists('uploads/freedom_fighter/'.$freedom_fighter->image)){
 
-        // unlink('uploads/freedom_fighter/'.$freedom_fighter->image);
+         //unlink('uploads/freedom_fighter/'.$freedom_fighter->image);
 }
         $freedom_fighter->delete();  
          return redirect()->back()->with('successMsg','Freedom_fighter Succesfully Deleted');
