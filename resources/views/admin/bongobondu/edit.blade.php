@@ -35,9 +35,9 @@
                   <div class="row">
                       <div class="col-md-12">
                         <label class="control-label">Image</label>
-                        <input type="file" class="form-control" name="image">
+                          <input type="file" name="image" class="form-control">
+                        </div>
                       </div>
-                  </div>
 
                    <div class="row">
                       <div class="col-md-12">
