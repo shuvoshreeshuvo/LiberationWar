@@ -362,9 +362,11 @@ input[type=search]::placeholder {
 }
 
 .headerfive{
+    text-align: center;
     padding-top: 20px;
     color:red;
     font-size: 18px;
+    font-weight: 700
 }
 
 .card img{
