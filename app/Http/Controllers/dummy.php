@@ -10,25 +10,27 @@ use App\Ff_title;
 use App\Bookcategory;
 
 
-class EtihashController extends Controller
+class dummy extends Controller
 {
-   
+       
+    
 
-    public function period_history($id)
-    {
-        $periods=Period::all();
+    public function index()
+    {    
+    	$id=3;
+        //$periods=Period::all();
         //$period = DB::table('periods')->where('id', $id)->first();
-        $period = Period::find($id);
-        //dd($period);
+       /* $period = Period::find($id);
         $ff_titles = Ff_title::all();
-        $bookcategories = Bookcategory::all();
-        $events = DB::table('events')
-                ->where('period_id', $id)
-                ->get();
-               // dd($periods);
+        $bookcategories = Bookcategory::all();*/
+        //$events = DB::table('events')
+               // ->where('period_id',$id)
+                //->get();
+         $period = Period::find($id);
+                dd($period);
            
         //dd(app()->getLocale());
-       return view('etihash.languagemovement.index',compact('periods', 'period','ff_titles','events','bookcategories'));
+        //return view('etihash.languagemovement.index',compact('periods', 'period','ff_titles','events','bookcategories'));
     }
     public function event_brief($id)
     {
@@ -39,3 +41,5 @@ class EtihashController extends Controller
        return view('etihash.languagemovement.bongovongo', compact('periods', 'ff_titles','event','bookcategories'));
     }
 }
+
+

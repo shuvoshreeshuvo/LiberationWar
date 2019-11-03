@@ -48,22 +48,21 @@
                         {{ __('header.history') }}
                     </a>
                     <div class="dropdown" >
-                        <div class="dropdown-content">
+                         <div class="dropdown" >
+                    <div class="dropdown-content">
+                        @foreach($periods as $period)
+                            <a  href="{!! url('/etihash/period/'.$period->id); !!}">
 
-                            @foreach($periods as $period)
-                                <a  href="{!! url('/etihash/period/'.$period->id); !!}">
+                            @if(app()->getLocale() == 'bn')
+                                {{ $period->name }}
+                            @else
+                                {{ $period->ename }}
+                            @endif
 
-                                    @if(app()->getLocale() == 'bn')
-                                        {{ $period->name }}
-                                    @else
-                                        {{ $period->ename }}
-                                    @endif
-
-                                        ( {{ $period->starting_year .' - '. $period->ending_year }} )</a>
-
-                            @endforeach
-                        </div>
+                             ( {{ $period->starting_year .' - '. $period->ending_year }} )</a>
+                        @endforeach
                     </div>
+                </div>                    </div>
                 </li>
 
                 <?php $lang =  app()->getLocale(); ?>
@@ -87,35 +86,34 @@
                         </div>
                     </div>
                 </li>
-
-                <?php $lang =  app()->getLocale(); ?>
-                <li class="nav-item dropdown">
-                    <a class="nav-link " href="{!! url('$lang./freedom_fighter'); !!}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        {{ __('header.freedom fighter') }}
+              <?php $lang =  app()->getLocale(); ?>
+               <li class="nav-item dropdown">
+                   <a class="nav-link " href="{!! url('/freedom_fighter'); !!}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       {{ __('header.freedom fighter') }}
                     </a>
-                    <div class="dropdown" >
+                     <div class="dropdown" >
                         <div class="dropdown-content">
                             @foreach($ff_titles as $ff_title)
-                                <a  href="{!! url('/freedom_fighter/freedomfighter_title/'.$ff_title->id); !!}">
+                            <a  href="{!! url('/freedom_fighter/freedomfighter_title/'.$ff_title->id); !!}">
 
-                                    @if(app()->getLocale() == 'bn')
-                                        {{ $ff_title->nickname }}
-                                    @else
-                                        {{ $ff_title->enickname }}
-                                    @endif
-                                </a>
+                                @if(app()->getLocale() == 'bn')
+                                    {{ $ff_title->nickname }}
+                                @else
+                                    {{ $ff_title->enickname }}
+                                @endif
+                            </a>
 
-                            @endforeach
+                             @endforeach                                              
 
                         </div>
                     </div>
-
+                
                 </li>
 
                 <?php $lang =  app()->getLocale(); ?>
                 <li class="nav-item dropdown">
 
-                    <a class="nav-link " href="{!! url('/books'); !!}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link " href="{!! url($lang.'/books'); !!}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         {{ __('header.book') }}
                     </a>
                     <div class="dropdown" >
@@ -145,7 +143,8 @@
 
 
             <!-- Search form -->
-            <form class="form-inline my-2 my-lg-0" action="{{ url('/search') }}" method="GET">
+            <?php $lang =  app()->getLocale(); ?>
+            <form class="form-inline my-2 my-lg-0" action="{{ url($lang.'/search') }}" method="GET">
                 {{ csrf_field() }}
                 <i class="fas fa-search" aria-hidden="true"></i>
                 <input class="form-control mr-sm-2 ml-3" type="search" placeholder="{{ __('header.search') }}" name="search" aria-label="Search">

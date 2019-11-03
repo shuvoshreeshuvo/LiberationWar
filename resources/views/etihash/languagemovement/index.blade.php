@@ -6,13 +6,14 @@
 
 <div class="container">
 
-    <h1 class="headertwo">{{ $period->name }}</h1>
+<h1 class="headertwo">{{ $period->name }}</h1>
     <div class="content">   
        <p>{!! $period->content !!}</p>
     </div>
-    
-        
 <div class="row ">
+
+
+
 
     @if($events->count() > 0)
     @foreach($events as $event)

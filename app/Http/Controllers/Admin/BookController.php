@@ -44,7 +44,7 @@ class BookController extends Controller
         $this->validate($request,[
            
            
-            'image' => 'required|mimes:jpeg,jpg,png,bmp',
+          //  'image' => 'required|mimes:jpeg,jpg,png,bmp',
             
           
         ]);
@@ -63,7 +63,7 @@ class BookController extends Controller
              $image->move('uploads/book',$imagename);
             }else {
 
-                $imagename ='dafault.png';
+                $imagename ='default.png';
             }
             $book = new Book();
             $book->bookcategory_id = $request->bookcategory;
@@ -166,7 +166,7 @@ class BookController extends Controller
         $book=Book::find($id);
         if(file_exists('uploads/book/'.$book->image)){
             
-                unlink('uploads/book/'.$book->image);
+                //unlink('uploads/book/'.$book->image);
             }
         $book->delete();  
          return redirect()->back()->with('successMsg','Book  Succesfully Deleted');

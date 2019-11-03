@@ -17,7 +17,7 @@ class CreateBongobondusTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->text('content');
-            $table->string('image');
+            $table->string('image')->default('default.png');
             $table->timestamps();
         });
     }

@@ -41,7 +41,7 @@ class BongobonduController extends Controller
     {
         $this->validate($request,[
             'title' => 'required',
-           'image' => 'mimes:jpeg,jpg,png,bmp',
+           //'image' => 'mimes:jpeg,jpg,png,bmp',
             'content' => 'required',
 
         ]);

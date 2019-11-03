@@ -45,4 +45,3 @@ class Freedom_fighterController extends Controller
 
     
 }
-

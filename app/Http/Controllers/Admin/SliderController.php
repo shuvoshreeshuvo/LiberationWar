@@ -42,7 +42,7 @@ class SliderController extends Controller
         $this->validate($request,[
             'title' => 'required',
             'sub_title' => 'required',
-            'image' => 'required|mimes:jpeg,jpg,png,bmp',
+           // 'image' => 'required|mimes:jpeg,jpg,png,bmp',
 
         ]);
 
@@ -60,7 +60,7 @@ class SliderController extends Controller
              $image->move('uploads/slider',$imagename);
             }else {
 
-                $imagename ='dafault.png';
+                $imagename ='default.png';
             }
             $slider = new Slider();
             $slider->title = $request->title;
