@@ -24,7 +24,7 @@
       <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
 
         <!-- Contact details -->
-        <h5 class="font-weight-bold text-uppercase mb-4">Address</h5>
+        <h5 class="font-weight-bold text-uppercase mb-4">Contact Info</h5>
 
         <ul class="list-unstyled">
           <li>
@@ -54,7 +54,7 @@
       <div id="social_icon_footer" class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
 
         <!-- Social buttons -->
-        <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
+        <h5 class="font-weight-bold text-uppercase mb-4">Get Social</h5>
 
         <!-- Facebook -->
         <a href="https://www.facebook.com"  target="_blank" id="social-fb">
