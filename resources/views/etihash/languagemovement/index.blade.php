@@ -1,7 +1,6 @@
 @extends('layouts.front')
 
 @section('title', 'পর্যায়কাল  || আমার ইতিহাস')
-<link href="{{asset('frontend/images/period.png')}}" rel="icon">
 @section('content') 
 
 <div class="container">
