@@ -23,12 +23,7 @@
                     <p>Admin Profile</p>
                 </a>
             </li>
-          <li class="nav-item {{ Request::is('admin/Slider*') ? 'active': '' }}">
-            <a class="nav-link" href="{{ route('Slider.index') }}">
-             <i class="material-icons">slideshow</i>
-              <p>Sliders</p>
-            </a>
-          </li>
+
 
           <li class="nav-item {{ Request::is('admin/period*') ? 'active': '' }}">
             <a class="nav-link" href="{{ route('period.index') }}">
@@ -61,8 +56,6 @@
           </li>
 
 
-           
-
 
           <li class="nav-item {{ Request::is('admin/book*') ? 'active': '' }}">
             <a class="nav-link" href="{{ route('book.index') }}">
@@ -94,27 +87,6 @@
               <p>Freedom fighter list</p>
             </a>
           </li>
-
-
-       {{-- <li class="nav-item {{ Request::is('admin/Category*') ? 'active': '' }}">
-            <a class="nav-link" href="{{ route('Category.index') }}">
-              <i class="material-icons">content_paste</i>
-              <p>Category</p>
-            </a>
-          </li>
-
-           <li class="nav-item {{ Request::is('admin/Item*') ? 'active': '' }}">
-            <a class="nav-link" href="{{ route('Item.index') }}">
-              <i class="material-icons">library_books</i>
-              <p>Item</p>
-            </a>
-          </li>--}} 
-
-
-
-
-          
-
 
          
          
