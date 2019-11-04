@@ -1,7 +1,7 @@
 @extends('layouts.front')
 
 @section('title', 'অডিও || আমার ইতিহাস')
-<link href="{{asset('frontend/images/audio.png')}}" rel="icon">
+
 
 @section('content')
 

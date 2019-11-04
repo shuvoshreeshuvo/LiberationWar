@@ -13,10 +13,6 @@
 
 </script>
 @section('title', 'ছবি || আমার ইতিহাস')
-<link href="{{asset('frontend/images/imagegallery.png')}}" rel="icon">
-
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-
 
 @section('content')
     <div class="container">

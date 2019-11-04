@@ -1,7 +1,6 @@
 @extends('layouts.front')
 
 @section('title','বই || আমার ইতিহাস')
-<link href="{{asset('frontend/images/book.png')}}" rel="icon">
 @section('content')
 
     <div class="container">

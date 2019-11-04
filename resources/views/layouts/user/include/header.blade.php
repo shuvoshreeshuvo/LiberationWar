@@ -8,7 +8,7 @@
     <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('frontend/css/style.css')}}">
-
+    <link href="{{asset('frontend/images/bd.png')}}" rel="icon">
      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">

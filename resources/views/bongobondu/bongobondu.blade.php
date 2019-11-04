@@ -4,7 +4,6 @@
 {{ __('header.bongobondhu') }}{{ __('header.title') }}{{ __('header.logo') }}
 
 @endsection
-<link href="{{asset('frontend/images/bongobondhu.png')}}" rel="icon">
 
 @section('content')
 
