@@ -19,12 +19,12 @@
                 <div class="card-footer">
                   <div class="stats">
                     <i class="material-icons text-danger">info</i>
-                    <a href="#pablo">Total Categories and Items</a>
+                    <a href="#pablo">Total Periods and Events</a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
+           {{-- <div class="col-lg-3 col-md-6 col-sm-6">
               <div class="card card-stats">
                 <div class="card-header card-header-success card-header-icon">
                   <div class="card-icon">
@@ -39,7 +39,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> --}}
             
             <div class="col-lg-3 col-md-6 col-sm-6">
               <div class="card card-stats">
