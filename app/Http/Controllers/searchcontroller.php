@@ -17,7 +17,7 @@ class SearchController extends Controller
         return redirect(url('/'));
     }
 
-    if($q == 'history'){
+    if($q == 'ইতিহাস'){
         $period = DB::table('periods')->inRandomOrder()->first();
         $id = $period->id;
         return redirect(url('/etihash/period/'.$period->id));
