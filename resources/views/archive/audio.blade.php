@@ -26,7 +26,7 @@
 
                                 <div class="audio-play-list-wrap-thumb">
 
-                                    <img src="{{ asset('/uploads/audimg/'.$data->audimg)}}">
+                                    <img src="{{ asset('/uploads/audimg/'.$data->audimg)}}" width="`150" height="110">
 
                                 </div>
 
