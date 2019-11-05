@@ -1,7 +1,6 @@
 @extends('layouts.front')
 
 @section('title', 'পর্যায়কাল  || আমার ইতিহাস')
-<link href="{{asset('frontend/images/period.png')}}" rel="icon">
 @section('content') 
 
 <div class="container">
@@ -164,7 +163,6 @@
 
                     </div>
                 </div>
-                <a href="{!! url('/Archive/Image'); !!}"style="text-align: left;text-decoration: none"> More Photos </a>
 
             </div>
             <!--/.Third slide-->

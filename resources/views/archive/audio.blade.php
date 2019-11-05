@@ -1,7 +1,7 @@
 @extends('layouts.front')
 
 @section('title', 'অডিও || আমার ইতিহাস')
-<link href="{{asset('frontend/images/audio.png')}}" rel="icon">
+
 
 @section('content')
 
@@ -26,7 +26,7 @@
 
                                 <div class="audio-play-list-wrap-thumb">
 
-                                    <img src="{{ asset('/uploads/audimg/'.$data->audimg)}}">
+                                    <img src="{{ asset('/uploads/audimg/'.$data->audimg)}}" width="`150" height="110">
 
                                 </div>
 

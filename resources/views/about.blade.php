@@ -1,9 +1,9 @@
 @extends('layouts.front')
 
 @section('title', ' আমাদের সম্পর্কে || আমার ইতিহাস')
-<link href="{{asset('frontend/images/Contact-Book.png')}}" rel="icon">
 
 @section('content')
+
 <div class="container">
 <div class="row">
 <div class=" col-md-6 mb-3">
@@ -16,27 +16,37 @@
 
 <div class="col-md-6 pt-md-2">
 	<h5 class="headerfive">আমাদের সাথে যোগাযোগ করুন</h5>
-<form  method="post" action="{{ route('contact.send') }}">
+<form class="contact-form" method="post" action="{{ route('contact.send') }}">
     {{ csrf_field() }}
 
 <div class="form-group">
-    <label for="exampleInputPassword1">নাম</label>
-    <input type="name" class="form-control" id="exampleInputName1" name="name" placeholder="আপনার নাম">
+
+    <div class="form-field">
+    <input type="text" class="form-control" id="exampleInputName1" name="name" placeholder="আপনার নাম">
+        <i class="fa fa-user"></i>
+    </div>
   </div>
 
   <div class="form-group">
-    <label for="exampleInputEmail1">ই-মেইল</label>
-    <input  type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="আপনার ইমেইল">
+
+      <div class="form-field">
+      <input  type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="আপনার ই-মেইল">
     <small id="emailHelp" class="form-text text-muted">
+
 আমরা অন্য কারো সাথে আপনার ইমেইল শেয়ার করব না।</small>
+      <i class="fa fa-envelope"></i>
+      </div>
   </div>
 
   <div class="form-group">
-    <label for="exampleFormControlTextarea1"></label>
-    <textarea class="form-control" name="message" id="exampleFormControlTextarea1"  rows="3" ></textarea>
+
+      <div class="form-field">
+    <textarea class="form-control" name="message" id="FormControlTextarea1"  rows="3" placeholder="আপনার বার্তা *" ></textarea>
+          <i class="fas fa-pen"></i>
+      </div>
   </div>
-  
-  <input type="submit" class="btn btn-success" value="বার্তা পাঠান">
+
+  <input type="submit" class="btn " value="বার্তা পাঠান">
 </form>
 
 </div>

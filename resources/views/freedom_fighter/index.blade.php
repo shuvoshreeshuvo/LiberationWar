@@ -1,7 +1,6 @@
 @extends('layouts.front')
 
 @section('title', 'মুক্তিযোদ্ধা || আমার ইতিহাস')
-<link href="{{asset('frontend/images/people.png')}}" rel="icon">
 
 @section('content')
 

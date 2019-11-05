@@ -1,7 +1,6 @@
 @extends('layouts.front')
 
 @section('title', 'ভিডিও || আমার ইতিহাস')
-<link href="{{asset('frontend/images/video.png')}}" rel="icon">
 @section('content')
 <div class="container">
 	<h3 class="header" >ভিডিও তালিকা</h3>
