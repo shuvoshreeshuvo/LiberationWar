@@ -427,9 +427,52 @@ table .list:hover{
 
 /*submit button*/
 
+.contact-form,input[type=text]{
+    width: 100%;
+    padding: 0px 10px 0px 0px;
+    display: inline-block;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-field > input[type="text"], .form-field > input[type="email"], .form-field > textarea
+{
+    padding-left: 40px;
+    font-size: 13px;
+}
+
+.form-group{
+    margin:  0px 10px 0px 0px;
+}
+
+.form-field {
+    position: relative;
+    margin-bottom: 16px;
+
+}
+.form-field > i {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 15px;
+    text-align: center;
+    line-height: 30px;
+    width: 40px;
+    opacity: 0.33;
+    pointer-events: none;
+    -webkit-transition: opacity 0.3s, color 0.3s;
+    transition: opacity 0.3s, color 0.3s;
+    color: #444;
+}
+#FormControlTextarea1{
+    height:200px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
 
 .btn, button, input[type="submit"]{
-    margin: 0px 0px 0px 10px;
+    margin: 0px 1px 0px 0px;
 }
 .btn {
     background-color: #4CAF50;
