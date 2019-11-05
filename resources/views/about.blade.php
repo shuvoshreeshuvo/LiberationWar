@@ -1,7 +1,9 @@
 @extends('layouts.front')
+
 @section('title', ' আমাদের সম্পর্কে || আমার ইতিহাস')
 
 @section('content')
+
 <div class="container">
 <div class="row">
 <div class=" col-md-6 mb-3">
@@ -28,7 +30,7 @@
   <div class="form-group">
 
       <div class="form-field">
-      <input  type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="আপনার ইমেইল">
+      <input  type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="আপনার ই-মেইল">
     <small id="emailHelp" class="form-text text-muted">
 
 আমরা অন্য কারো সাথে আপনার ইমেইল শেয়ার করব না।</small>
@@ -43,7 +45,7 @@
           <i class="fas fa-pen"></i>
       </div>
   </div>
-  
+
   <input type="submit" class="btn " value="বার্তা পাঠান">
 </form>
 
