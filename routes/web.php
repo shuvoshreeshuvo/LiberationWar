@@ -90,12 +90,12 @@ Route::post('/about', 'ContactController@sendMessage')->name('contact.send');
 
 Auth::routes();
 
-
+/*
 //lang
 Route::get('/locale/{lang?}', function ($lang=null) {
     App::setlocale($lang);
     return view('welcome');
-});
+});*/
 
 
 //Admin
