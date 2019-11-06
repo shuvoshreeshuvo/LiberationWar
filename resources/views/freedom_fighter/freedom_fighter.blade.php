@@ -4,9 +4,9 @@
 
 @section('content')
 
-<div class="container" style="margin-top:100px; ">
-  
-  <h1 style="text-align: center;color: red;">{{ $freedom_fighter->name }}</h1>
+<div class="container ">
+	<h4 class="headerfour">{{ $freedom_fighter->name }}</h4>
+  <h5 class="headerfive">{{ $freedom_fighter->name }}</h5>
    
    	@if($freedom_fighter->image)
    		<div class="img">

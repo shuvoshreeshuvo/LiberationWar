@@ -31,6 +31,8 @@ class BongobonduController extends Controller
         return view('admin.bongobondu.create');
     }
 
+
+
     /**
      * Store a newly created resource in storage.
      *
@@ -79,8 +81,10 @@ class BongobonduController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
+
     {
-        //
+        $bongobondu=Bongobondu::find($id);
+        return view('admin.bongobondu.show',compact('bongobondu'));
     }
 
     /**

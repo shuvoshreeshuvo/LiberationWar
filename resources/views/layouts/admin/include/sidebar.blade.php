@@ -43,7 +43,7 @@
           <li class="nav-item {{ Request::is('admin/bongobondu*') ? 'active': '' }}">
             <a class="nav-link" href="{{ route('bongobondu.index') }}">
               <i class="material-icons">person</i>
-              <p>Friend Of Bengal</p>
+              <p>Bongobondhu</p>
             </a>
           </li>
 

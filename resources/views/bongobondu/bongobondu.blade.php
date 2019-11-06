@@ -11,7 +11,7 @@
 	<h2 class="headertwo">বঙ্গবন্ধু শেখ মুজিবুর রহমান</h2>
 	
 	@foreach($bongobondu as $data)
-		<h3 style="color: red;">{{ $data->title }}</h3>
+		<h5 class="headerfive bongobondhu">{{ $data->title }}</h5>
 		<h4 style="text-align: left;color: red;">{{ $data->subtitle }}</h4>
 		@if($data->image)
  		<div class="img">

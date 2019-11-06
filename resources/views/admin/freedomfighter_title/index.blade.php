@@ -28,7 +28,7 @@
                           <th>Number</th>
                            <th>Image</th>
                             <th>Content</th>
-                           <th>Intro</th>
+
                           <th>Created At</th>
                           <th>Updated At</th>
                           <th>Action</th>

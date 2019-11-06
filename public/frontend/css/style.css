@@ -188,6 +188,9 @@ body::-webkit-scrollbar-thumb {
     background-color:#28A745;
     color:red;
 }
+.intro{
+    padding-bottom: 5px;
+}
 
 div.polaroid {
     width: 300px;
@@ -198,7 +201,7 @@ div.polaroid {
 
 div.polaroids {
     margin: 0 auto;
-    padding: 20px;
+    padding: 0px 20px 50px 20px;
     text-align: center;
 }
 
@@ -207,6 +210,7 @@ div.polar{
     margin: 10px;
     position: relative;
     width: auto;
+    padding-top: 5px;
 }
 
 div.polar img {
@@ -351,8 +355,11 @@ input[type=search]::placeholder {
 
 .headerfour{
     color:red;
-    font-size: 22px;
+    font-size: 20px;
     text-align: center;
+    font-weight: 700;
+    padding-top: 30px;
+    padding-bottom: 10px;
 }
 
 .headerfour.section-heading3 {
@@ -363,12 +370,10 @@ input[type=search]::placeholder {
 }
 
 .headerfive{
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 10px;
     color:red;
     font-size: 18px;
-    font-weight: 700
 }
 
 .card img{
@@ -956,7 +961,7 @@ ul, ol, li {
     text-align: right;
 }
 .audio-play-icon {
-    background:  url(../frontend/images/play-arrow.png) no-repeat scroll center 5px;
+    background:  url('../../frontend/images/play-arrow.png') no-repeat scroll center 5px;
     color: red;
     float: left;
     height: 26px;
