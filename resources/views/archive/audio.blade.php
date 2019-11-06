@@ -36,18 +36,11 @@
                                         <h3> {{ $data->title }} </h3>
                                         <div class="audio-play-share">
 
-                                                <a class="audio-play-icon play" href="{{ asset('frontend/archive/audio/'.$data->path) }}" type="audio/mp3"></a>
+                                                <a class="audio-play-icon play" href="{{ asset('frontend/archive/audio/'.$data->path) }}" ></a>
 
                                             <div class="audio-play-share-inner">
                                                 <ul>
                                                     <li><span>&nbsp;</span></li>
-                                                    <!--<li><span>শেয়ার করুন:</span></li>-->
-                                                    <!--                                        <li><a class="facebook" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                                                                            <li><a class="twitter" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                                                                            <li><a class="linkedin" href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                                                                            <li><a class="google-plus" href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                                                                                            <li><a class="pinterest" href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-                                                                                            <li><a class="share"  href="#"><i class="fa fa-share-alt" aria-hidden="true"></i></a></li>-->
                                                 </ul>
                                             </div>
                                         </div>
