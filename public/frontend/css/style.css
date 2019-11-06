@@ -188,6 +188,9 @@ body::-webkit-scrollbar-thumb {
     background-color:#28A745;
     color:red;
 }
+.intro{
+    padding-bottom: 5px;
+}
 
 div.polaroid {
     width: 300px;
@@ -198,7 +201,7 @@ div.polaroid {
 
 div.polaroids {
     margin: 0 auto;
-    padding: 20px;
+    padding: 0px 20px 50px 20px;
     text-align: center;
 }
 
@@ -207,6 +210,7 @@ div.polar{
     margin: 10px;
     position: relative;
     width: auto;
+    padding-top: 5px;
 }
 
 div.polar img {
@@ -956,7 +960,7 @@ ul, ol, li {
     text-align: right;
 }
 .audio-play-icon {
-    background:  url(../frontend/images/play-arrow.png) no-repeat scroll center 5px;
+    background:  url('../../frontend/images/play-arrow.png') no-repeat scroll center 5px;
     color: red;
     float: left;
     height: 26px;
