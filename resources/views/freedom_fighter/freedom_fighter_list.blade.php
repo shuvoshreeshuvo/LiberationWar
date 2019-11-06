@@ -5,7 +5,7 @@
 @section('content')
 
 <div class="container">
-    <h5  class="headerfive">বাংলাদেশের স্বাধীনতা যুদ্ধের খেতাবপ্রাপ্ত মুক্তিযোদ্ধা </h5>
+    <h4  class="headerfour">বাংলাদেশের স্বাধীনতা যুদ্ধের খেতাবপ্রাপ্ত মুক্তিযোদ্ধা </h4>
     <hr>
  
        <table border="1">
