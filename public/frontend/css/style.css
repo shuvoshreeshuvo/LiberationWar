@@ -355,8 +355,11 @@ input[type=search]::placeholder {
 
 .headerfour{
     color:red;
-    font-size: 22px;
+    font-size: 20px;
     text-align: center;
+    font-weight: 700;
+    padding-top: 30px;
+    padding-bottom: 10px;
 }
 
 .headerfour.section-heading3 {
@@ -367,12 +370,10 @@ input[type=search]::placeholder {
 }
 
 .headerfive{
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 10px;
     color:red;
     font-size: 18px;
-    font-weight: 700
 }
 
 .card img{
