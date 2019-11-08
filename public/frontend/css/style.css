@@ -1,5 +1,4 @@
 
-/*protek page er jonno margin and padding, body ,container*/
 * {
     margin: 0;
     padding: 0;
@@ -619,7 +618,6 @@ table .list:hover{
 }
 
 
-
 /*image*/
 .imagehovereffect a{
     color: white;
@@ -972,9 +970,6 @@ ul, ol, li {
     overflow: hidden;
     text-indent: 99px;
 }
-
-
-
 
 
 
