@@ -1,27 +1,11 @@
 <?php
 
-
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-
 // Default Route
 Route::get('/', 'HomeController@index1');
 
 // Custom Route
 Route::get('/lang', 'HomeController@index');
 
-Route::get('/test', 'dummy@index');
-// shuvoy korsil ami off korsi
 
 /*
 Route::group(['prefix' => '{lang?}', 'middleware' => 'setlocale', 'where' => ['lang' => '[a-zA-Z]{2}']], function($lang = Null){
@@ -48,8 +32,6 @@ Route::group(['prefix' => '{lang?}', 'middleware' => 'setlocale', 'where' => ['l
 
 
 });*/
-
-
 
 //search
 
@@ -92,10 +74,10 @@ Auth::routes();
 
 
 //lang
-Route::get('/locale/{lang?}', function ($lang=null) {
+/*Route::get('/locale/{lang?}', function ($lang=null) {
     App::setlocale($lang);
     return view('welcome');
-});
+});*/
 
 
 //Admin
