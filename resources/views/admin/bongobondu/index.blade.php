@@ -24,7 +24,7 @@
                                     <thead class="text-primary">
                                     <th style="width: 50px;">Id</th>
                                     <th>Title</th>
-                                    <th>Image</th>
+                                    <th>Title</th>
                                     <th>Content</th>
                                     <th>Created At</th>
                                     <th>Updated At</th>
@@ -36,7 +36,7 @@
                                         <tr>
                                             <td>{{ $key + 1 }}</td>
                                             <td>{{$bongobondu->title }}</td>
-                                            <td><img width="300" height="150" class="img-responsive img-thumbnail" src="{{ asset('uploads/book/'.$bongobondu->image) }}"  alt=""></td>
+                                            <td><img class="img-responsive img-thumbnail" src="{{ asset('uploads/bongobondu/'.$bongobondu->image) }}" style="height:100px;width:100px" alt=""></td>
                                             <td>{!! str_limit($bongobondu->content , $limit = 100, $end = '...') !!}  <p class="card-description">
                                                     <span class="wpb_button align_center">
                                                         <a href="{{ route('bongobondu.show',$bongobondu->id) }}" class="btn btn-primary btn-sm"  >
