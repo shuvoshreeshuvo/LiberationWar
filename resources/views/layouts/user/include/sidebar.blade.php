@@ -1,9 +1,4 @@
 <style>
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
     .stage{
         height: 100%;
         width: 170px;
@@ -15,7 +10,7 @@
         padding-top: 200px;
         background: #ff6666;
     }
-    .p{
+    .pp{
         font-size: 30px;
         text-align: center;
         margin-top: 0;
@@ -30,7 +25,7 @@
 
 
     }
-    .div{
+    .diiv{
         margin-left: auto;
         margin-right: auto;
         border-radius: 10px;
@@ -41,25 +36,25 @@
 
     }
 
-    .div a{
+    .diiv a{
 
         text-decoration: none;
 
     }
-    .p:hover{
+    .pp:hover{
         background: #00A65E;
         color:white ;
 
     }
-    .div:nth-child(odd){
+    .diiv:nth-child(odd){
         transform: perspective(300px) rotateY(45deg);
         box-shadow: -2px 2px 7px gray;
     }
-    .div:nth-child(even){
+    .diiv:nth-child(even){
         transform: perspective(300px) rotateY(-45deg);
         box-shadow: 2px 2px 7px gray;
     }
-    .div:hover{
+    .diiv:hover{
         transform: rotateY(0);
         background: white;
         color: black;
@@ -74,14 +69,14 @@
 <div class="col-md-3 ">
 
     <section class="stage">
-        <div id="home" class="div"><a href="/"><p id="homep" class="p">Home</p></a></div>
-        <div class="div" id="contact"><a href="{!! url('/archive/image'); !!}"> <p class="p">Gallery</p></a>
+        <div id="home" class="diiv"><a href="/"><p id="homep" class="pp">Home</p></a></div>
+        <div class="diiv" id="contact"><a href="{!! url('/archive/image'); !!}"> <p class="pp">Gallery</p></a>
         </div>
-        <div class="div" id="book"><a href="{!! url('/books'); !!}"><p class="p">Books</p></a>
+        <div class="diiv" id="book"><a href="{!! url('/books'); !!}"><p class="pp">Books</p></a>
         </div>
-        <div class="div" id="freedomfighter"><a href="{!! url('/freedom_fighter'); !!}"><p class="p">Fighters</p></a>
+        <div class="diiv" id="freedomfighter"><a href="{!! url('/freedom_fighter'); !!}"><p class="pp">Fighters</p></a>
         </div>
-        <div class="div" id="contact"><a href="{!! url('/about'); !!}"><p class="p">Contact</p></a>
+        <div class="diiv" id="contact"><a href="{!! url('/about'); !!}"><p class="pp">Contact</p></a>
         </div>
     </section>
 
