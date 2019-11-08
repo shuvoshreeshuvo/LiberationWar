@@ -264,7 +264,7 @@ class ArchiveController extends Controller
         $archive->special = '1';
         $archive->save();
 
-        return redirect()->back()->with('successMsg', 'Archive has been spcialed.');
+        return redirect()->back()->with('successMsg', 'Archive has been specialized.');
     }
 
     public function normal($id){
