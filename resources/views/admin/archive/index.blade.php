@@ -16,7 +16,7 @@
               <div class="card">
                 <div class="card-header card-header-primary">
                   <h4 class="card-title ">All Archives</h4>
-                  
+
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">
@@ -57,7 +57,7 @@
                                   </div>
                                 </td>
                               @endif
-                              
+
                                @if($archive->type == 'audio')
                                 <td><audio controls> <source  src="{{ asset('frontend/archive/audio/'.$archive->path) }}" type="audio/mpeg"></audio></td>
                               @endif
@@ -69,19 +69,19 @@
                               <td>
                               	@if($archive->special == 1)
                               		<span class="badge badge-success">Special</span>
-                              	@else 
+                              	@else
                               		<span class="badge badge-primary">Normal</span>
                               	@endif
                               </td>
-                              
+
                               <td>{{ $archive->created_at }}</td>
-                              
+
                               <td>
                               	@if($archive->special == 0)
                               	<a href="{{ route('archive.special',$archive->id) }}" class="btn btn-success btn-sm"><i class="material-icons">check_circle_outline</i></a>
                               	@else
                               	<a href="{{ route('archive.normal',$archive->id) }}" class="btn btn-primary btn-sm"><i class="material-icons">highlight_off</i></a>
-                              	@endif 
+                              	@endif
                                 <a href="{{ route('archive.edit',$archive->id) }}" class="btn btn-info btn-sm"><i class="material-icons">mode_edit</i></a>
                                  <form  id="delete-form-{{ $archive->id }}"  action="{{ route('archive.destroy',$archive->id) }}" style="display:none;"method="POST">
                                     {{ csrf_field() }}
@@ -99,7 +99,7 @@
                               </td>
 
                             </tr>
-                        @endforeach                   
+                        @endforeach
                       </tbody>
                     </table>
                   </div>
