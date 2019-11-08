@@ -6,8 +6,6 @@
 
 <div class="container">
     <h4 class="headerfour">বাংলাদেশের স্বাধীনতা যুদ্ধের খেতাবপ্রাপ্ত মুক্তিযোদ্ধা</h4>
-
-
      @foreach($ff_titles as $ff_title)    
      <div class="intro">
        <p>{!! $ff_title->intro !!}</p>
