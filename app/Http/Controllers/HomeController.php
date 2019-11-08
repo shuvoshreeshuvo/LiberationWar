@@ -15,9 +15,9 @@ class HomeController extends Controller
 
 	public function index1()
 	{
-    $lang  = 'bn';
+   // $lang  = 'bn';
     
-    App::setLocale($lang);
+   // App::setLocale($lang);
 		$periods = Period::all();
 		$ff_titles=Ff_title::all();
         $bookcategories=Bookcategory::all();
@@ -56,7 +56,7 @@ class HomeController extends Controller
   public function index($lang)
   {
     
-    App::setLocale($lang);
+   // App::setLocale($lang);
     $periods = Period::all();
     $ff_titles=Ff_title::all();
         $bookcategories=Bookcategory::all();

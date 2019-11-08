@@ -67,7 +67,7 @@
 
 
 
-            <?php $lang =  app()->getLocale(); ?>
+            
 
             <li class="nav-item dropdown">
                 <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -86,8 +86,7 @@
                 </div>
             </li>
 
-            <?php $lang =  app()->getLocale(); ?>
-            <li class="nav-item dropdown">
+                        <li class="nav-item dropdown">
                    <a class="nav-link " href="{!! url('/freedom_fighter'); !!}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                        {{ __('header.freedom fighter') }}
                     </a>
@@ -111,7 +110,7 @@
                 </li>
 
 
-            <?php $lang =  app()->getLocale(); ?>
+            
             <li class="nav-item dropdown">
 
                 <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -136,7 +135,7 @@
 
             </li>
 
-            <?php $lang =  app()->getLocale(); ?>
+           
             <li class="nav-item">
                 <a class="nav-link " href="{!! url('/about'); !!}">{{ __('header.about') }}</a>
             </li>
