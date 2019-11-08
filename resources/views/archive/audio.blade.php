@@ -26,7 +26,7 @@
 
                             <div class="audio-play-list-wrap-thumb">
 
-                                <img src="{{ asset('/uploads/audimg/'.$data->audimg)}}" width="`150" height="110">
+                                <img src="https://d30fl32nd2baj9.cloudfront.net/media/2014/10/13/freedom-fighter.jpg1/ALTERNATES/w640/Freedom+Fighter.jpg" width="`150" height="110">
 
                             </div>
 
