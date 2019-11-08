@@ -3,23 +3,87 @@
 @section('title','Dashboard')
 
 @section('content')
+
   <div class="content">
+       <h4> Welcome to your Dashboard </h4>
         <div class="container-fluid">
           <div class="row">
+
+
             <div class="col-lg-3 col-md-6 col-sm-6">
               <div class="card card-stats">
-                <div class="card-header card-header-warning card-header-icon">
+                <div class="card-header card-header-dark card-header-icon">
                   <div class="card-icon">
-                    <i class="material-icons">content_copy</i>
+                    <i class="material-icons">person</i>
+                  </div>
+                  <p class="card-category">Admin </p>
+                  <h3 class="card-title">{{ $profileCount }}
+                  </h3>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons text-danger">info</i>
+                    <a href="#pablo">Total Admin</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                <div class="card-header card-header-danger card-header-icon">
+                  <div class="card-icon">
+                    <i class="material-icons">
+                      history
+                    </i>
                   </div>
                   <p class="card-category">Period / Event</p>
-                  <h3 class="card-title">{{ $categoryCount }} / {{ $itemCount }}
+                  <h3 class="card-title">{{ $periodCount }} / {{ $eventCount }}
                   </h3>
                 </div>
                 <div class="card-footer">
                   <div class="stats">
                     <i class="material-icons text-danger">info</i>
                     <a href="#pablo">Total Periods and Events</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                <div class="card-header card-header-warning card-header-icon">
+                  <div class="card-icon">
+                    <i class="material-icons">book</i>
+                  </div>
+                  <p class="card-category">Archive </p>
+                  <h3 class="card-title">{{ $archiveCount }}
+                  </h3>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons text-danger">info</i>
+                    <a href="#pablo">Total Archive</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                <div class="card-header card-header-success card-header-icon">
+                  <div class="card-icon">
+                    <i class="material-icons">library_books</i>
+                  </div>
+                  <p class="card-category">Book Category/ Book</p>
+                  <h3 class="card-title">{{ $bookCount }} / {{ $bookcategoryCount }}
+                  </h3>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons text-danger">info</i>
+                    <a href="#pablo">Total Book Categories and Books</a>
                   </div>
                 </div>
               </div>
@@ -40,7 +104,33 @@
                 </div>
               </div>
             </div> --}}
-            
+
+          </div>
+
+          <div class="row">
+
+
+
+              <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                  <div class="card-header card-header-primary card-header-icon">
+                    <div class="card-icon">
+                      <i class="material-icons">category</i>
+                    </div>
+                    <p class="card-category">Freedom Fighter Titles / Freedom Fighters </p>
+                    <h3 class="card-title">{{ $ff_titleCount }} / {{ $freedom_fighterCount  }}
+                    </h3>
+                  </div>
+                  <div class="card-footer">
+                    <div class="stats">
+                      <i class="material-icons text-danger">info</i>
+                      <a href="#pablo">Total Freedom Fighter Titles & Freedom Fighters </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
             <div class="col-lg-3 col-md-6 col-sm-6">
               <div class="card card-stats">
                 <div class="card-header card-header-info card-header-icon">
@@ -57,6 +147,8 @@
                 </div>
               </div>
             </div>
+
+
           </div>
          {{-- <div class="row">
             <div class="col-md-4">
